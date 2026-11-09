@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.8)
+project(promise_description)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY urdf meshes textures config launch worlds DESTINATION share/${PROJECT_NAME})
+install(PROGRAMS scripts/drive.py scripts/stereo_info.py DESTINATION lib/${PROJECT_NAME})
+install(FILES scripts/kinematics.py DESTINATION lib/${PROJECT_NAME})
+ament_package()

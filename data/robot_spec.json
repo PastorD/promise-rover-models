@@ -1,0 +1,2148 @@
+{
+  "name": "promise",
+  "date": "2026-11-08",
+  "units": "m",
+  "axes": "X forward, Y left, Z up",
+  "base_height": 0.9,
+  "total_mass_kg": 900,
+  "links": {
+    "base_link": {
+      "name": "base_link",
+      "anchor": [
+        0,
+        0,
+        0.9
+      ],
+      "parent": null,
+      "joint": null,
+      "axis": null,
+      "type": "fixed",
+      "mass": 760,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "box",
+          "pos": [
+            -0.019999999552965164,
+            0.0,
+            0.020000040531158447
+          ],
+          "size": [
+            1.91,
+            1.48,
+            0.46
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            -1.2400000095367432,
+            0.0,
+            0.30000007152557373
+          ],
+          "size": [
+            0.72,
+            0.64,
+            0.67
+          ],
+          "rpy": [
+            0,
+            -0.27,
+            0
+          ]
+        }
+      ],
+      "com": [
+        -0.1,
+        0.0,
+        0.02
+      ],
+      "inertia": [
+        220.0,
+        350.0,
+        400.0
+      ],
+      "bounds": [
+        [
+          -1.661749243736267,
+          -0.870278000831604,
+          -0.3473200798034668
+        ],
+        [
+          1.25653076171875,
+          0.8703056573867798,
+          0.7237149477005005
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "base_link_000",
+          "material": "tex_01",
+          "triangles": 2237
+        },
+        {
+          "mesh": "base_link_001",
+          "material": "tex_02",
+          "triangles": 1715
+        },
+        {
+          "mesh": "base_link_002",
+          "material": "tex_04",
+          "triangles": 802
+        },
+        {
+          "mesh": "base_link_003",
+          "material": "tex_03",
+          "triangles": 712
+        },
+        {
+          "mesh": "base_link_004",
+          "material": "tex_01_001",
+          "triangles": 2
+        },
+        {
+          "mesh": "base_link_005",
+          "material": "parts_AO",
+          "triangles": 2411
+        },
+        {
+          "mesh": "base_link_006",
+          "material": "tex_03",
+          "triangles": 10
+        },
+        {
+          "mesh": "base_link_007",
+          "material": "tex_01",
+          "triangles": 267
+        },
+        {
+          "mesh": "base_link_008",
+          "material": "tex_02",
+          "triangles": 246
+        },
+        {
+          "mesh": "base_link_009",
+          "material": "tex_05",
+          "triangles": 490
+        },
+        {
+          "mesh": "base_link_010",
+          "material": "tex_03",
+          "triangles": 56
+        },
+        {
+          "mesh": "base_link_011",
+          "material": "tex_03",
+          "triangles": 352
+        },
+        {
+          "mesh": "base_link_012",
+          "material": "tex_02",
+          "triangles": 216
+        },
+        {
+          "mesh": "base_link_013",
+          "material": "tex_03_002",
+          "triangles": 232
+        },
+        {
+          "mesh": "base_link_014",
+          "material": "tex_03",
+          "triangles": 34
+        },
+        {
+          "mesh": "base_link_015",
+          "material": "tex_03_002",
+          "triangles": 232
+        },
+        {
+          "mesh": "base_link_016",
+          "material": "tex_03",
+          "triangles": 34
+        },
+        {
+          "mesh": "base_link_017",
+          "material": "tex_02",
+          "triangles": 336
+        },
+        {
+          "mesh": "base_link_018",
+          "material": "tex_05",
+          "triangles": 140
+        },
+        {
+          "mesh": "base_link_019",
+          "material": "tex_03",
+          "triangles": 240
+        },
+        {
+          "mesh": "base_link_020",
+          "material": "tex_03",
+          "triangles": 240
+        },
+        {
+          "mesh": "base_link_021",
+          "material": "Material_0",
+          "triangles": 18849
+        },
+        {
+          "mesh": "base_link_022",
+          "material": "Material_1",
+          "triangles": 64001
+        },
+        {
+          "mesh": "base_link_023",
+          "material": "Material_2",
+          "triangles": 2932
+        },
+        {
+          "mesh": "base_link_024",
+          "material": "Material_0",
+          "triangles": 51145
+        },
+        {
+          "mesh": "base_link_025",
+          "material": "Material_1",
+          "triangles": 5589
+        },
+        {
+          "mesh": "base_link_026",
+          "material": "Material_3",
+          "triangles": 1028
+        },
+        {
+          "mesh": "base_link_027",
+          "material": "Material_3",
+          "triangles": 2020
+        },
+        {
+          "mesh": "base_link_028",
+          "material": "Material_1",
+          "triangles": 1491
+        },
+        {
+          "mesh": "base_link_029",
+          "material": "Material_38",
+          "triangles": 20
+        },
+        {
+          "mesh": "base_link_030",
+          "material": "Material_3",
+          "triangles": 512
+        },
+        {
+          "mesh": "base_link_031",
+          "material": "Material_1",
+          "triangles": 6045
+        },
+        {
+          "mesh": "base_link_032",
+          "material": "Material_0",
+          "triangles": 6140
+        },
+        {
+          "mesh": "base_link_033",
+          "material": "Material_1",
+          "triangles": 3378
+        },
+        {
+          "mesh": "base_link_034",
+          "material": "Material_39",
+          "triangles": 144
+        },
+        {
+          "mesh": "base_link_035",
+          "material": "Material_38",
+          "triangles": 352
+        },
+        {
+          "mesh": "base_link_036",
+          "material": "Material_1",
+          "triangles": 14185
+        },
+        {
+          "mesh": "base_link_037",
+          "material": "Material_0",
+          "triangles": 506
+        },
+        {
+          "mesh": "base_link_038",
+          "material": "Material_3",
+          "triangles": 392
+        },
+        {
+          "mesh": "base_link_039",
+          "material": "Material_0",
+          "triangles": 1185
+        },
+        {
+          "mesh": "base_link_040",
+          "material": "Material_1",
+          "triangles": 1396
+        },
+        {
+          "mesh": "base_link_041",
+          "material": "Material_3",
+          "triangles": 224
+        },
+        {
+          "mesh": "base_link_042",
+          "material": "Material_0",
+          "triangles": 393
+        },
+        {
+          "mesh": "base_link_043",
+          "material": "Material_8",
+          "triangles": 1819
+        },
+        {
+          "mesh": "base_link_044",
+          "material": "Material_3",
+          "triangles": 291
+        },
+        {
+          "mesh": "base_link_045",
+          "material": "Material_1",
+          "triangles": 5762
+        },
+        {
+          "mesh": "base_link_046",
+          "material": "Material_3",
+          "triangles": 224
+        },
+        {
+          "mesh": "base_link_047",
+          "material": "Material_0",
+          "triangles": 393
+        },
+        {
+          "mesh": "base_link_048",
+          "material": "Material_8",
+          "triangles": 1819
+        },
+        {
+          "mesh": "base_link_049",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_050",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_051",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_052",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_053",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_054",
+          "material": "PROMISE_black_anodized",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_055",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_056",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_057",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_058",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_059",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_060",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_061",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_062",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_063",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_064",
+          "material": "PROMISE_black_anodized",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_065",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_066",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_067",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_068",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_069",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_070",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_071",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_072",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_073",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_074",
+          "material": "PROMISE_black_anodized",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_075",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_076",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_077",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_078",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_079",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_080",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_081",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_082",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_083",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_084",
+          "material": "PROMISE_black_anodized",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_085",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_086",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_087",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_088",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_089",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_090",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_091",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_092",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        },
+        {
+          "mesh": "base_link_093",
+          "material": "PROMISE_illuminator",
+          "triangles": 108
+        }
+      ]
+    },
+    "rocker_left": {
+      "name": "rocker_left",
+      "anchor": [
+        0.21300005912780762,
+        0.796999990940094,
+        0.9067000150680542
+      ],
+      "parent": "base_link",
+      "joint": "rocker_left_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "revolute",
+      "mass": 20,
+      "limits": [
+        -0.65,
+        0.65
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.4404999613761902,
+            0.13200002908706665,
+            -0.12084996700286865
+          ],
+          "radius": 0.043,
+          "length": 0.9509341336427963,
+          "rpy": [
+            1.8277870416641235,
+            -2.2450155512387937e-08,
+            1.861940622329712
+          ]
+        },
+        {
+          "type": "cylinder",
+          "pos": [
+            -0.37650004029273987,
+            0.0,
+            -0.12035000324249268
+          ],
+          "radius": 0.043,
+          "length": 0.7905350367246572,
+          "rpy": [
+            1.8801860809326172,
+            1.5670741149165224e-08,
+            -1.5707963705062866
+          ]
+        }
+      ],
+      "com": [
+        0.08481842279434204,
+        0.13565856218338013,
+        -0.10283675789833069
+      ],
+      "inertia": [
+        0.4826311059705842,
+        5.296774318961213,
+        5.374905014889866
+      ],
+      "bounds": [
+        [
+          -0.789354681968689,
+          -0.06941980123519897,
+          -0.27701348066329956
+        ],
+        [
+          0.958991527557373,
+          0.34073692560195923,
+          0.07133996486663818
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "rocker_left_094",
+          "material": "PROMISE_black_anodized",
+          "triangles": 451
+        },
+        {
+          "mesh": "rocker_left_095",
+          "material": "PROMISE_black_anodized",
+          "triangles": 334
+        }
+      ]
+    },
+    "bogie_left": {
+      "name": "bogie_left",
+      "anchor": [
+        -0.5399999618530273,
+        0.7970000505447388,
+        0.6657000184059143
+      ],
+      "parent": "rocker_left",
+      "joint": "bogie_left_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "revolute",
+      "mass": 15,
+      "limits": [
+        -0.9,
+        0.9
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.2254999876022339,
+            0.19749999046325684,
+            -0.20160001516342163
+          ],
+          "radius": 0.043,
+          "length": 0.7224930656324728,
+          "rpy": [
+            2.1628518104553223,
+            -3.680727544974616e-08,
+            2.290097236633301
+          ]
+        },
+        {
+          "type": "cylinder",
+          "pos": [
+            -0.312000036239624,
+            0.13199996948242188,
+            -0.00034999847412109375
+          ],
+          "radius": 0.043,
+          "length": 0.6775489342692181,
+          "rpy": [
+            1.5718296766281128,
+            5.6484473986984085e-08,
+            -1.9710367918014526
+          ]
+        }
+      ],
+      "com": [
+        -0.09292954206466675,
+        0.14006271958351135,
+        -0.12550120055675507
+      ],
+      "inertia": [
+        0.6976912509492429,
+        2.3613709446122058,
+        2.0642049352107827
+      ],
+      "bounds": [
+        [
+          -0.703493595123291,
+          -0.06006854772567749,
+          -0.4409147799015045
+        ],
+        [
+          0.5176345109939575,
+          0.3401939868927002,
+          0.18991237878799438
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "bogie_left_096",
+          "material": "PROMISE_black_anodized",
+          "triangles": 597
+        }
+      ]
+    },
+    "front_left_steer": {
+      "name": "front_left_steer",
+      "anchor": [
+        1.0940001010894775,
+        1.060999870300293,
+        0.6647000312805176
+      ],
+      "parent": "rocker_left",
+      "joint": "front_left_steer_joint",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "type": "revolute",
+      "mass": 6,
+      "limits": [
+        -1.4,
+        1.4
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "box",
+          "pos": [
+            0.0,
+            -0.0899999737739563,
+            -0.18000000715255737
+          ],
+          "size": [
+            0.12,
+            0.15,
+            0.35
+          ]
+        }
+      ],
+      "com": [
+        -0.001502394676208496,
+        -0.16186141967773438,
+        -0.21678686141967773
+      ],
+      "inertia": [
+        0.2394803362513187,
+        0.12196731794361426,
+        0.16169297891303813
+      ],
+      "bounds": [
+        [
+          -0.10659754276275635,
+          -0.42606115341186523,
+          -0.4402564764022827
+        ],
+        [
+          0.10359275341033936,
+          0.10233831405639648,
+          0.006682753562927246
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "front_left_steer_097",
+          "material": "PROMISE_black_anodized",
+          "triangles": 489
+        }
+      ]
+    },
+    "rear_left_steer": {
+      "name": "rear_left_steer",
+      "anchor": [
+        -1.1639999151229858,
+        1.061000108718872,
+        0.6647000312805176
+      ],
+      "parent": "bogie_left",
+      "joint": "rear_left_steer_joint",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "type": "revolute",
+      "mass": 6,
+      "limits": [
+        -1.4,
+        1.4
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "box",
+          "pos": [
+            0.0,
+            -0.0899999737739563,
+            -0.18000000715255737
+          ],
+          "size": [
+            0.12,
+            0.15,
+            0.35
+          ]
+        }
+      ],
+      "com": [
+        2.384185791015625e-07,
+        -0.12930279970169067,
+        -0.2140505462884903
+      ],
+      "inertia": [
+        0.20668980121762148,
+        0.12196754438080193,
+        0.12890221744215324
+      ],
+      "bounds": [
+        [
+          -0.10509490966796875,
+          -0.3604004383087158,
+          -0.43752041459083557
+        ],
+        [
+          0.10509538650512695,
+          0.10179483890533447,
+          0.00941932201385498
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "rear_left_steer_098",
+          "material": "PROMISE_black_anodized",
+          "triangles": 434
+        }
+      ]
+    },
+    "rocker_right": {
+      "name": "rocker_right",
+      "anchor": [
+        0.21299993991851807,
+        -0.796999990940094,
+        0.9067000150680542
+      ],
+      "parent": "base_link",
+      "joint": "rocker_right_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "revolute",
+      "mass": 20,
+      "limits": [
+        -0.65,
+        0.65
+      ],
+      "mimic": {
+        "joint": "rocker_left_joint",
+        "multiplier": -1
+      },
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.44050002098083496,
+            -0.13200002908706665,
+            -0.12084996700286865
+          ],
+          "radius": 0.043,
+          "length": 0.9509342590029842,
+          "rpy": [
+            1.827786922454834,
+            1.0699355357246532e-07,
+            1.2796521186828613
+          ]
+        },
+        {
+          "type": "cylinder",
+          "pos": [
+            -0.3764999806880951,
+            0.0,
+            -0.12035000324249268
+          ],
+          "radius": 0.043,
+          "length": 0.7905348859289362,
+          "rpy": [
+            1.8801862001419067,
+            3.403834014648055e-08,
+            -1.5707964897155762
+          ]
+        }
+      ],
+      "com": [
+        0.08606982231140137,
+        -0.14018690586090088,
+        -0.10211697220802307
+      ],
+      "inertia": [
+        0.4835621766078961,
+        5.313046928213894,
+        5.388758867214302
+      ],
+      "bounds": [
+        [
+          -0.7893548011779785,
+          -0.34499305486679077,
+          -0.2770134210586548
+        ],
+        [
+          0.9614944458007812,
+          0.06461924314498901,
+          0.07277947664260864
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "rocker_right_099",
+          "material": "PROMISE_black_anodized",
+          "triangles": 451
+        },
+        {
+          "mesh": "rocker_right_100",
+          "material": "PROMISE_black_anodized",
+          "triangles": 334
+        }
+      ]
+    },
+    "bogie_right": {
+      "name": "bogie_right",
+      "anchor": [
+        -0.5400000810623169,
+        -0.7969999313354492,
+        0.6657000184059143
+      ],
+      "parent": "rocker_right",
+      "joint": "bogie_right_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "revolute",
+      "mass": 15,
+      "limits": [
+        -0.9,
+        0.9
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.22550004720687866,
+            -0.1975000500679016,
+            -0.20160001516342163
+          ],
+          "radius": 0.043,
+          "length": 0.7224932100049559,
+          "rpy": [
+            2.162851333618164,
+            1.6769492106050166e-07,
+            0.8514955639839172
+          ]
+        },
+        {
+          "type": "cylinder",
+          "pos": [
+            -0.31199997663497925,
+            -0.13200002908706665,
+            -0.00034999847412109375
+          ],
+          "radius": 0.043,
+          "length": 0.6775488737891657,
+          "rpy": [
+            1.5718294382095337,
+            -1.1469695238019995e-07,
+            -1.170555591583252
+          ]
+        }
+      ],
+      "com": [
+        -0.09292995929718018,
+        -0.14486318826675415,
+        -0.12550124526023865
+      ],
+      "inertia": [
+        0.69769246031401,
+        2.3613725775452865,
+        2.0642052394915744
+      ],
+      "bounds": [
+        [
+          -0.7034940719604492,
+          -0.3449944257736206,
+          -0.44091522693634033
+        ],
+        [
+          0.5176341533660889,
+          0.055268049240112305,
+          0.18991273641586304
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "bogie_right_101",
+          "material": "PROMISE_black_anodized",
+          "triangles": 597
+        }
+      ]
+    },
+    "front_right_steer": {
+      "name": "front_right_steer",
+      "anchor": [
+        1.0939998626708984,
+        -1.061000108718872,
+        0.6647000312805176
+      ],
+      "parent": "rocker_right",
+      "joint": "front_right_steer_joint",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "type": "revolute",
+      "mass": 6,
+      "limits": [
+        -1.4,
+        1.4
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "box",
+          "pos": [
+            0.0,
+            0.0899999737739563,
+            -0.18000000715255737
+          ],
+          "size": [
+            0.12,
+            0.15,
+            0.35
+          ]
+        }
+      ],
+      "com": [
+        0.0010004043579101562,
+        0.15760540962219238,
+        -0.21404984593391418
+      ],
+      "inertia": [
+        0.23948018363144463,
+        0.121967291303962,
+        0.16169285293281632
+      ],
+      "bounds": [
+        [
+          -0.1040947437286377,
+          -0.10659420490264893,
+          -0.4375194311141968
+        ],
+        [
+          0.10609555244445801,
+          0.4218050241470337,
+          0.009419739246368408
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "front_right_steer_102",
+          "material": "PROMISE_black_anodized",
+          "triangles": 489
+        }
+      ]
+    },
+    "rear_right_steer": {
+      "name": "rear_right_steer",
+      "anchor": [
+        -1.164000153541565,
+        -1.060999870300293,
+        0.6647000312805176
+      ],
+      "parent": "bogie_right",
+      "joint": "rear_right_steer_joint",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "type": "revolute",
+      "mass": 6,
+      "limits": [
+        -1.4,
+        1.4
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "box",
+          "pos": [
+            0.0,
+            0.0899999737739563,
+            -0.18000000715255737
+          ],
+          "size": [
+            0.12,
+            0.15,
+            0.35
+          ]
+        }
+      ],
+      "com": [
+        -2.384185791015625e-07,
+        0.12450230121612549,
+        -0.2140505015850067
+      ],
+      "inertia": [
+        0.20668997983143989,
+        0.12196755770064449,
+        0.12890238273612908
+      ],
+      "bounds": [
+        [
+          -0.10509538650512695,
+          -0.10659551620483398,
+          -0.4375203847885132
+        ],
+        [
+          0.10509490966796875,
+          0.35560011863708496,
+          0.009419381618499756
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "rear_right_steer_103",
+          "material": "PROMISE_black_anodized",
+          "triangles": 434
+        }
+      ]
+    },
+    "front_left_wheel": {
+      "name": "front_left_wheel",
+      "anchor": [
+        1.094,
+        1.061,
+        0.2625
+      ],
+      "parent": "front_left_steer",
+      "joint": "front_left_wheel_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "continuous",
+      "mass": 6,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius": 0.2625,
+          "length": 0.3,
+          "rpy": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        }
+      ],
+      "wheel_radius": 0.2625,
+      "wheel_width": 0.33538020374196315,
+      "com": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": [
+        0.14835937500000002,
+        0.20671875000000003,
+        0.14835937500000002
+      ],
+      "bounds": [
+        [
+          -0.26249998807907104,
+          -0.16769009828567505,
+          -0.26249992847442627
+        ],
+        [
+          0.2625000476837158,
+          0.16769015789031982,
+          0.26249992847442627
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "front_left_wheel_104",
+          "material": "aluminum",
+          "triangles": 3936
+        },
+        {
+          "mesh": "front_left_wheel_105",
+          "material": "aluminum_black",
+          "triangles": 7200
+        },
+        {
+          "mesh": "front_left_wheel_106",
+          "material": "hub",
+          "triangles": 200
+        }
+      ]
+    },
+    "middle_left_wheel": {
+      "name": "middle_left_wheel",
+      "anchor": [
+        -0.089,
+        1.192,
+        0.2625
+      ],
+      "parent": "bogie_left",
+      "joint": "middle_left_wheel_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "continuous",
+      "mass": 6,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius": 0.2625,
+          "length": 0.3,
+          "rpy": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        }
+      ],
+      "wheel_radius": 0.2625,
+      "wheel_width": 0.3353801656915047,
+      "com": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": [
+        0.14835937500000002,
+        0.20671875000000003,
+        0.14835937500000002
+      ],
+      "bounds": [
+        [
+          -0.26249998807907104,
+          -0.16769015789031982,
+          -0.2624998986721039
+        ],
+        [
+          0.26249998807907104,
+          0.16769003868103027,
+          0.26249992847442627
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "middle_left_wheel_107",
+          "material": "aluminum",
+          "triangles": 3936
+        },
+        {
+          "mesh": "middle_left_wheel_108",
+          "material": "aluminum_black",
+          "triangles": 7200
+        },
+        {
+          "mesh": "middle_left_wheel_109",
+          "material": "hub",
+          "triangles": 200
+        }
+      ]
+    },
+    "rear_left_wheel": {
+      "name": "rear_left_wheel",
+      "anchor": [
+        -1.164,
+        1.061,
+        0.2625
+      ],
+      "parent": "rear_left_steer",
+      "joint": "rear_left_wheel_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "continuous",
+      "mass": 6,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius": 0.2625,
+          "length": 0.3,
+          "rpy": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        }
+      ],
+      "wheel_radius": 0.2625,
+      "wheel_width": 0.3356535359604965,
+      "com": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": [
+        0.14835937500000002,
+        0.20671875000000003,
+        0.14835937500000002
+      ],
+      "bounds": [
+        [
+          -0.26249992847442627,
+          -0.16782677173614502,
+          -0.26249998807907104
+        ],
+        [
+          0.2625000476837158,
+          0.16782677173614502,
+          0.26249998807907104
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "rear_left_wheel_110",
+          "material": "aluminum",
+          "triangles": 3936
+        },
+        {
+          "mesh": "rear_left_wheel_111",
+          "material": "aluminum_black",
+          "triangles": 7200
+        },
+        {
+          "mesh": "rear_left_wheel_112",
+          "material": "hub",
+          "triangles": 200
+        }
+      ]
+    },
+    "front_right_wheel": {
+      "name": "front_right_wheel",
+      "anchor": [
+        1.094,
+        -1.061,
+        0.2625
+      ],
+      "parent": "front_right_steer",
+      "joint": "front_right_wheel_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "continuous",
+      "mass": 6,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius": 0.2625,
+          "length": 0.3,
+          "rpy": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        }
+      ],
+      "wheel_radius": 0.2625,
+      "wheel_width": 0.33538033940664086,
+      "com": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": [
+        0.14835937500000002,
+        0.20671875000000003,
+        0.14835937500000002
+      ],
+      "bounds": [
+        [
+          -0.26249998807907104,
+          -0.16769015789031982,
+          -0.26249998807907104
+        ],
+        [
+          0.2625000476837158,
+          0.16769015789031982,
+          0.26249998807907104
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "front_right_wheel_113",
+          "material": "aluminum",
+          "triangles": 3936
+        },
+        {
+          "mesh": "front_right_wheel_114",
+          "material": "aluminum_black",
+          "triangles": 7200
+        },
+        {
+          "mesh": "front_right_wheel_115",
+          "material": "hub",
+          "triangles": 200
+        }
+      ]
+    },
+    "middle_right_wheel": {
+      "name": "middle_right_wheel",
+      "anchor": [
+        -0.089,
+        -1.192,
+        0.2625
+      ],
+      "parent": "bogie_right",
+      "joint": "middle_right_wheel_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "continuous",
+      "mass": 6,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius": 0.2625,
+          "length": 0.3,
+          "rpy": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        }
+      ],
+      "wheel_radius": 0.2625,
+      "wheel_width": 0.3353801656915047,
+      "com": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": [
+        0.14835937500000002,
+        0.20671875000000003,
+        0.14835937500000002
+      ],
+      "bounds": [
+        [
+          -0.26249998807907104,
+          -0.16769003868103027,
+          -0.2624998986721039
+        ],
+        [
+          0.26249998807907104,
+          0.16769015789031982,
+          0.26249992847442627
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "middle_right_wheel_116",
+          "material": "aluminum",
+          "triangles": 3936
+        },
+        {
+          "mesh": "middle_right_wheel_117",
+          "material": "aluminum_black",
+          "triangles": 7200
+        },
+        {
+          "mesh": "middle_right_wheel_118",
+          "material": "hub",
+          "triangles": 200
+        }
+      ]
+    },
+    "rear_right_wheel": {
+      "name": "rear_right_wheel",
+      "anchor": [
+        -1.164,
+        -1.061,
+        0.2625
+      ],
+      "parent": "rear_right_steer",
+      "joint": "rear_right_wheel_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "continuous",
+      "mass": 6,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius": 0.2625,
+          "length": 0.3,
+          "rpy": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        }
+      ],
+      "wheel_radius": 0.2625,
+      "wheel_width": 0.33538020374196315,
+      "com": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": [
+        0.14835937500000002,
+        0.20671875000000003,
+        0.14835937500000002
+      ],
+      "bounds": [
+        [
+          -0.26249992847442627,
+          -0.16769015789031982,
+          -0.26249992847442627
+        ],
+        [
+          0.2625000476837158,
+          0.16769009828567505,
+          0.26249992847442627
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "rear_right_wheel_119",
+          "material": "aluminum",
+          "triangles": 3936
+        },
+        {
+          "mesh": "rear_right_wheel_120",
+          "material": "aluminum_black",
+          "triangles": 7200
+        },
+        {
+          "mesh": "rear_right_wheel_121",
+          "material": "hub",
+          "triangles": 200
+        }
+      ]
+    },
+    "mast_yaw_link": {
+      "name": "mast_yaw_link",
+      "anchor": [
+        0.679,
+        -0.164,
+        1.17
+      ],
+      "parent": "base_link",
+      "joint": "mast_yaw_joint",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "type": "revolute",
+      "mass": 6,
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0.0,
+            0.0,
+            0.3400000333786011
+          ],
+          "radius": 0.05,
+          "length": 0.65
+        }
+      ],
+      "com": [
+        -0.010943830013275146,
+        -0.04337897151708603,
+        0.3357447385787964
+      ],
+      "inertia": [
+        0.36412248368227845,
+        0.3026647075494111,
+        0.10734146742410478
+      ],
+      "bounds": [
+        [
+          -0.11804622411727905,
+          -0.24880489706993103,
+          -0.03823578357696533
+        ],
+        [
+          0.09615856409072876,
+          0.16204695403575897,
+          0.7097252607345581
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "mast_yaw_link_122",
+          "material": "Material_3",
+          "triangles": 3925
+        },
+        {
+          "mesh": "mast_yaw_link_123",
+          "material": "Material_1",
+          "triangles": 7058
+        },
+        {
+          "mesh": "mast_yaw_link_124",
+          "material": "Material_0",
+          "triangles": 5403
+        }
+      ]
+    },
+    "head_pitch_link": {
+      "name": "head_pitch_link",
+      "anchor": [
+        0.679,
+        -0.164,
+        1.89
+      ],
+      "parent": "mast_yaw_link",
+      "joint": "head_pitch_joint",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "type": "revolute",
+      "mass": 4,
+      "limits": [
+        -0.65,
+        0.65
+      ],
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "box",
+          "pos": [
+            0.010999977588653564,
+            0.0,
+            0.07500004768371582
+          ],
+          "size": [
+            0.16,
+            0.5,
+            0.14
+          ]
+        }
+      ],
+      "com": [
+        0.007891565561294556,
+        0.0005154460668563843,
+        0.059956252574920654
+      ],
+      "inertia": [
+        0.09197493496288,
+        0.03452606025284529,
+        0.1094821638390225
+      ],
+      "bounds": [
+        [
+          -0.13179552555084229,
+          -0.24968275427818298,
+          -0.019931554794311523
+        ],
+        [
+          0.1475786566734314,
+          0.25071364641189575,
+          0.13984405994415283
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "head_pitch_link_125",
+          "material": "Material_3",
+          "triangles": 794
+        },
+        {
+          "mesh": "head_pitch_link_126",
+          "material": "Material_1",
+          "triangles": 6074
+        },
+        {
+          "mesh": "head_pitch_link_127",
+          "material": "Material_38",
+          "triangles": 149
+        }
+      ]
+    }
+  },
+  "materials": {
+    "default": {
+      "rgba": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.5,
+      "texture": null
+    },
+    "tex_01": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": "tex_01_png.png"
+    },
+    "tex_02": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": "tex_02_png.png"
+    },
+    "tex_04": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": "tex_04_png.png"
+    },
+    "tex_03": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": "tex_03_png.png"
+    },
+    "tex_01_001": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": "tex_01_png.png"
+    },
+    "parts_AO": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": "parts_AO_png_001.png"
+    },
+    "tex_05": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": null
+    },
+    "tex_03_002": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": null
+    },
+    "Material_0": {
+      "rgba": [
+        0.4500780701637268,
+        0.4500780701637268,
+        0.4500780701637268,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.42181816697120667,
+      "texture": null
+    },
+    "Material_1": {
+      "rgba": [
+        0.04080532118678093,
+        0.04080532118678093,
+        0.04080532118678093,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5,
+      "texture": null
+    },
+    "Material_2": {
+      "rgba": [
+        0.09462860226631165,
+        0.028214111924171448,
+        0.0057484484277665615,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5309090614318848,
+      "texture": null
+    },
+    "Material_3": {
+      "rgba": [
+        0.4241814613342285,
+        0.4241814613342285,
+        0.4241814613342285,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "texture": null
+    },
+    "Material_38": {
+      "rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.009999999776482582,
+      "texture": null
+    },
+    "Material_39": {
+      "rgba": [
+        0.5972021818161011,
+        0.9473065733909607,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 1.0,
+      "texture": null
+    },
+    "Material_8": {
+      "rgba": [
+        0.23103535175323486,
+        0.23103535175323486,
+        0.23103535175323486,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.2781818211078644,
+      "texture": null
+    },
+    "PROMISE_thermal_white": {
+      "rgba": [
+        0.8199999928474426,
+        0.8399999737739563,
+        0.8600000143051147,
+        1.0
+      ],
+      "metallic": 0.18000000715255737,
+      "roughness": 0.4300000071525574,
+      "texture": null
+    },
+    "PROMISE_black_anodized": {
+      "rgba": [
+        0.04500000178813934,
+        0.054999999701976776,
+        0.06499999761581421,
+        1.0
+      ],
+      "metallic": 0.699999988079071,
+      "roughness": 0.3499999940395355,
+      "texture": null
+    },
+    "PROMISE_illuminator": {
+      "rgba": [
+        0.699999988079071,
+        0.9100000262260437,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.10000000149011612,
+      "roughness": 0.20000000298023224,
+      "texture": null
+    },
+    "aluminum": {
+      "rgba": [
+        0.9646862149238586,
+        0.964686393737793,
+        0.9646864533424377,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.27727270126342773,
+      "texture": null
+    },
+    "aluminum_black": {
+      "rgba": [
+        0.07773852348327637,
+        0.07383769750595093,
+        0.07383769750595093,
+        1.0
+      ],
+      "metallic": 0.6000000238418579,
+      "roughness": 0.47999998927116394,
+      "texture": null
+    },
+    "hub": {
+      "rgba": [
+        0.5225215554237366,
+        0.5225215554237366,
+        0.5225215554237366,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.4000000059604645,
+      "texture": "mars_2020_hub_jpg.png"
+    }
+  },
+  "cameras": [
+    {
+      "name": "stereo_left",
+      "parent": "head_pitch_link",
+      "position": [
+        0.822,
+        0.036000000000000004,
+        1.951
+      ],
+      "baseline": 0.4,
+      "width": 1280,
+      "height": 720,
+      "hfov": 1.221730476,
+      "rate": 10
+    },
+    {
+      "name": "stereo_right",
+      "parent": "head_pitch_link",
+      "position": [
+        0.822,
+        -0.364,
+        1.951
+      ],
+      "baseline": 0.4,
+      "width": 1280,
+      "height": 720,
+      "hfov": 1.221730476,
+      "rate": 10
+    },
+    {
+      "name": "dashcam_left",
+      "parent": "head_pitch_link",
+      "position": [
+        0.822,
+        -0.009000000000000008,
+        2.003
+      ],
+      "baseline": 0.31,
+      "width": 1280,
+      "height": 720,
+      "hfov": 1.221730476,
+      "rate": 10
+    },
+    {
+      "name": "dashcam_right",
+      "parent": "head_pitch_link",
+      "position": [
+        0.822,
+        -0.319,
+        2.003
+      ],
+      "baseline": 0.31,
+      "width": 1280,
+      "height": 720,
+      "hfov": 1.221730476,
+      "rate": 10
+    }
+  ],
+  "provenance": [
+    {
+      "source": "NASA Curiosity Rover (MSL) (Clean), July 7 2026 listing",
+      "objects": [
+        "body",
+        "Chassis",
+        "radiators",
+        "RTG",
+        "antenna_LG",
+        "suspension_axel_L",
+        "suspension_axel_L2",
+        "suspension_axel_R",
+        "suspension_axel_R2",
+        "suspension_xmember",
+        "suspension_rod_L",
+        "suspension_rod_R",
+        "suspension_arm_F_L",
+        "suspension_arm_B_L",
+        "suspension_arm_B2_L",
+        "suspension_arm_F_R",
+        "suspension_arm_B_R",
+        "suspension_arm_B2_R",
+        "suspension_steer_F_L",
+        "suspension_steer_B_L",
+        "suspension_steer_F_R",
+        "suspension_steer_B_R"
+      ],
+      "operation": "Remove arm, original mast, science instruments; preserve body and rocker-bogie geometry; rotate FLU and raise 22.7 mm for larger wheels."
+    },
+    {
+      "source": "NASA Mars 2020 Perseverance Rover.blend, October 16 2026 listing",
+      "objects": [
+        "Wheels_objs"
+      ],
+      "operation": "Split all six wheels; normalize tread radius to 0.2625 m; remount on Curiosity suspension; preserve NASA treads, spokes and hub materials."
+    },
+    {
+      "source": "NASA PROMISE interactive GLB, November 7 2026 release",
+      "objects": [
+        "Mesh_0",
+        "Mesh_1",
+        "Mesh_2",
+        "Mesh_3",
+        "Mesh_17",
+        "Mesh_18",
+        "Mesh_19",
+        "Mesh_20",
+        "Mesh_21",
+        "Mesh_22",
+        "Mesh_23",
+        "Mesh_24",
+        "Mesh_25",
+        "Mesh_24.001"
+      ],
+      "operation": "Use current head, stowed TRIDENT and payload accessory meshes; manually split mast/head and create yaw/pitch joints. Exclude its chassis, wheels and suspension, which come from the requested donor models."
+    },
+    {
+      "source": "Manually authored approximation against NASA PROMISE render",
+      "objects": [
+        "arm deletion cover",
+        "NSS enclosure",
+        "HPSC / GPU exterior",
+        "UHF pedestal",
+        "illuminator arrays"
+      ],
+      "operation": "Create simplified attachment geometry; placements are illustrative, not flight CAD."
+    }
+  ],
+  "notes": [
+    "Masses, inertias, joint limits, actuator gains, friction and optical calibration are estimates, not NASA flight parameters.",
+    "Latest public PROMISE visualization used for mast/payload geometry. TRIDENT is fixed in its stowed driving pose.",
+    "Rocker differential uses q_left + q_right = 0.",
+    "Tread geometry is visual; wheel contact is a smooth cylinder. No deformable regolith model."
+  ]
+}

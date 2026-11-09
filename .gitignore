@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Blender backups and interrupted-save temp files
+*.blend1
+*.blend@
+blender/.*.blend.*
+
+# NASA donor downloads; re-fetch and verify with scripts/fetch_sources.py
+source_assets/

@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="promise">
+  <xacro:include filename="$(find promise_description)/urdf/promise.urdf" />
+  <ros2_control name="GazeboSimSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="rocker_left_joint">
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="bogie_left_joint">
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="front_left_steer_joint">
+      <command_interface name="position" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="rear_left_steer_joint">
+      <command_interface name="position" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="rocker_right_joint">
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="bogie_right_joint">
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="front_right_steer_joint">
+      <command_interface name="position" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="rear_right_steer_joint">
+      <command_interface name="position" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="front_left_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="middle_left_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="rear_left_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="front_right_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="middle_right_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="rear_right_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="mast_yaw_joint">
+      <command_interface name="position" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+    <joint name="head_pitch_joint">
+      <command_interface name="position" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+  </ros2_control>
+  <gazebo>
+    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find promise_description)/config/controllers.yaml</parameters>
+      <hold_joints>false</hold_joints>
+    </plugin>
+  </gazebo>
+  <gazebo reference="front_left_wheel">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>1000000</kp>
+    <kd>100</kd>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <gazebo reference="middle_left_wheel">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>1000000</kp>
+    <kd>100</kd>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <gazebo reference="rear_left_wheel">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>1000000</kp>
+    <kd>100</kd>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <gazebo reference="front_right_wheel">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>1000000</kp>
+    <kd>100</kd>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <gazebo reference="middle_right_wheel">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>1000000</kp>
+    <kd>100</kd>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <gazebo reference="rear_right_wheel">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>1000000</kp>
+    <kd>100</kd>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <gazebo reference="head_pitch_link">
+    <sensor name="stereo_left" type="camera">
+      <pose>0.143 0.2 0.061 0 0 0</pose>
+      <topic>/promise/stereo_left</topic>
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <gz_frame_id>stereo_left_optical_frame</gz_frame_id>
+      <camera name="stereo_left">
+        <horizontal_fov>1.221730476</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>.05</near>
+          <far>100</far>
+        </clip>
+      </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="head_pitch_link">
+    <sensor name="stereo_right" type="camera">
+      <pose>0.143 -0.2 0.061 0 0 0</pose>
+      <topic>/promise/stereo_right</topic>
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <gz_frame_id>stereo_right_optical_frame</gz_frame_id>
+      <camera name="stereo_right">
+        <horizontal_fov>1.221730476</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>.05</near>
+          <far>100</far>
+        </clip>
+      </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="head_pitch_link">
+    <sensor name="dashcam_left" type="camera">
+      <pose>0.143 0.155 0.113 0 0 0</pose>
+      <topic>/promise/dashcam_left</topic>
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <gz_frame_id>dashcam_left_optical_frame</gz_frame_id>
+      <camera name="dashcam_left">
+        <horizontal_fov>1.221730476</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>.05</near>
+          <far>100</far>
+        </clip>
+      </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="head_pitch_link">
+    <sensor name="dashcam_right" type="camera">
+      <pose>0.143 -0.155 0.113 0 0 0</pose>
+      <topic>/promise/dashcam_right</topic>
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <gz_frame_id>dashcam_right_optical_frame</gz_frame_id>
+      <camera name="dashcam_right">
+        <horizontal_fov>1.221730476</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>.05</near>
+          <far>100</far>
+        </clip>
+      </camera>
+    </sensor>
+  </gazebo>
+</robot>

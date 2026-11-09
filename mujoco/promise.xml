@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="PROMISE">
+  <compiler angle="radian" autolimits="true" inertiafromgeom="false" />
+  <option timestep=".002" gravity="0 0 -1.62" integrator="implicitfast" solver="Newton" iterations="80" cone="elliptic" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight ambient=".3 .3 .3" diffuse=".6 .6 .6" specular=".2 .2 .2" />
+  </visual>
+  <default>
+    <joint damping=".1" armature=".03" />
+    <geom friction=".9 .01 .001" condim="4" solref=".02 1" solimp=".9 .95 .001" />
+  </default>
+  <asset>
+    <texture name="ground_tex" type="2d" builtin="checker" rgb1=".22 .24 .27" rgb2=".30 .32 .35" width="512" height="512" />
+    <material name="ground_mat" texture="ground_tex" texrepeat="10 10" reflectance=".1" />
+    <material name="default" rgba="0.7 0.7 0.7 1" specular="0.3" shininess="0.5" />
+    <texture name="tex_01_tex" type="2d" file="../ros2/promise_description/textures/tex_01_png.png" />
+    <material name="tex_01" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" texture="tex_01_tex" />
+    <texture name="tex_02_tex" type="2d" file="../ros2/promise_description/textures/tex_02_png.png" />
+    <material name="tex_02" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" texture="tex_02_tex" />
+    <texture name="tex_04_tex" type="2d" file="../ros2/promise_description/textures/tex_04_png.png" />
+    <material name="tex_04" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" texture="tex_04_tex" />
+    <texture name="tex_03_tex" type="2d" file="../ros2/promise_description/textures/tex_03_png.png" />
+    <material name="tex_03" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" texture="tex_03_tex" />
+    <texture name="tex_01_001_tex" type="2d" file="../ros2/promise_description/textures/tex_01_png.png" />
+    <material name="tex_01_001" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" texture="tex_01_001_tex" />
+    <texture name="parts_AO_tex" type="2d" file="../ros2/promise_description/textures/parts_AO_png_001.png" />
+    <material name="parts_AO" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" texture="parts_AO_tex" />
+    <material name="tex_05" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" />
+    <material name="tex_03_002" rgba="0.800000012 0.800000012 0.800000012 1" specular="0.3" shininess="0.5" />
+    <material name="Material_0" rgba="0.45007807 0.45007807 0.45007807 1" specular="0.3" shininess="0.5781818330287933" />
+    <material name="Material_1" rgba="0.0408053212 0.0408053212 0.0408053212 1" specular="0.3" shininess="0.5" />
+    <material name="Material_2" rgba="0.0946286023 0.0282141119 0.00574844843 1" specular="0.3" shininess="0.46909093856811523" />
+    <material name="Material_3" rgba="0.424181461 0.424181461 0.424181461 1" specular="0.3" shininess="0.5" />
+    <material name="Material_38" rgba="1 1 1 1" specular="0.3" shininess="0.9900000002235174" />
+    <material name="Material_39" rgba="0.597202182 0.947306573 1 1" specular="0.3" shininess="0.01" />
+    <material name="Material_8" rgba="0.231035352 0.231035352 0.231035352 1" specular="0.3" shininess="0.7218181788921356" />
+    <material name="PROMISE_thermal_white" rgba="0.819999993 0.839999974 0.860000014 1" specular="0.3" shininess="0.5699999928474426" />
+    <material name="PROMISE_black_anodized" rgba="0.0450000018 0.0549999997 0.0649999976 1" specular="0.3" shininess="0.6500000059604645" />
+    <material name="PROMISE_illuminator" rgba="0.699999988 0.910000026 1 1" specular="0.3" shininess="0.7999999970197678" />
+    <material name="aluminum" rgba="0.964686215 0.964686394 0.964686453 1" specular="0.3" shininess="0.7227272987365723" />
+    <material name="aluminum_black" rgba="0.0777385235 0.0738376975 0.0738376975 1" specular="0.3" shininess="0.5200000107288361" />
+    <texture name="hub_tex" type="2d" file="../ros2/promise_description/textures/mars_2020_hub_jpg.png" />
+    <material name="hub" rgba="0.522521555 0.522521555 0.522521555 1" specular="0.3" shininess="0.5999999940395355" texture="hub_tex" />
+    <mesh name="base_link_000" file="../ros2/promise_description/meshes/base_link_000.obj" inertia="shell" />
+    <mesh name="base_link_001" file="../ros2/promise_description/meshes/base_link_001.obj" inertia="shell" />
+    <mesh name="base_link_002" file="../ros2/promise_description/meshes/base_link_002.obj" inertia="shell" />
+    <mesh name="base_link_003" file="../ros2/promise_description/meshes/base_link_003.obj" inertia="shell" />
+    <mesh name="base_link_004" file="../ros2/promise_description/meshes/base_link_004.obj" inertia="shell" />
+    <mesh name="base_link_005" file="../ros2/promise_description/meshes/base_link_005.obj" inertia="shell" />
+    <mesh name="base_link_006" file="../ros2/promise_description/meshes/base_link_006.obj" inertia="shell" />
+    <mesh name="base_link_007" file="../ros2/promise_description/meshes/base_link_007.obj" inertia="shell" />
+    <mesh name="base_link_008" file="../ros2/promise_description/meshes/base_link_008.obj" inertia="shell" />
+    <mesh name="base_link_009" file="../ros2/promise_description/meshes/base_link_009.obj" inertia="shell" />
+    <mesh name="base_link_010" file="../ros2/promise_description/meshes/base_link_010.obj" inertia="shell" />
+    <mesh name="base_link_011" file="../ros2/promise_description/meshes/base_link_011.obj" inertia="shell" />
+    <mesh name="base_link_012" file="../ros2/promise_description/meshes/base_link_012.obj" inertia="shell" />
+    <mesh name="base_link_013" file="../ros2/promise_description/meshes/base_link_013.obj" inertia="shell" />
+    <mesh name="base_link_014" file="../ros2/promise_description/meshes/base_link_014.obj" inertia="shell" />
+    <mesh name="base_link_015" file="../ros2/promise_description/meshes/base_link_015.obj" inertia="shell" />
+    <mesh name="base_link_016" file="../ros2/promise_description/meshes/base_link_016.obj" inertia="shell" />
+    <mesh name="base_link_017" file="../ros2/promise_description/meshes/base_link_017.obj" inertia="shell" />
+    <mesh name="base_link_018" file="../ros2/promise_description/meshes/base_link_018.obj" inertia="shell" />
+    <mesh name="base_link_019" file="../ros2/promise_description/meshes/base_link_019.obj" inertia="shell" />
+    <mesh name="base_link_020" file="../ros2/promise_description/meshes/base_link_020.obj" inertia="shell" />
+    <mesh name="base_link_021" file="../ros2/promise_description/meshes/base_link_021.obj" inertia="shell" />
+    <mesh name="base_link_022" file="../ros2/promise_description/meshes/base_link_022.obj" inertia="shell" />
+    <mesh name="base_link_023" file="../ros2/promise_description/meshes/base_link_023.obj" inertia="shell" />
+    <mesh name="base_link_024" file="../ros2/promise_description/meshes/base_link_024.obj" inertia="shell" />
+    <mesh name="base_link_025" file="../ros2/promise_description/meshes/base_link_025.obj" inertia="shell" />
+    <mesh name="base_link_026" file="../ros2/promise_description/meshes/base_link_026.obj" inertia="shell" />
+    <mesh name="base_link_027" file="../ros2/promise_description/meshes/base_link_027.obj" inertia="shell" />
+    <mesh name="base_link_028" file="../ros2/promise_description/meshes/base_link_028.obj" inertia="shell" />
+    <mesh name="base_link_029" file="../ros2/promise_description/meshes/base_link_029.obj" inertia="shell" />
+    <mesh name="base_link_030" file="../ros2/promise_description/meshes/base_link_030.obj" inertia="shell" />
+    <mesh name="base_link_031" file="../ros2/promise_description/meshes/base_link_031.obj" inertia="shell" />
+    <mesh name="base_link_032" file="../ros2/promise_description/meshes/base_link_032.obj" inertia="shell" />
+    <mesh name="base_link_033" file="../ros2/promise_description/meshes/base_link_033.obj" inertia="shell" />
+    <mesh name="base_link_034" file="../ros2/promise_description/meshes/base_link_034.obj" inertia="shell" />
+    <mesh name="base_link_035" file="../ros2/promise_description/meshes/base_link_035.obj" inertia="shell" />
+    <mesh name="base_link_036" file="../ros2/promise_description/meshes/base_link_036.obj" inertia="shell" />
+    <mesh name="base_link_037" file="../ros2/promise_description/meshes/base_link_037.obj" inertia="shell" />
+    <mesh name="base_link_038" file="../ros2/promise_description/meshes/base_link_038.obj" inertia="shell" />
+    <mesh name="base_link_039" file="../ros2/promise_description/meshes/base_link_039.obj" inertia="shell" />
+    <mesh name="base_link_040" file="../ros2/promise_description/meshes/base_link_040.obj" inertia="shell" />
+    <mesh name="base_link_041" file="../ros2/promise_description/meshes/base_link_041.obj" inertia="shell" />
+    <mesh name="base_link_042" file="../ros2/promise_description/meshes/base_link_042.obj" inertia="shell" />
+    <mesh name="base_link_043" file="../ros2/promise_description/meshes/base_link_043.obj" inertia="shell" />
+    <mesh name="base_link_044" file="../ros2/promise_description/meshes/base_link_044.obj" inertia="shell" />
+    <mesh name="base_link_045" file="../ros2/promise_description/meshes/base_link_045.obj" inertia="shell" />
+    <mesh name="base_link_046" file="../ros2/promise_description/meshes/base_link_046.obj" inertia="shell" />
+    <mesh name="base_link_047" file="../ros2/promise_description/meshes/base_link_047.obj" inertia="shell" />
+    <mesh name="base_link_048" file="../ros2/promise_description/meshes/base_link_048.obj" inertia="shell" />
+    <mesh name="base_link_049" file="../ros2/promise_description/meshes/base_link_049.obj" inertia="shell" />
+    <mesh name="base_link_050" file="../ros2/promise_description/meshes/base_link_050.obj" inertia="shell" />
+    <mesh name="base_link_051" file="../ros2/promise_description/meshes/base_link_051.obj" inertia="shell" />
+    <mesh name="base_link_052" file="../ros2/promise_description/meshes/base_link_052.obj" inertia="shell" />
+    <mesh name="base_link_053" file="../ros2/promise_description/meshes/base_link_053.obj" inertia="shell" />
+    <mesh name="base_link_054" file="../ros2/promise_description/meshes/base_link_054.obj" inertia="shell" />
+    <mesh name="base_link_055" file="../ros2/promise_description/meshes/base_link_055.obj" inertia="shell" />
+    <mesh name="base_link_056" file="../ros2/promise_description/meshes/base_link_056.obj" inertia="shell" />
+    <mesh name="base_link_057" file="../ros2/promise_description/meshes/base_link_057.obj" inertia="shell" />
+    <mesh name="base_link_058" file="../ros2/promise_description/meshes/base_link_058.obj" inertia="shell" />
+    <mesh name="base_link_059" file="../ros2/promise_description/meshes/base_link_059.obj" inertia="shell" />
+    <mesh name="base_link_060" file="../ros2/promise_description/meshes/base_link_060.obj" inertia="shell" />
+    <mesh name="base_link_061" file="../ros2/promise_description/meshes/base_link_061.obj" inertia="shell" />
+    <mesh name="base_link_062" file="../ros2/promise_description/meshes/base_link_062.obj" inertia="shell" />
+    <mesh name="base_link_063" file="../ros2/promise_description/meshes/base_link_063.obj" inertia="shell" />
+    <mesh name="base_link_064" file="../ros2/promise_description/meshes/base_link_064.obj" inertia="shell" />
+    <mesh name="base_link_065" file="../ros2/promise_description/meshes/base_link_065.obj" inertia="shell" />
+    <mesh name="base_link_066" file="../ros2/promise_description/meshes/base_link_066.obj" inertia="shell" />
+    <mesh name="base_link_067" file="../ros2/promise_description/meshes/base_link_067.obj" inertia="shell" />
+    <mesh name="base_link_068" file="../ros2/promise_description/meshes/base_link_068.obj" inertia="shell" />
+    <mesh name="base_link_069" file="../ros2/promise_description/meshes/base_link_069.obj" inertia="shell" />
+    <mesh name="base_link_070" file="../ros2/promise_description/meshes/base_link_070.obj" inertia="shell" />
+    <mesh name="base_link_071" file="../ros2/promise_description/meshes/base_link_071.obj" inertia="shell" />
+    <mesh name="base_link_072" file="../ros2/promise_description/meshes/base_link_072.obj" inertia="shell" />
+    <mesh name="base_link_073" file="../ros2/promise_description/meshes/base_link_073.obj" inertia="shell" />
+    <mesh name="base_link_074" file="../ros2/promise_description/meshes/base_link_074.obj" inertia="shell" />
+    <mesh name="base_link_075" file="../ros2/promise_description/meshes/base_link_075.obj" inertia="shell" />
+    <mesh name="base_link_076" file="../ros2/promise_description/meshes/base_link_076.obj" inertia="shell" />
+    <mesh name="base_link_077" file="../ros2/promise_description/meshes/base_link_077.obj" inertia="shell" />
+    <mesh name="base_link_078" file="../ros2/promise_description/meshes/base_link_078.obj" inertia="shell" />
+    <mesh name="base_link_079" file="../ros2/promise_description/meshes/base_link_079.obj" inertia="shell" />
+    <mesh name="base_link_080" file="../ros2/promise_description/meshes/base_link_080.obj" inertia="shell" />
+    <mesh name="base_link_081" file="../ros2/promise_description/meshes/base_link_081.obj" inertia="shell" />
+    <mesh name="base_link_082" file="../ros2/promise_description/meshes/base_link_082.obj" inertia="shell" />
+    <mesh name="base_link_083" file="../ros2/promise_description/meshes/base_link_083.obj" inertia="shell" />
+    <mesh name="base_link_084" file="../ros2/promise_description/meshes/base_link_084.obj" inertia="shell" />
+    <mesh name="base_link_085" file="../ros2/promise_description/meshes/base_link_085.obj" inertia="shell" />
+    <mesh name="base_link_086" file="../ros2/promise_description/meshes/base_link_086.obj" inertia="shell" />
+    <mesh name="base_link_087" file="../ros2/promise_description/meshes/base_link_087.obj" inertia="shell" />
+    <mesh name="base_link_088" file="../ros2/promise_description/meshes/base_link_088.obj" inertia="shell" />
+    <mesh name="base_link_089" file="../ros2/promise_description/meshes/base_link_089.obj" inertia="shell" />
+    <mesh name="base_link_090" file="../ros2/promise_description/meshes/base_link_090.obj" inertia="shell" />
+    <mesh name="base_link_091" file="../ros2/promise_description/meshes/base_link_091.obj" inertia="shell" />
+    <mesh name="base_link_092" file="../ros2/promise_description/meshes/base_link_092.obj" inertia="shell" />
+    <mesh name="base_link_093" file="../ros2/promise_description/meshes/base_link_093.obj" inertia="shell" />
+    <mesh name="rocker_left_094" file="../ros2/promise_description/meshes/rocker_left_094.obj" inertia="shell" />
+    <mesh name="rocker_left_095" file="../ros2/promise_description/meshes/rocker_left_095.obj" inertia="shell" />
+    <mesh name="bogie_left_096" file="../ros2/promise_description/meshes/bogie_left_096.obj" inertia="shell" />
+    <mesh name="front_left_steer_097" file="../ros2/promise_description/meshes/front_left_steer_097.obj" inertia="shell" />
+    <mesh name="rear_left_steer_098" file="../ros2/promise_description/meshes/rear_left_steer_098.obj" inertia="shell" />
+    <mesh name="rocker_right_099" file="../ros2/promise_description/meshes/rocker_right_099.obj" inertia="shell" />
+    <mesh name="rocker_right_100" file="../ros2/promise_description/meshes/rocker_right_100.obj" inertia="shell" />
+    <mesh name="bogie_right_101" file="../ros2/promise_description/meshes/bogie_right_101.obj" inertia="shell" />
+    <mesh name="front_right_steer_102" file="../ros2/promise_description/meshes/front_right_steer_102.obj" inertia="shell" />
+    <mesh name="rear_right_steer_103" file="../ros2/promise_description/meshes/rear_right_steer_103.obj" inertia="shell" />
+    <mesh name="front_left_wheel_104" file="../ros2/promise_description/meshes/front_left_wheel_104.obj" inertia="shell" />
+    <mesh name="front_left_wheel_105" file="../ros2/promise_description/meshes/front_left_wheel_105.obj" inertia="shell" />
+    <mesh name="front_left_wheel_106" file="../ros2/promise_description/meshes/front_left_wheel_106.obj" inertia="shell" />
+    <mesh name="middle_left_wheel_107" file="../ros2/promise_description/meshes/middle_left_wheel_107.obj" inertia="shell" />
+    <mesh name="middle_left_wheel_108" file="../ros2/promise_description/meshes/middle_left_wheel_108.obj" inertia="shell" />
+    <mesh name="middle_left_wheel_109" file="../ros2/promise_description/meshes/middle_left_wheel_109.obj" inertia="shell" />
+    <mesh name="rear_left_wheel_110" file="../ros2/promise_description/meshes/rear_left_wheel_110.obj" inertia="shell" />
+    <mesh name="rear_left_wheel_111" file="../ros2/promise_description/meshes/rear_left_wheel_111.obj" inertia="shell" />
+    <mesh name="rear_left_wheel_112" file="../ros2/promise_description/meshes/rear_left_wheel_112.obj" inertia="shell" />
+    <mesh name="front_right_wheel_113" file="../ros2/promise_description/meshes/front_right_wheel_113.obj" inertia="shell" />
+    <mesh name="front_right_wheel_114" file="../ros2/promise_description/meshes/front_right_wheel_114.obj" inertia="shell" />
+    <mesh name="front_right_wheel_115" file="../ros2/promise_description/meshes/front_right_wheel_115.obj" inertia="shell" />
+    <mesh name="middle_right_wheel_116" file="../ros2/promise_description/meshes/middle_right_wheel_116.obj" inertia="shell" />
+    <mesh name="middle_right_wheel_117" file="../ros2/promise_description/meshes/middle_right_wheel_117.obj" inertia="shell" />
+    <mesh name="middle_right_wheel_118" file="../ros2/promise_description/meshes/middle_right_wheel_118.obj" inertia="shell" />
+    <mesh name="rear_right_wheel_119" file="../ros2/promise_description/meshes/rear_right_wheel_119.obj" inertia="shell" />
+    <mesh name="rear_right_wheel_120" file="../ros2/promise_description/meshes/rear_right_wheel_120.obj" inertia="shell" />
+    <mesh name="rear_right_wheel_121" file="../ros2/promise_description/meshes/rear_right_wheel_121.obj" inertia="shell" />
+    <mesh name="mast_yaw_link_122" file="../ros2/promise_description/meshes/mast_yaw_link_122.obj" inertia="shell" />
+    <mesh name="mast_yaw_link_123" file="../ros2/promise_description/meshes/mast_yaw_link_123.obj" inertia="shell" />
+    <mesh name="mast_yaw_link_124" file="../ros2/promise_description/meshes/mast_yaw_link_124.obj" inertia="shell" />
+    <mesh name="head_pitch_link_125" file="../ros2/promise_description/meshes/head_pitch_link_125.obj" inertia="shell" />
+    <mesh name="head_pitch_link_126" file="../ros2/promise_description/meshes/head_pitch_link_126.obj" inertia="shell" />
+    <mesh name="head_pitch_link_127" file="../ros2/promise_description/meshes/head_pitch_link_127.obj" inertia="shell" />
+  </asset>
+  <worldbody>
+    <light pos="0 -3 6" dir="0 0 -1" diffuse=".8 .8 .8" directional="true" />
+    <geom name="ground" type="plane" size="20 20 .1" material="ground_mat" />
+    <camera name="overview" pos="5 -5 3.6" xyaxes="0.70710678 0.70710678 0 -0.2588 0.2588 0.9306" />
+    <body name="base_link" pos="0 0 0.92">
+      <freejoint name="floating_base" />
+      <inertial pos="-0.1 0 0.02" mass="760" diaginertia="220 350 400" />
+      <geom name="base_link_000" type="mesh" mesh="base_link_000" material="tex_01" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_001" type="mesh" mesh="base_link_001" material="tex_02" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_002" type="mesh" mesh="base_link_002" material="tex_04" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_003" type="mesh" mesh="base_link_003" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_004" type="mesh" mesh="base_link_004" material="tex_01_001" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_005" type="mesh" mesh="base_link_005" material="parts_AO" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_006" type="mesh" mesh="base_link_006" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_007" type="mesh" mesh="base_link_007" material="tex_01" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_008" type="mesh" mesh="base_link_008" material="tex_02" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_009" type="mesh" mesh="base_link_009" material="tex_05" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_010" type="mesh" mesh="base_link_010" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_011" type="mesh" mesh="base_link_011" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_012" type="mesh" mesh="base_link_012" material="tex_02" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_013" type="mesh" mesh="base_link_013" material="tex_03_002" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_014" type="mesh" mesh="base_link_014" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_015" type="mesh" mesh="base_link_015" material="tex_03_002" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_016" type="mesh" mesh="base_link_016" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_017" type="mesh" mesh="base_link_017" material="tex_02" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_018" type="mesh" mesh="base_link_018" material="tex_05" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_019" type="mesh" mesh="base_link_019" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_020" type="mesh" mesh="base_link_020" material="tex_03" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_021" type="mesh" mesh="base_link_021" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_022" type="mesh" mesh="base_link_022" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_023" type="mesh" mesh="base_link_023" material="Material_2" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_024" type="mesh" mesh="base_link_024" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_025" type="mesh" mesh="base_link_025" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_026" type="mesh" mesh="base_link_026" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_027" type="mesh" mesh="base_link_027" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_028" type="mesh" mesh="base_link_028" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_029" type="mesh" mesh="base_link_029" material="Material_38" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_030" type="mesh" mesh="base_link_030" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_031" type="mesh" mesh="base_link_031" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_032" type="mesh" mesh="base_link_032" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_033" type="mesh" mesh="base_link_033" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_034" type="mesh" mesh="base_link_034" material="Material_39" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_035" type="mesh" mesh="base_link_035" material="Material_38" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_036" type="mesh" mesh="base_link_036" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_037" type="mesh" mesh="base_link_037" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_038" type="mesh" mesh="base_link_038" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_039" type="mesh" mesh="base_link_039" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_040" type="mesh" mesh="base_link_040" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_041" type="mesh" mesh="base_link_041" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_042" type="mesh" mesh="base_link_042" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_043" type="mesh" mesh="base_link_043" material="Material_8" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_044" type="mesh" mesh="base_link_044" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_045" type="mesh" mesh="base_link_045" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_046" type="mesh" mesh="base_link_046" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_047" type="mesh" mesh="base_link_047" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_048" type="mesh" mesh="base_link_048" material="Material_8" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_049" type="mesh" mesh="base_link_049" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_050" type="mesh" mesh="base_link_050" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_051" type="mesh" mesh="base_link_051" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_052" type="mesh" mesh="base_link_052" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_053" type="mesh" mesh="base_link_053" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_054" type="mesh" mesh="base_link_054" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_055" type="mesh" mesh="base_link_055" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_056" type="mesh" mesh="base_link_056" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_057" type="mesh" mesh="base_link_057" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_058" type="mesh" mesh="base_link_058" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_059" type="mesh" mesh="base_link_059" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_060" type="mesh" mesh="base_link_060" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_061" type="mesh" mesh="base_link_061" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_062" type="mesh" mesh="base_link_062" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_063" type="mesh" mesh="base_link_063" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_064" type="mesh" mesh="base_link_064" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_065" type="mesh" mesh="base_link_065" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_066" type="mesh" mesh="base_link_066" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_067" type="mesh" mesh="base_link_067" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_068" type="mesh" mesh="base_link_068" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_069" type="mesh" mesh="base_link_069" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_070" type="mesh" mesh="base_link_070" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_071" type="mesh" mesh="base_link_071" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_072" type="mesh" mesh="base_link_072" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_073" type="mesh" mesh="base_link_073" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_074" type="mesh" mesh="base_link_074" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_075" type="mesh" mesh="base_link_075" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_076" type="mesh" mesh="base_link_076" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_077" type="mesh" mesh="base_link_077" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_078" type="mesh" mesh="base_link_078" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_079" type="mesh" mesh="base_link_079" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_080" type="mesh" mesh="base_link_080" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_081" type="mesh" mesh="base_link_081" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_082" type="mesh" mesh="base_link_082" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_083" type="mesh" mesh="base_link_083" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_084" type="mesh" mesh="base_link_084" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_085" type="mesh" mesh="base_link_085" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_086" type="mesh" mesh="base_link_086" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_087" type="mesh" mesh="base_link_087" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_088" type="mesh" mesh="base_link_088" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_089" type="mesh" mesh="base_link_089" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_090" type="mesh" mesh="base_link_090" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_091" type="mesh" mesh="base_link_091" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_092" type="mesh" mesh="base_link_092" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_093" type="mesh" mesh="base_link_093" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="base_link_collision_0" type="box" pos="-0.0199999996 0 0.0200000405" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.955 0.74 0.23" />
+      <geom name="base_link_collision_1" type="box" pos="-1.24000001 0 0.300000072" quat="0.990901331 0 -0.134590311 0" rgba="0.5 0.5 0.5 0" group="3" size="0.36 0.32 0.335" />
+      <body name="rocker_left" pos="0.213000059 0.796999991 0.00670001507">
+        <joint name="rocker_left_joint" axis="0 1 0" type="hinge" range="-0.65 0.65" damping="15" armature="0.5" />
+        <inertial pos="0.0848184228 0.135658562 -0.102836758" mass="20" diaginertia="0.482631106 5.29677432 5.37490501" />
+        <geom name="rocker_left_094" type="mesh" mesh="rocker_left_094" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="rocker_left_095" type="mesh" mesh="rocker_left_095" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="rocker_left_collision_0" type="cylinder" pos="0.440499961 0.132000029 -0.120849967" quat="0.364602409 0.472801023 0.635251775 0.489876983" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.475467067" />
+        <geom name="rocker_left_collision_1" type="cylinder" pos="-0.37650004 0 -0.120350003" quat="0.416989968 0.571068599 -0.571068618 -0.416989995" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.395267518" />
+        <body name="bogie_left" pos="-0.753000021 5.96046448e-08 -0.240999997">
+          <joint name="bogie_left_joint" axis="0 1 0" type="hinge" range="-0.9 0.9" damping="15" armature="0.5" />
+          <inertial pos="-0.0929295421 0.14006272 -0.125501201" mass="15" diaginertia="0.697691251 2.36137094 2.06420494" />
+          <geom name="bogie_left_096" type="mesh" mesh="bogie_left_096" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="bogie_left_collision_0" type="cylinder" pos="0.225499988 0.19749999 -0.201600015" quat="0.194139891 0.364527416 0.803836848 0.428107214" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.361246533" />
+          <geom name="bogie_left_collision_1" type="cylinder" pos="-0.312000036 0.131999969 -0.000349998474" quat="0.390425863 0.390829552 -0.589719371 -0.589110321" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.338774467" />
+          <body name="rear_left_steer" pos="-0.623999953 0.264000058 -0.000999987125">
+            <joint name="rear_left_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
+            <inertial pos="2.38418579e-07 -0.1293028 -0.214050546" mass="6" diaginertia="0.206689801 0.121967544 0.128902217" />
+            <geom name="rear_left_steer_098" type="mesh" mesh="rear_left_steer_098" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="rear_left_steer_collision_0" type="box" pos="0 -0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
+            <body name="rear_left_wheel" pos="-8.48770141e-08 -1.08718872e-07 -0.402200031">
+              <joint name="rear_left_wheel_joint" axis="0 1 0" type="hinge" />
+              <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
+              <geom name="rear_left_wheel_110" type="mesh" mesh="rear_left_wheel_110" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="rear_left_wheel_111" type="mesh" mesh="rear_left_wheel_111" material="aluminum_black" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="rear_left_wheel_112" type="mesh" mesh="rear_left_wheel_112" material="hub" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="rear_left_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
+            </body>
+          </body>
+          <body name="middle_left_wheel" pos="0.450999962 0.394999949 -0.403200018">
+            <joint name="middle_left_wheel_joint" axis="0 1 0" type="hinge" />
+            <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
+            <geom name="middle_left_wheel_107" type="mesh" mesh="middle_left_wheel_107" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="middle_left_wheel_108" type="mesh" mesh="middle_left_wheel_108" material="aluminum_black" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="middle_left_wheel_109" type="mesh" mesh="middle_left_wheel_109" material="hub" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="middle_left_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
+          </body>
+        </body>
+        <body name="front_left_steer" pos="0.881000042 0.263999879 -0.241999984">
+          <joint name="front_left_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
+          <inertial pos="-0.00150239468 -0.16186142 -0.216786861" mass="6" diaginertia="0.239480336 0.121967318 0.161692979" />
+          <geom name="front_left_steer_097" type="mesh" mesh="front_left_steer_097" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="front_left_steer_collision_0" type="box" pos="0 -0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
+          <body name="front_left_wheel" pos="-1.01089477e-07 1.29699707e-07 -0.402200031">
+            <joint name="front_left_wheel_joint" axis="0 1 0" type="hinge" />
+            <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
+            <geom name="front_left_wheel_104" type="mesh" mesh="front_left_wheel_104" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="front_left_wheel_105" type="mesh" mesh="front_left_wheel_105" material="aluminum_black" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="front_left_wheel_106" type="mesh" mesh="front_left_wheel_106" material="hub" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="front_left_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
+          </body>
+        </body>
+      </body>
+      <body name="rocker_right" pos="0.21299994 -0.796999991 0.00670001507">
+        <joint name="rocker_right_joint" axis="0 1 0" type="hinge" range="-0.65 0.65" damping="15" armature="0.5" />
+        <inertial pos="0.0860698223 -0.140186906 -0.102116972" mass="20" diaginertia="0.483562177 5.31304693 5.38875887" />
+        <geom name="rocker_right_099" type="mesh" mesh="rocker_right_099" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="rocker_right_100" type="mesh" mesh="rocker_right_100" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="rocker_right_collision_0" type="cylinder" pos="0.440500021 -0.132000029 -0.120849967" quat="0.489877025 0.635251709 0.47280105 0.364602432" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.47546713" />
+        <geom name="rocker_right_collision_1" type="cylinder" pos="-0.376499981 0 -0.120350003" quat="0.416989904 0.571068594 -0.571068673 -0.416989991" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.395267443" />
+        <body name="bogie_right" pos="-0.753000021 5.96046448e-08 -0.240999997">
+          <joint name="bogie_right_joint" axis="0 1 0" type="hinge" range="-0.9 0.9" damping="15" armature="0.5" />
+          <inertial pos="-0.0929299593 -0.144863188 -0.125501245" mass="15" diaginertia="0.69769246 2.36137258 2.06420524" />
+          <geom name="bogie_right_101" type="mesh" mesh="bogie_right_101" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="bogie_right_collision_0" type="cylinder" pos="0.225500047 -0.19750005 -0.201600015" quat="0.428107416 0.803836707 0.364527457 0.194139957" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.361246605" />
+          <geom name="bogie_right_collision_1" type="cylinder" pos="-0.311999977 -0.132000029 -0.000349998474" quat="0.589110456 0.589719342 -0.390829443 -0.390425813" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.338774437" />
+          <body name="rear_right_steer" pos="-0.624000072 -0.263999939 -0.000999987125">
+            <joint name="rear_right_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
+            <inertial pos="-2.38418579e-07 0.124502301 -0.214050502" mass="6" diaginertia="0.20668998 0.121967558 0.128902383" />
+            <geom name="rear_right_steer_103" type="mesh" mesh="rear_right_steer_103" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="rear_right_steer_collision_0" type="box" pos="0 0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
+            <body name="rear_right_wheel" pos="1.53541565e-07 -1.29699707e-07 -0.402200031">
+              <joint name="rear_right_wheel_joint" axis="0 1 0" type="hinge" />
+              <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
+              <geom name="rear_right_wheel_119" type="mesh" mesh="rear_right_wheel_119" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="rear_right_wheel_120" type="mesh" mesh="rear_right_wheel_120" material="aluminum_black" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="rear_right_wheel_121" type="mesh" mesh="rear_right_wheel_121" material="hub" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="rear_right_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
+            </body>
+          </body>
+          <body name="middle_right_wheel" pos="0.451000081 -0.395000069 -0.403200018">
+            <joint name="middle_right_wheel_joint" axis="0 1 0" type="hinge" />
+            <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
+            <geom name="middle_right_wheel_116" type="mesh" mesh="middle_right_wheel_116" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="middle_right_wheel_117" type="mesh" mesh="middle_right_wheel_117" material="aluminum_black" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="middle_right_wheel_118" type="mesh" mesh="middle_right_wheel_118" material="hub" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="middle_right_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
+          </body>
+        </body>
+        <body name="front_right_steer" pos="0.880999923 -0.264000118 -0.241999984">
+          <joint name="front_right_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
+          <inertial pos="0.00100040436 0.15760541 -0.214049846" mass="6" diaginertia="0.239480184 0.121967291 0.161692853" />
+          <geom name="front_right_steer_102" type="mesh" mesh="front_right_steer_102" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="front_right_steer_collision_0" type="box" pos="0 0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
+          <body name="front_right_wheel" pos="1.37329102e-07 1.08718872e-07 -0.402200031">
+            <joint name="front_right_wheel_joint" axis="0 1 0" type="hinge" />
+            <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
+            <geom name="front_right_wheel_113" type="mesh" mesh="front_right_wheel_113" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="front_right_wheel_114" type="mesh" mesh="front_right_wheel_114" material="aluminum_black" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="front_right_wheel_115" type="mesh" mesh="front_right_wheel_115" material="hub" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="front_right_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
+          </body>
+        </body>
+      </body>
+      <body name="mast_yaw_link" pos="0.679 -0.164 0.27">
+        <joint name="mast_yaw_joint" axis="0 0 1" type="hinge" range="-3.14159265 3.14159265" />
+        <inertial pos="-0.01094383 -0.0433789715 0.335744739" mass="6" diaginertia="0.364122484 0.302664708 0.107341467" />
+        <geom name="mast_yaw_link_122" type="mesh" mesh="mast_yaw_link_122" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="mast_yaw_link_123" type="mesh" mesh="mast_yaw_link_123" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="mast_yaw_link_124" type="mesh" mesh="mast_yaw_link_124" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="mast_yaw_link_collision_0" type="cylinder" pos="0 0 0.340000033" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.05 0.325" />
+        <body name="head_pitch_link" pos="0 0 0.72">
+          <joint name="head_pitch_joint" axis="0 1 0" type="hinge" range="-0.65 0.65" />
+          <inertial pos="0.00789156556 0.000515446067 0.0599562526" mass="4" diaginertia="0.091974935 0.0345260603 0.109482164" />
+          <geom name="head_pitch_link_125" type="mesh" mesh="head_pitch_link_125" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_126" type="mesh" mesh="head_pitch_link_126" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_127" type="mesh" mesh="head_pitch_link_127" material="Material_38" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_collision_0" type="box" pos="0.0109999776 0 0.0750000477" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.08 0.25 0.07" />
+          <camera name="stereo_left" pos="0.143 0.2 0.061" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
+          <camera name="stereo_right" pos="0.143 -0.2 0.061" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
+          <camera name="dashcam_left" pos="0.143 0.155 0.113" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
+          <camera name="dashcam_right" pos="0.143 -0.155 0.113" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
+        </body>
+      </body>
+      <site name="imu" size=".01" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+  <equality>
+    <joint name="rocker_differential" joint1="rocker_right_joint" joint2="rocker_left_joint" polycoef="0 -1 0 0 0" solref=".01 1" />
+  </equality>
+  <actuator>
+    <position name="front_left_steer_joint_servo" joint="front_left_steer_joint" kp="350" kv="45" ctrlrange="-1.4 1.4" forcerange="-150 150" />
+    <position name="rear_left_steer_joint_servo" joint="rear_left_steer_joint" kp="350" kv="45" ctrlrange="-1.4 1.4" forcerange="-150 150" />
+    <position name="front_right_steer_joint_servo" joint="front_right_steer_joint" kp="350" kv="45" ctrlrange="-1.4 1.4" forcerange="-150 150" />
+    <position name="rear_right_steer_joint_servo" joint="rear_right_steer_joint" kp="350" kv="45" ctrlrange="-1.4 1.4" forcerange="-150 150" />
+    <velocity name="front_left_wheel_drive" joint="front_left_wheel_joint" kv="30" ctrlrange="-4 4" forcerange="-80 80" />
+    <velocity name="middle_left_wheel_drive" joint="middle_left_wheel_joint" kv="30" ctrlrange="-4 4" forcerange="-80 80" />
+    <velocity name="rear_left_wheel_drive" joint="rear_left_wheel_joint" kv="30" ctrlrange="-4 4" forcerange="-80 80" />
+    <velocity name="front_right_wheel_drive" joint="front_right_wheel_joint" kv="30" ctrlrange="-4 4" forcerange="-80 80" />
+    <velocity name="middle_right_wheel_drive" joint="middle_right_wheel_joint" kv="30" ctrlrange="-4 4" forcerange="-80 80" />
+    <velocity name="rear_right_wheel_drive" joint="rear_right_wheel_joint" kv="30" ctrlrange="-4 4" forcerange="-80 80" />
+    <position name="mast_yaw_joint_servo" joint="mast_yaw_joint" kp="350" kv="45" ctrlrange="-3.14159265 3.14159265" forcerange="-150 150" />
+    <position name="head_pitch_joint_servo" joint="head_pitch_joint" kp="350" kv="45" ctrlrange="-0.65 0.65" forcerange="-150 150" />
+  </actuator>
+  <sensor>
+    <gyro name="imu_gyro" site="imu" />
+    <accelerometer name="imu_accel" site="imu" />
+    <framequat name="body_orientation" objtype="body" objname="base_link" />
+  </sensor>
+</mujoco>

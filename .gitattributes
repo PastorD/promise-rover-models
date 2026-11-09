@@ -1,0 +1,6 @@
+# Large binary 3D assets go through Git LFS.
+# Meshes (.obj/.dae), .npz and textures stay in plain git so ROS/MuJoCo
+# users can clone without git-lfs installed.
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.glb   filter=lfs diff=lfs merge=lfs -text
+*.usdc  filter=lfs diff=lfs merge=lfs -text

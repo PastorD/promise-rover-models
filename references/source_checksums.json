@@ -1,0 +1,22 @@
+[
+  {
+    "file": "promise_nasa.glb",
+    "sha256": "67fc1f34035655ed9ca8711fc572a2645c95d9c62b484e81055b1dcda7c436ef",
+    "size_bytes": 6671336
+  },
+  {
+    "file": "perseverance.glb",
+    "sha256": "10db7c03a5e63a5a3b3e7baa6243aa4918ba045fa8ff0a731d0217491adc727f",
+    "size_bytes": 4987176
+  },
+  {
+    "file": "curiosity_clean.zip",
+    "sha256": "d48c61a9f2e6873ce4662706f49470edb4f040b7374750ab59f990b3ecc2a836",
+    "size_bytes": 6123157
+  },
+  {
+    "file": "perseverance_blend.zip",
+    "sha256": "5a359ba0b28efd2846f788fee036ae7839db91a3e17b708f8132857f7ed7bf46",
+    "size_bytes": 6966559
+  }
+]
