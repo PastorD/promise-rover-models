@@ -1,0 +1,73 @@
+{
+  "name": "os1",
+  "model": "Ouster OS1 Rev8",
+  "parent": "os1_link",
+  "frame": "os1_lidar_frame",
+  "optical_offset": [
+    0,
+    0,
+    0.0402
+  ],
+  "channels": 128,
+  "columns": 1024,
+  "rate_hz": 10,
+  "vertical_fov_deg": 44,
+  "vertical_min_deg": -22,
+  "vertical_max_deg": 22,
+  "horizontal_fov_deg": 360,
+  "min_range_m": 0.5,
+  "max_range_m": 170,
+  "housing_diameter_m": 0.087,
+  "housing_height_m": 0.05835,
+  "mass_kg": 0.5,
+  "calibration": "Uniform elevation, zero azimuth offsets, approximate optical origin; not device-calibrated beam intrinsics.",
+  "sampling": "Instantaneous full frame, single geometric return; no packet transport, reflectivity, native RGB, dual returns or calibrated noise.",
+  "mount_rpy_rad": [
+    0,
+    0.39269908169872414,
+    0
+  ],
+  "mount_pitch_down_deg": 22.5,
+  "mount_anchor_world_m": [
+    0.692,
+    -0.164,
+    1.9522
+  ],
+  "enclosure": {
+    "outer_bounds_m": [
+      [
+        0.6066039800643921,
+        -0.413682758808136,
+        1.928886890411377
+      ],
+      [
+        0.7496998310089111,
+        0.08671365678310394,
+        2.028966188430786
+      ]
+    ],
+    "wall_thickness_m": 0.003,
+    "front_plane_x_m": 0.7496998310089111,
+    "opening_width_m": 0.15,
+    "opening_bottom_z_m": 1.933,
+    "opening_top_z_m": 2.025,
+    "opening_center_y_m": -0.164,
+    "note": "True open aperture and hollow cavity; no glass cover. Original enclosure footprint and four camera meshes retained."
+  },
+  "installation": "Recessed inside white mast head, behind a front aperture. Enclosure blocks most side/rear directions; do not interpret the native 360-degree scan grid as unobstructed coverage.",
+  "head_visible_mask_encoding": "zlib+packbits-little-base64",
+  "head_visible_mask_b64": "eNrt28FthDAQBVCzRCKHSFYqIJ3QSjrBHaQlS2nEJfjoA8IRJpccVh4kf40c/hSwb8Us5u/Y5Py3FgOtlGs1QP0qny2SD3V/0b382AYI+DzieNeDP+F834NvVW8/+jPOjz34i+7ye3t/xfkbfUHh/L0LHxeAMn3NAOboqwZA34cPC2CBvmoAjPRVA2CirxoAN/qqAXTvxEcFwExfMwA6+qoB1NNXDaCBvmoAjfRVA6i+/y3RA84foqT5EXX/rZIlcDIR9Pzzs2z/O6DypxX8BQJOv81DsAbaF4Os6g/APnT9yfxr39Gnr3T6gz79qj/Qp6/oG/r06d/Wv/v6d/f8wf8fR72q+efs6a29/HHBd4AJ2KfML7PXAJjAnlM1r+eXaxqU/eoAtMxeA2ACm4qflP3qEYD1d1LbvLbS013kR5gvO3yRUL5gC/bsUnt/F/pD6RLAX4xoC9Si/NWI3z9DxLDymZItqNIlhD+KTmCt49Gl5jHMlc5KTiC9H1cJ4c+yE0Dj8S0R/ip9/2sHxEBfdhZF9ZVB/oVqHsAC/SvVPIDFvvzmASzRv1LNA9izJ88Puviogg==",
+  "head_visibility": {
+    "total_rays": 131072,
+    "head_clear_rays": 38314,
+    "head_blocked_rays": 92758,
+    "forward_center_all_128_channels_clear": true,
+    "rear_center_all_channels_blocked": true,
+    "fully_clear_horizontal_sector_deg": [
+      -44.6484375,
+      44.6484375
+    ],
+    "native_vertical_fov_deg": 44,
+    "scope": "Only geometry rigidly attached to head_pitch_link; excludes OS1 case. Other rover/environment occlusion is dynamic."
+  }
+}

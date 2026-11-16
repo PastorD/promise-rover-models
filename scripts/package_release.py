@@ -10,15 +10,18 @@ OUT = ROOT.parent / "deliverables"
 OUT.mkdir(exist_ok=True)
 
 common = [ROOT / p for p in (
-    "README.md", "NOTICE.md", "LICENSE", "validation.json",
-    "data/robot_spec.json", "references/source_checksums.json",
-    "references/blender_validation.json", "previews/promise_rover.png",
+    "README.md", "SENSORS.md", "NOTICE.md", "LICENSE", "validation.json",
+    "data/robot_spec.json", "data/os1_rev8_profile.json", "data/head_visibility_mask.json", "references/source_checksums.json",
+    "references/blender_validation.json", "references/sensor_validation.json",
+    "references/recessed_mount_validation.json", "references/recessed_exports_validation.json",
+    "previews/promise_rover.png", "previews/turret_sensors.png",
 )]
 
 def files_in(directory):
     return [p for p in (ROOT / directory).rglob("*")
             if p.is_file() and "__pycache__" not in p.parts
-            and not p.name.endswith(".blend1")]
+            and not p.name.startswith(".")
+            and not p.name.endswith((".blend1", ".partial"))]
 
 ros = files_in("ros2")
 usd = files_in("usd")
@@ -41,26 +44,36 @@ def archive(name, files):
 archive("promise_ros2_gazebo.zip", [p for p in ros if p.suffix not in {".obj", ".npz"}])
 archive("promise_mujoco_4.zip", files_in("mujoco") + texture_files
         + list(mesh_prefix.glob("*.obj"))
-        + [ROOT / "scripts/mujoco_demo.py", ROOT / "scripts/kinematics.py"])
+        + [ROOT / ("scripts/"+n) for n in ["mujoco_demo.py", "kinematics.py", "mujoco_sensors.py", "sensor_rays.py"]])
 archive("promise_isaac_usd.zip", usd
-        + [ROOT / "scripts/isaac_demo.py", ROOT / "scripts/kinematics.py"])
+        + [ROOT / "scripts/isaac_demo.py", ROOT / "scripts/kinematics.py", ROOT / "scripts/sensor_rays.py"])
+archive("promise_blender_sensors.zip", files_in("blender")
+        + [ROOT / ("scripts/"+n) for n in ["visionsim_capture.py", "blender_sensors.py", "sensor_rays.py", "show_lidar_points.py"]])
+
+archive("promise_sensor_update_source.zip", files_in("scripts") + files_in("data")
+        + files_in("references")
+        + [p for p in ros if "meshes" not in p.parts and "textures" not in p.parts]
+        + [ROOT / "source_assets/os1_rev8_cad.zip", ROOT / "source_assets/os1_rev8_datasheet.pdf"])
 
 source_files = [ROOT / "source_assets" / name for name in
-                ("curiosity_clean.zip", "perseverance_blend.zip", "perseverance.glb", "promise_nasa.glb")]
+                ("curiosity_clean.zip", "perseverance_blend.zip", "perseverance.glb", "promise_nasa.glb", "os1_rev8_cad.zip", "os1_rev8_datasheet.pdf")]
 archive("promise_rover_complete.zip", ros + usd + files_in("mujoco")
         + files_in("blender") + files_in("glb") + files_in("scripts")
-        + files_in("previews") + source_files
-        + [ROOT / "references/promise-7.jpg", ROOT / "references/promise_reference_render.png"])
+        + files_in("previews") + files_in("data") + source_files
+        + files_in("references"))
 
 for source, name in (
     (ROOT / "glb/promise.glb", "promise.glb"),
     (ROOT / "blender/promise_wheel_animation.blend", "promise_wheel_animation.blend"),
     (ROOT / "previews/promise_rover.png", "promise_rover.png"),
+    (ROOT / "previews/turret_sensors.png", "turret_sensors.png"),
     (ROOT / "README.md", "PROMISE_README.md"),
+    (ROOT / "SENSORS.md", "SENSORS.md"),
 ):
     shutil.copy2(source, OUT / name)
 
 manifest = [{"file": p.name, "bytes": p.stat().st_size,
              "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
-            for p in sorted(OUT.iterdir()) if p.is_file() and p.name != "release_manifest.json"]
+            for p in sorted(OUT.iterdir()) if p.is_file() and p.name != "release_manifest.json"
+            and not p.name.endswith(".partial")]
 (OUT / "release_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

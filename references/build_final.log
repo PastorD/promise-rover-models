@@ -1,0 +1,20 @@
+Read blend: "source_assets/curiosity_clean/Curiosity Rover (MSL) (Clean).blend"
+LOD rejected due to displaced vertices: PROMISE_Mesh_0
+LOD rejected due to displaced vertices: PROMISE_Mesh_1
+LOD rejected due to displaced vertices: PROMISE_Mesh_3
+LOD rejected due to displaced vertices: PROMISE_Mesh_18
+LOD rejected due to displaced vertices: PROMISE_compact_mast
+LOD rejected due to displaced vertices: PROMISE_Mesh_22
+Error: Image 'tex_01_png.png' does not have any image data
+Traceback (most recent call last):
+  File "scripts/build_geometry.py", line 267, in <module>
+    key=material(mesh.materials[mi] if mi<len(mesh.materials) else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scripts/build_geometry.py", line 257, in material
+    if n.type=='TEX_IMAGE' and n.image:texture=imagefile(n.image)
+                                               ^^^^^^^^^^^^^^^^^^
+  File "scripts/build_geometry.py", line 236, in imagefile
+    im.filepath_raw=str(path);im.file_format='PNG';im.save()
+                                                   ^^^^^^^^^
+RuntimeError: Error: Image 'tex_01_png.png' does not have any image data
+

@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>PROMISE's Payload in 3D</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" sizes="192x192" type="image/png" href="./favicon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" crossorigin src="./assets/index-yLyZFI2T.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CPAujc2l.css">
+  </head>
+  <body>
+    
+    <model-viewer
+      id="the-model"
+      loading="eager"
+      reveal="auto"
+      src="promise-rover-draco-x2.glb"
+      skybox-image="qwantani_moon_noon_puresky_64_32_normal.jpg"
+      environment-image="qwantani_moon_noon_puresky_64_32_uhdr_via_tool.jpg"
+      camera-controls
+      camera-orbit="37.46deg 73.72deg 8.562m"
+      field-of-view="30deg"
+      tone-mapping="neutral"
+      shadow-intensity="1"
+      interaction-prompt="none"
+      interpolation-decay="150"
+      autoplay
+    >
+      
+      <button
+        id="fullscreen-button"
+        role="button"
+        aria-controls="model-viewer"
+        tabindex="0"
+        aria-label="Enter full screen"
+        style="display: inline-flex"
+      >
+        <svg
+          class="icon-expand"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 16C-7.72516e-07 7.16344 7.16344 7.72517e-07 16 0C24.8366 -7.72516e-07 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 7.72516e-07 24.8366 0 16Z"
+            fill="currentColor"
+          ></path>
+          <path
+            d="M16.9185 21.7532L16.9185 20.3056L12.9271 20.3127L20.3126 12.9271L20.3056 16.9185L21.7532 16.9185L21.7532 10.4395L15.2741 10.4395L15.2671 11.8801L19.2656 11.8801L11.88 19.2656L11.88 15.2672L10.4395 15.2742L10.4395 21.7532L16.9185 21.7532Z"
+            fill="white"
+          ></path>
+        </svg>
+        <svg
+          class="icon-close hidden"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 16C-7.72516e-07 7.16344 7.16344 7.72517e-07 16 0C24.8366 -7.72516e-07 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 7.72516e-07 24.8366 0 16Z"
+            fill="currentColor"
+          ></path>
+          
+          <path
+            transform="translate(11, 11) scale(0.5)"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.58204 10.0006L-8.80957e-05 18.5828L1.41621 19.9949L9.99625 11.4149L18.5827 20.0013L19.999 18.5892L11.4105 10.0006L19.999 1.41213L18.5827 0L9.99625 8.58643L1.413 0.00317653L-0.0032959 1.41531L8.58204 10.0006Z"
+            fill="white"
+          ></path>
+        </svg>
+      </button>
+
+      
+      <div class="interaction-overlay"></div>
+
+      
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-1"
+        data-title="The Regolith and Ice Drill for Exploring New Terrain (TRIDENT)"
+        data-text="Drill for extracting regolith from up to 3 feet below the surface"
+        data-position="0.171973 1.43762 -0.267463"
+        data-orbit="-5.43042379907695rad 0.9739692101599909rad 4.738624709217788m"
+        data-target="-0.000005245208740234375m 0.9235504680339091m -0.18218540529493665m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">TRIDENT</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-2"
+        data-title="Surface Characterization and Autonomous Navigation in 3D (SCAN-3D)"
+        data-text="Imaging lidar for building real-time 3D maps"
+        data-normal="-1 1 0"
+        data-position="-0.25937 2.05373 0.689892"
+        data-orbit="-0.8505072939418935rad 1.254483792904702rad 6.389416828844494m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-field-of-view="20deg"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">SCAN-3D</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-3"
+        data-title="Mass Spectrometer Observing Lunar Operations (MSOLO)"
+        data-text="Mass spectrometer for analyzing regolith composition"
+        data-normal="1 -1 1"
+        data-position="0.01967 0.532083 0.637918"
+        data-orbit="-0.4470077979465632rad 2.482846684822901rad 2.646038545612271m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-field-of-view="20deg"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">MSOLO</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-4"
+        data-text="Camera system for capturing continuous panoramas"
+        data-normal="1 1 0"
+        data-position="0.107747 1.9929 0.734801"
+        data-orbit="0.5232239875524223rad 1.0218943695829135rad 6.389416828844494m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-field-of-view="20deg"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">Lunar Dashcam</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-5"
+        data-title="Radiation Assessment Detector (RAD)"
+        data-text="Radiation detector to help protect future astronauts"
+        data-normal="1 1 1"
+        data-position="0.431116 1.17642 0.139009"
+        data-orbit="1.1338734386937206rad 0.9594323712023792rad 5.334516259293991m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">RAD</div>
+      </button>
+
+      
+      
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-6"
+        data-title="Neutron Spectrometer System (NSS)"
+        data-text="Spectrometer for identifying potential subsurface water ice"
+        data-normal="-1 1 0"
+        data-position="-0.740579 0.943519 0.742504"
+        data-orbit="-1.0175787270328256rad 1.4870732162264908rad 6.60611961189284m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">NSS</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-7"
+        data-title="Laser Retroreflector Array (LRA)"
+        data-text="Laser retroreflector array for pinpoint geolocation"
+        data-normal="-1 1 0"
+        data-position="-0.518387 1.31368 -0.430738"
+        data-orbit="-2.3404310721755rad 0.8220128339157516rad 6.161308636162028m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">LRA</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-8"
+        data-title="High-speed Intelligent Robust Autonomous Terrain Exploration (HI-RATE)"
+        data-text="Autonomous surface navigation software and algorithms"
+        data-normal="-1 1 0"
+        data-position="-0.709629 0.740175 -0.099979"
+        data-orbit="-0.8976269810491053rad 1.7596389466817115rad 6.161308636162028m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">HI-RATE</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-9"
+        data-title="High Performance Spaceflight Computing (HPSC)"
+        data-text="Next-generation, radiation-tolerant processor"
+        data-normal="-1 1 0"
+        data-position="-0.660851 0.757036 0.109821"
+        data-orbit="-0.8976269810491053rad 1.7596389466817115rad 6.161308636162028m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">HPSC</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-10"
+        data-title="Near-Infrared Volatiles Spectrometer System (NIRVSS)"
+        data-text="Spectrometer for identifying minerals and potential ices"
+        data-normal="-1 0 1"
+        data-position="0.002011 0.807647 0.906814"
+        data-orbit="0.18897890644895393rad 1.6542468642390284rad 6.161308636162028m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">NIRVSS</div>
+      </button>
+
+      
+      <button
+        class="hotspot"
+        slot="hotspot-11"
+        data-title="Lunar Advanced Filter Observing Radiometer for Geologic Exploration (LAFORGE)"
+        data-text="Imaging radiometer for mapping ultra-cold temperatures"
+        data-normal="-1 1 1"
+        data-position="-0.346146 1.06084 1.08587"
+        data-orbit="0.19624732592776098rad 1.6433442350208187rad 7.039525177989528m"
+        data-target="-0.008563285978468893m 1.0155510902404785m -0.14943288786535125m"
+        data-visibility-attribute="visible"
+      >
+        <div class="hotspot-annotation">LAFORGE</div>
+      </button>
+
+      
+      <img slot="poster" src="poster.webp" class="poster" alt="Loading model..." />
+
+      
+      <svg id="lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="line-container">
+        <line id="annotation-line" class="annotation-line hidden"></line>
+      </svg>
+      
+      <div class="progress-bar" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      
+      <div class="model-controls">
+        <span class="icon hidden"
+          ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.97624 13.786C8.97624 14.3898 8.97624 15.7986 8.97624 16.4024C10.0787 15.4967 11.8827 13.9873 12.9852 13.0816C11.8827 12.176 10.0787 10.6666 8.97624 9.76091V12.3772C7.87379 12.3772 6.77133 12.2766 5.86932 12.0754C5.56865 8.75464 6.06977 5.0314 8.07423 2.5157V2.41507C8.07423 2.41507 7.77356 0.805024 7.77356 0.704396C5.86932 2.11319 4.96731 4.42763 4.56642 6.8427C2.16106 7.24522 -1.94809 9.3584 1.05861 11.8741C3.1633 13.3835 6.27022 13.6854 8.97624 13.786ZM3.66441 8.65401C3.86486 8.55338 4.06531 8.55338 4.26575 8.45275C4.16553 9.15715 4.16553 9.86154 4.16553 10.5659C4.16553 10.9685 4.16553 11.2703 4.26575 11.6728C3.26352 11.371 1.65995 10.8678 1.4595 10.0628C1.65995 9.3584 2.66218 8.95589 3.66441 8.65401Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M18.9986 8.2515C18.3972 7.84898 17.6957 7.44647 16.7937 7.14459C16.8939 7.64773 16.8939 8.2515 16.9941 8.85526C18.9986 9.76092 18.9986 10.3647 16.9941 11.1697C16.9941 11.7735 16.8939 12.2766 16.7937 12.8804C18.9986 12.2766 21.4039 10.2641 18.9986 8.2515Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M15.4908 6.8427C15.0899 4.93077 14.4885 3.32072 13.3861 1.8113L14.8894 0C13.5865 0 10.9807 0 9.67781 0C9.97848 1.50942 10.3794 3.62261 10.5798 5.13203L12.3838 3.01884C13.0854 4.02512 13.5865 5.13203 13.8872 6.54082C11.9829 6.23894 9.57758 6.23894 7.47289 6.33956C7.37267 6.8427 7.17222 7.34584 7.17222 7.84898C9.27691 7.64773 12.0832 7.64773 14.1879 8.05024C14.4885 10.7672 14.1879 13.786 12.8849 16.2011C10.7803 20.3269 7.67334 18.4149 6.47066 14.7923C5.86932 14.6917 5.36821 14.5911 4.76687 14.4904C5.96955 19.7231 11.0809 22.5407 14.0876 16.9055C15.7914 13.9873 16.0921 10.1634 15.4908 6.8427Z"
+              fill="currentColor"
+            ></path></svg></span
+        ><span class="text">Loading…</span>
+      </div>
+      <div
+        id="info-panel"
+        class="hidden"
+        role="dialog"
+        aria-labelledby="panel-title"
+        aria-describedby="panel-text"
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <div class="panel-header">
+          
+          <h2 id="panel-title">Title</h2>
+          
+          <button id="panel-close" aria-label="Close annotation details">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.58533 10.0006L0.0032078 18.5828L1.4195 19.9949L9.99955 11.4149L18.586 20.0013L20.0023 18.5892L11.4138 10.0006L20.0023 1.41213L18.586 0L9.99955 8.58643L1.41629 0.00317653L0 1.41531L8.58533 10.0006Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        
+        <p id="panel-text" aria-live="polite" aria-atomic="true">Summary</p>
+        
+        <div class="panel-nav">
+          <button id="panel-prev" aria-label="Previous annotation">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="transform: scaleX(-1)"
+            >
+              <path
+                d="M10 0.5C15.2467 0.499999 19.5 4.75329 19.5 10C19.5 15.2467 15.2467 19.5 10 19.5C4.75329 19.5 0.5 15.2467 0.5 10C0.499999 4.75329 4.75329 0.5 10 0.5Z"
+                stroke="currentColor"
+              />
+              <path
+                d="M11.0552 10L7.80005 6.76716L8.57249 6L12.6 10L8.57249 14L7.80005 13.2328L11.0552 10Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button id="panel-next" aria-label="Next annotation">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 0.5C15.2467 0.499999 19.5 4.75329 19.5 10C19.5 15.2467 15.2467 19.5 10 19.5C4.75329 19.5 0.5 15.2467 0.5 10C0.499999 4.75329 4.75329 0.5 10 0.5Z"
+                stroke="currentColor"
+              />
+              <path
+                d="M11.0552 10L7.80005 6.76716L8.57249 6L12.6 10L8.57249 14L7.80005 13.2328L11.0552 10Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </model-viewer>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+  </body>
+</html>

@@ -6,6 +6,7 @@ from pxr import Usd, UsdGeom, UsdPhysics, UsdShade, UsdLux, Sdf, Gf, Vt
 
 ROOT=pathlib.Path(__file__).resolve().parents[1];P=ROOT/'ros2/promise_description'
 spec=json.loads((ROOT/'data/robot_spec.json').read_text());L=spec['links'];MAT=spec['materials']
+lidar=spec['lidar']
 for d in [P/'urdf',P/'config',P/'launch',P/'worlds',ROOT/'mujoco',ROOT/'usd',ROOT/'usd/textures']:d.mkdir(parents=True,exist_ok=True)
 def f(v):return ' '.join(f'{float(x):.9g}' for x in v)
 def sub(p,tag,**kw):return E.SubElement(p,tag,{k:str(v) for k,v in kw.items()})
@@ -56,7 +57,9 @@ for name,l in L.items():
         if c['type']=='box':sub(g,'box',size=f(c['size']))
         else:sub(g,'cylinder',radius=c['radius'],length=c['length'])
     if l['parent']:
-        j=sub(urdf,'joint',name=l['joint'],type=l['type']);sub(j,'parent',link=l['parent']);sub(j,'child',link=name);sub(j,'origin',xyz=f(posrel(l['anchor'],L[l['parent']]['anchor'])),rpy='0 0 0');sub(j,'axis',xyz=f(l['axis']))
+        j=sub(urdf,'joint',name=l['joint'],type=l['type']);sub(j,'parent',link=l['parent']);sub(j,'child',link=name);sub(j,'origin',xyz=f(posrel(l['anchor'],L[l['parent']]['anchor'])),rpy=f(l.get('rpy',[0,0,0])))
+        if l['type']=='fixed':continue
+        sub(j,'axis',xyz=f(l['axis']))
         limit=dict(effort=80 if name.endswith('_wheel') else 150,velocity=4 if name.endswith('_wheel') else .6)
         if l['limits']:limit.update(lower=l['limits'][0],upper=l['limits'][1])
         sub(j,'limit',**limit);sub(j,'dynamics',damping=15 if name.startswith(('rocker','bogie')) else .1,friction=.05)
@@ -65,6 +68,7 @@ def fixed_frame(name,parent,pos,rpy=[0,0,0]):
     sub(urdf,'link',name=name);j=sub(urdf,'joint',name=name+'_joint',type='fixed');sub(j,'parent',link=parent);sub(j,'child',link=name);sub(j,'origin',xyz=f(pos),rpy=f(rpy))
 fixed_frame('base_footprint','base_link',[0,0,-.9])
 fixed_frame('imu_link','base_link',[0,0,0])
+fixed_frame(lidar['frame'],lidar['parent'],lidar['optical_offset'])
 for c in spec['cameras']:
     fixed_frame(c['name']+'_frame',c['parent'],posrel(c['position'],L[c['parent']]['anchor']))
     fixed_frame(c['name']+'_optical_frame',c['name']+'_frame',[0,0,0],[-math.pi/2,0,-math.pi/2])
@@ -75,7 +79,7 @@ x=E.Element('robot',{'xmlns:xacro':'http://www.ros.org/wiki/xacro','name':'promi
 sub(x,'xacro:include',filename='$(find promise_description)/urdf/promise.urdf')
 control=sub(x,'ros2_control',name='GazeboSimSystem',type='system');sub(sub(control,'hardware'),'plugin').text='gz_ros2_control/GazeboSimSystem'
 for name,l in L.items():
-    if not l['joint']:continue
+    if not l['joint'] or l['type']=='fixed':continue
     j=sub(control,'joint',name=l['joint'])
     if name.endswith('_wheel'):sub(j,'command_interface',name='velocity')
     elif name.endswith('_steer') or name in ['mast_yaw_link','head_pitch_link']:sub(j,'command_interface',name='position')
@@ -91,7 +95,19 @@ for c in spec['cameras']:
     fx=c['width']/(2*math.tan(c['hfov']/2));cx=(c['width']-1)/2;cy=(c['height']-1)/2;tx=-fx*c['baseline'] if c['name'].endswith('right') else 0
     calibration={'image_width':c['width'],'image_height':c['height'],'camera_name':c['name'],'camera_matrix':{'rows':3,'cols':3,'data':[fx,0,cx,0,fx,cy,0,0,1]},'distortion_model':'plumb_bob','distortion_coefficients':{'rows':1,'cols':5,'data':[0]*5},'rectification_matrix':{'rows':3,'cols':3,'data':[1,0,0,0,1,0,0,0,1]},'projection_matrix':{'rows':3,'cols':4,'data':[fx,0,cx,tx,0,fx,cy,0,0,0,1,0]}}
     (P/'config'/f"{c['name']}_calibration.yaml").write_text(json.dumps(calibration,indent=2)) # JSON is valid YAML.
+g=sub(x,'gazebo',reference=lidar['parent']);s=sub(g,'sensor',name='os1_rev8',type='gpu_lidar')
+sub(s,'pose').text=f(lidar['optical_offset'])+' 0 0 0';sub(s,'topic').text='/promise/os1';sub(s,'always_on').text='true';sub(s,'update_rate').text=str(lidar['rate_hz']);sub(s,'visualize').text='false';sub(s,'gz_frame_id').text=lidar['frame']
+scan=sub(sub(s,'lidar'),'scan');horizontal=sub(scan,'horizontal')
+for k,v in [('samples',lidar['columns']),('resolution',1),('min_angle',0),('max_angle',2*math.pi*(1-1/lidar['columns']))]:sub(horizontal,k).text=str(v)
+vertical=sub(scan,'vertical')
+for k,v in [('samples',lidar['channels']),('resolution',1),('min_angle',math.radians(lidar['vertical_min_deg'])),('max_angle',math.radians(lidar['vertical_max_deg']))]:sub(vertical,k).text=str(v)
+range_element=sub(s.find('lidar'),'range')
+for k,v in [('min',lidar['min_range_m']),('max',lidar['max_range_m']),('resolution',.001)]:sub(range_element,k).text=str(v)
 write(x,P/'urdf/promise.gazebo.urdf.xacro')
+bridge=json.loads((P/'config/bridge.yaml').read_text());bridge=[b for b in bridge if b.get('gz_topic_name')!='/promise/os1/points']
+bridge.append(dict(ros_topic_name='/promise/os1/points_raw',gz_topic_name='/promise/os1/points',ros_type_name='sensor_msgs/msg/PointCloud2',gz_type_name='gz.msgs.PointCloudPacked',direction='GZ_TO_ROS',qos_profile='SENSOR_DATA'))
+(P/'config/bridge.yaml').write_text(json.dumps(bridge,indent=2));(P/'config/os1_rev8_profile.json').write_text(json.dumps(lidar,indent=2))
+shutil.copy2(ROOT/'scripts/sensor_rays.py',P/'scripts/sensor_rays.py')
 
 # Native MJCF 4.0: six torque-limited velocity actuators, position servos,
 # passive rocker/bogie joints and an ideal differential equality constraint.
@@ -114,20 +130,21 @@ bodies={}
 for name,l in L.items():
     parent=bodies[l['parent']] if l['parent'] else w
     p=posrel(l['anchor'],L[l['parent']]['anchor']) if l['parent'] else [0,0,.92]
-    b=sub(parent,'body',name=name,pos=f(p));bodies[name]=b
-    if l['parent']:
+    b=sub(parent,'body',name=name,pos=f(p),quat=f(quat(l.get('rpy',[0,0,0]))));bodies[name]=b
+    if l['parent'] and l['type']!='fixed':
         attrs=dict(name=l['joint'],axis=f(l['axis']),type='hinge')
         if l['limits']:attrs['range']=f(l['limits'])
         if name.startswith(('rocker','bogie')):attrs.update(damping=15,armature=.5)
         sub(b,'joint',**attrs)
-    else:sub(b,'freejoint',name='floating_base')
+    elif not l['parent']:sub(b,'freejoint',name='floating_base')
     sub(b,'inertial',pos=f(l['com']),mass=l['mass'],diaginertia=f(l['inertia']))
     for v in l['visuals']:sub(b,'geom',name=v['mesh'],type='mesh',mesh=v['mesh'],material=v['material'],contype=0,conaffinity=0,group=2,density=0)
     for i,c in enumerate(l['collisions']):
         attrs=dict(name=name+'_collision_'+str(i),type=c['type'],pos=f(c['pos']),quat=f(quat(c.get('rpy',[0,0,0]))),rgba='0.5 0.5 0.5 0',group=3)
         attrs['size']=f(np.array(c['size'])/2) if c['type']=='box' else f([c['radius'],c['length']/2])
         sub(b,'geom',**attrs)
-for c in spec['cameras']:sub(bodies[c['parent']],'camera',name=c['name'],pos=f(posrel(c['position'],L[c['parent']]['anchor'])),xyaxes='0 -1 0 0 0 1',fovy=math.degrees(2*math.atan(c['height']/c['width']*math.tan(c['hfov']/2))))
+for c in spec['cameras']:sub(bodies[c['parent']],'camera',name=c['name'],pos=f(posrel(c['position'],L[c['parent']]['anchor'])),xyaxes='0 -1 0 0 0 1',resolution=f([c['width'],c['height']]),fovy=math.degrees(2*math.atan(c['height']/c['width']*math.tan(c['hfov']/2))))
+sub(bodies[lidar['parent']],'site',name=lidar['frame'],pos=f(lidar['optical_offset']),size='.003',rgba='0 .8 .6 0',group=4)
 sub(bodies['base_link'],'site',name='imu',size='.01',rgba='0 0 0 0')
 eq=sub(m,'equality');sub(eq,'joint',name='rocker_differential',joint1='rocker_right_joint',joint2='rocker_left_joint',polycoef='0 -1 0 0 0',solref='.01 1')
 act=sub(m,'actuator')
@@ -135,6 +152,8 @@ for name,l in L.items():
     if name.endswith('_wheel'):sub(act,'velocity',name=name+'_drive',joint=l['joint'],kv=30,ctrlrange='-4 4',forcerange='-80 80')
     elif name.endswith('_steer') or name in ['mast_yaw_link','head_pitch_link']:sub(act,'position',name=l['joint']+'_servo',joint=l['joint'],kp=350,kv=45,ctrlrange=f(l['limits']),forcerange='-150 150')
 sen=sub(m,'sensor');sub(sen,'gyro',name='imu_gyro',site='imu');sub(sen,'accelerometer',name='imu_accel',site='imu');sub(sen,'framequat',name='body_orientation',objtype='body',objname='base_link')
+sub(sen,'user',name='os1_ranges',dim=lidar['channels']*lidar['columns'],datatype='real',needstage='pos',objtype='site',objname=lidar['frame'])
+custom=sub(m,'custom');sub(custom,'text',name='os1_driver',data='scripts/mujoco_sensors.py:OS1Scanner. Call update(data). Bare XML does not populate the user sensor.');sub(custom,'text',name='os1_profile_json',data=json.dumps(lidar,separators=(',',':')))
 write(m,ROOT/'mujoco/promise.xml')
 
 # USD uses the same exact vertex buffers and PBR base textures as the simulators.
@@ -151,7 +170,7 @@ for key,ma in MAT.items():
     usd_mats[key]=material
 physmat=UsdShade.Material.Define(stage,'/PROMISE/Looks/WheelContact');pm=UsdPhysics.MaterialAPI.Apply(physmat.GetPrim());pm.CreateStaticFrictionAttr(.9);pm.CreateDynamicFrictionAttr(.8);pm.CreateRestitutionAttr(0)
 for name,l in L.items():
-    path='/PROMISE/'+name;xform=UsdGeom.Xform.Define(stage,path);xform.AddTranslateOp().Set(Gf.Vec3d(*l['anchor']));prim=xform.GetPrim();UsdPhysics.RigidBodyAPI.Apply(prim)
+    path='/PROMISE/'+name;xform=UsdGeom.Xform.Define(stage,path);xform.AddTranslateOp().Set(Gf.Vec3d(*l['anchor']));q=quat(l.get('rpy',[0,0,0]));xform.AddOrientOp().Set(Gf.Quatf(q[0],Gf.Vec3f(*q[1:])));prim=xform.GetPrim();UsdPhysics.RigidBodyAPI.Apply(prim)
     mass=UsdPhysics.MassAPI.Apply(prim);mass.CreateMassAttr(l['mass']);mass.CreateCenterOfMassAttr(Gf.Vec3f(*l['com']));mass.CreateDiagonalInertiaAttr(Gf.Vec3f(*l['inertia']));mass.CreatePrincipalAxesAttr(Gf.Quatf(1))
     if name=='base_link':UsdPhysics.ArticulationRootAPI.Apply(prim)
     for v in l['visuals']:
@@ -165,7 +184,12 @@ for name,l in L.items():
         if c['type']=='box':xf.AddScaleOp().Set(Gf.Vec3f(*c['size']))
         shape.CreatePurposeAttr('guide');UsdPhysics.CollisionAPI.Apply(shape.GetPrim());UsdShade.MaterialBindingAPI.Apply(shape.GetPrim()).Bind(physmat,materialPurpose='physics')
     if l['parent']:
-        j=UsdPhysics.RevoluteJoint.Define(stage,'/PROMISE/Joints/'+l['joint']);j.CreateBody0Rel().SetTargets(['/PROMISE/'+l['parent']]);j.CreateBody1Rel().SetTargets([path]);j.CreateLocalPos0Attr(Gf.Vec3f(*posrel(l['anchor'],L[l['parent']]['anchor'])));j.CreateLocalPos1Attr(Gf.Vec3f(0));j.CreateAxisAttr('Y' if l['axis'][1] else 'Z');j.CreateCollisionEnabledAttr(False)
+        cls=UsdPhysics.FixedJoint if l['type']=='fixed' else UsdPhysics.RevoluteJoint
+        j=cls.Define(stage,'/PROMISE/Joints/'+l['joint']);j.CreateBody0Rel().SetTargets(['/PROMISE/'+l['parent']]);j.CreateBody1Rel().SetTargets([path]);j.CreateLocalPos0Attr(Gf.Vec3f(*posrel(l['anchor'],L[l['parent']]['anchor'])));j.CreateLocalPos1Attr(Gf.Vec3f(0));j.CreateCollisionEnabledAttr(False)
+        if l['type']=='fixed':
+            q=quat(l.get('rpy',[0,0,0]));j.CreateLocalRot0Attr(Gf.Quatf(q[0],Gf.Vec3f(*q[1:])));j.CreateLocalRot1Attr(Gf.Quatf(1))
+            continue
+        j.CreateAxisAttr('Y' if l['axis'][1] else 'Z')
         if l['limits']:j.CreateLowerLimitAttr(math.degrees(l['limits'][0]));j.CreateUpperLimitAttr(math.degrees(l['limits'][1]))
         if name.endswith('_wheel') or name.endswith('_steer') or name in ['mast_yaw_link','head_pitch_link']:
             drive=UsdPhysics.DriveAPI.Apply(j.GetPrim(),'angular');drive.CreateTypeAttr('force');drive.CreateMaxForceAttr(80 if name.endswith('_wheel') else 150);drive.CreateStiffnessAttr(0 if name.endswith('_wheel') else 350*math.pi/180);drive.CreateDampingAttr((30 if name.endswith('_wheel') else 45)*math.pi/180);drive.CreateTargetVelocityAttr(0);drive.CreateTargetPositionAttr(0)
@@ -177,6 +201,12 @@ for name,l in L.items():
             prim.CreateAttribute('physxMimicJoint:rotY:referenceJointAxis',Sdf.ValueTypeNames.Token,custom=False).Set('rotY');prim.CreateRelationship('physxMimicJoint:rotY:referenceJoint',custom=False).SetTargets(['/PROMISE/Joints/rocker_left_joint'])
 for c in spec['cameras']:
     cam=UsdGeom.Camera.Define(stage,'/PROMISE/'+c['parent']+'/'+c['name']);cam.AddTranslateOp().Set(Gf.Vec3d(*posrel(c['position'],L[c['parent']]['anchor'])));q=Rotation.from_matrix(np.array([[0,0,-1],[-1,0,0],[0,1,0]])).as_quat();cam.AddOrientOp().Set(Gf.Quatf(float(q[3]),Gf.Vec3f(*q[:3])));cam.CreateFocalLengthAttr(12);cam.CreateHorizontalApertureAttr(24*math.tan(c['hfov']/2));cam.CreateVerticalApertureAttr(24*math.tan(c['hfov']/2)*c['height']/c['width']);cam.CreateClippingRangeAttr(Gf.Vec2f(.05,100))
+from usd_lidar import write_os1_profile
+write_os1_profile(ROOT/'usd/os1_rev8_lidar.usda',lidar)
+sensor_frame=UsdGeom.Xform.Define(stage,'/PROMISE/os1_link/'+lidar['frame']);sensor_frame.AddTranslateOp().Set(Gf.Vec3d(*lidar['optical_offset']))
+# Keep the optical transform on a standard Xform so standalone OpenUSD can
+# evaluate it even without NVIDIA's OmniLidar schema plug-in installed.
+lp=stage.DefinePrim(str(sensor_frame.GetPath())+'/sensor','OmniLidar');lp.GetReferences().AddReference('./os1_rev8_lidar.usda')
 stage.GetRootLayer().Save()
 scene=Usd.Stage.CreateNew(str(ROOT/'usd/promise_scene.usda'));UsdGeom.SetStageUpAxis(scene,UsdGeom.Tokens.z);UsdGeom.SetStageMetersPerUnit(scene,1);world=UsdGeom.Xform.Define(scene,'/World');scene.SetDefaultPrim(world.GetPrim());r=UsdGeom.Xform.Define(scene,'/World/PROMISE');r.GetPrim().GetReferences().AddReference('./promise.usdc');r.AddTranslateOp().Set(Gf.Vec3d(0,0,.02));phys=UsdPhysics.Scene.Define(scene,'/World/PhysicsScene');phys.CreateGravityDirectionAttr(Gf.Vec3f(0,0,-1));phys.CreateGravityMagnitudeAttr(1.62)
 ground=UsdGeom.Cube.Define(scene,'/World/Ground');ground.CreateSizeAttr(1);ground.AddTranslateOp().Set(Gf.Vec3d(0,0,-.05));ground.AddScaleOp().Set(Gf.Vec3f(40,40,.1));ground.CreateDisplayColorAttr([Gf.Vec3f(.24,.25,.27)]);UsdPhysics.CollisionAPI.Apply(ground.GetPrim())

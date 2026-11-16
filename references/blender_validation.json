@@ -1,36 +1,40 @@
 {
   "status": "PASS",
   "blender": "4.5.3 LTS",
-  "animated_wheels": [
-    {
-      "name": "front_left_wheel",
-      "parent": "front_left_steer",
-      "half_cycle_radians": 3.1415927410125732
+  "visionsim": "0.2.0",
+  "animated_wheels": 6,
+  "turret_parenting": "PASS",
+  "lidar_rays": 131072,
+  "lidar_target_expected_m": 3.8494102042587275,
+  "lidar_target_measured_m": 3.849409818649292,
+  "visionsim_cameras": {
+    "stereo_left": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6649999618530273
     },
-    {
-      "name": "front_right_wheel",
-      "parent": "front_right_steer",
-      "half_cycle_radians": 3.1415927410125732
+    "stereo_right": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6649999618530273
     },
-    {
-      "name": "middle_left_wheel",
-      "parent": "bogie_left",
-      "half_cycle_radians": 3.1415927410125732
+    "dashcam_left": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6649999618530273
     },
-    {
-      "name": "middle_right_wheel",
-      "parent": "bogie_right",
-      "half_cycle_radians": 3.1415927410125732
-    },
-    {
-      "name": "rear_left_wheel",
-      "parent": "rear_left_steer",
-      "half_cycle_radians": 3.1415927410125732
-    },
-    {
-      "name": "rear_right_wheel",
-      "parent": "rear_right_steer",
-      "half_cycle_radians": 3.1415927410125732
+    "dashcam_right": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6649999618530273
     }
-  ]
+  }
 }

@@ -42,6 +42,8 @@
     <material name="aluminum_black" rgba="0.0777385235 0.0738376975 0.0738376975 1" specular="0.3" shininess="0.5200000107288361" />
     <texture name="hub_tex" type="2d" file="../ros2/promise_description/textures/mars_2020_hub_jpg.png" />
     <material name="hub" rgba="0.522521555 0.522521555 0.522521555 1" specular="0.3" shininess="0.5999999940395355" texture="hub_tex" />
+    <material name="PROMISE_silver" rgba="0.519999981 0.550000012 0.579999983 1" specular="0.3" shininess="0.699999988079071" />
+    <material name="OS1_optical_window" rgba="0.0179999992 0.0270000007 0.0240000002 1" specular="0.3" shininess="0.8199999928474426" />
     <mesh name="base_link_000" file="../ros2/promise_description/meshes/base_link_000.obj" inertia="shell" />
     <mesh name="base_link_001" file="../ros2/promise_description/meshes/base_link_001.obj" inertia="shell" />
     <mesh name="base_link_002" file="../ros2/promise_description/meshes/base_link_002.obj" inertia="shell" />
@@ -170,12 +172,28 @@
     <mesh name="head_pitch_link_125" file="../ros2/promise_description/meshes/head_pitch_link_125.obj" inertia="shell" />
     <mesh name="head_pitch_link_126" file="../ros2/promise_description/meshes/head_pitch_link_126.obj" inertia="shell" />
     <mesh name="head_pitch_link_127" file="../ros2/promise_description/meshes/head_pitch_link_127.obj" inertia="shell" />
+    <mesh name="head_pitch_link_128" file="../ros2/promise_description/meshes/head_pitch_link_128.obj" inertia="shell" />
+    <mesh name="head_pitch_link_129" file="../ros2/promise_description/meshes/head_pitch_link_129.obj" inertia="shell" />
+    <mesh name="head_pitch_link_130" file="../ros2/promise_description/meshes/head_pitch_link_130.obj" inertia="shell" />
+    <mesh name="head_pitch_link_131" file="../ros2/promise_description/meshes/head_pitch_link_131.obj" inertia="shell" />
+    <mesh name="head_pitch_link_132" file="../ros2/promise_description/meshes/head_pitch_link_132.obj" inertia="shell" />
+    <mesh name="head_pitch_link_133" file="../ros2/promise_description/meshes/head_pitch_link_133.obj" inertia="shell" />
+    <mesh name="head_pitch_link_134" file="../ros2/promise_description/meshes/head_pitch_link_134.obj" inertia="shell" />
+    <mesh name="head_pitch_link_135" file="../ros2/promise_description/meshes/head_pitch_link_135.obj" inertia="shell" />
+    <mesh name="head_pitch_link_136" file="../ros2/promise_description/meshes/head_pitch_link_136.obj" inertia="shell" />
+    <mesh name="head_pitch_link_137" file="../ros2/promise_description/meshes/head_pitch_link_137.obj" inertia="shell" />
+    <mesh name="head_pitch_link_138" file="../ros2/promise_description/meshes/head_pitch_link_138.obj" inertia="shell" />
+    <mesh name="head_pitch_link_139" file="../ros2/promise_description/meshes/head_pitch_link_139.obj" inertia="shell" />
+    <mesh name="head_pitch_link_140" file="../ros2/promise_description/meshes/head_pitch_link_140.obj" inertia="shell" />
+    <mesh name="os1_link_141" file="../ros2/promise_description/meshes/os1_link_141.obj" inertia="shell" />
+    <mesh name="os1_link_142" file="../ros2/promise_description/meshes/os1_link_142.obj" inertia="shell" />
+    <mesh name="os1_link_143" file="../ros2/promise_description/meshes/os1_link_143.obj" inertia="shell" />
   </asset>
   <worldbody>
     <light pos="0 -3 6" dir="0 0 -1" diffuse=".8 .8 .8" directional="true" />
     <geom name="ground" type="plane" size="20 20 .1" material="ground_mat" />
     <camera name="overview" pos="5 -5 3.6" xyaxes="0.70710678 0.70710678 0 -0.2588 0.2588 0.9306" />
-    <body name="base_link" pos="0 0 0.92">
+    <body name="base_link" pos="0 0 0.92" quat="1 0 0 0">
       <freejoint name="floating_base" />
       <inertial pos="-0.1 0 0.02" mass="760" diaginertia="220 350 400" />
       <geom name="base_link_000" type="mesh" mesh="base_link_000" material="tex_01" contype="0" conaffinity="0" group="2" density="0" />
@@ -274,25 +292,25 @@
       <geom name="base_link_093" type="mesh" mesh="base_link_093" material="PROMISE_illuminator" contype="0" conaffinity="0" group="2" density="0" />
       <geom name="base_link_collision_0" type="box" pos="-0.0199999996 0 0.0200000405" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.955 0.74 0.23" />
       <geom name="base_link_collision_1" type="box" pos="-1.24000001 0 0.300000072" quat="0.990901331 0 -0.134590311 0" rgba="0.5 0.5 0.5 0" group="3" size="0.36 0.32 0.335" />
-      <body name="rocker_left" pos="0.213000059 0.796999991 0.00670001507">
+      <body name="rocker_left" pos="0.213000059 0.796999991 0.00670001507" quat="1 0 0 0">
         <joint name="rocker_left_joint" axis="0 1 0" type="hinge" range="-0.65 0.65" damping="15" armature="0.5" />
         <inertial pos="0.0848184228 0.135658562 -0.102836758" mass="20" diaginertia="0.482631106 5.29677432 5.37490501" />
         <geom name="rocker_left_094" type="mesh" mesh="rocker_left_094" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="rocker_left_095" type="mesh" mesh="rocker_left_095" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="rocker_left_collision_0" type="cylinder" pos="0.440499961 0.132000029 -0.120849967" quat="0.364602409 0.472801023 0.635251775 0.489876983" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.475467067" />
         <geom name="rocker_left_collision_1" type="cylinder" pos="-0.37650004 0 -0.120350003" quat="0.416989968 0.571068599 -0.571068618 -0.416989995" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.395267518" />
-        <body name="bogie_left" pos="-0.753000021 5.96046448e-08 -0.240999997">
+        <body name="bogie_left" pos="-0.753000021 5.96046448e-08 -0.240999997" quat="1 0 0 0">
           <joint name="bogie_left_joint" axis="0 1 0" type="hinge" range="-0.9 0.9" damping="15" armature="0.5" />
           <inertial pos="-0.0929295421 0.14006272 -0.125501201" mass="15" diaginertia="0.697691251 2.36137094 2.06420494" />
           <geom name="bogie_left_096" type="mesh" mesh="bogie_left_096" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
-          <geom name="bogie_left_collision_0" type="cylinder" pos="0.225499988 0.19749999 -0.201600015" quat="0.194139891 0.364527416 0.803836848 0.428107214" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.361246533" />
+          <geom name="bogie_left_collision_0" type="cylinder" pos="0.225499988 0.19749999 -0.201600015" quat="0.194139976 0.364527371 0.803836869 0.428107176" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.361246533" />
           <geom name="bogie_left_collision_1" type="cylinder" pos="-0.312000036 0.131999969 -0.000349998474" quat="0.390425863 0.390829552 -0.589719371 -0.589110321" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.338774467" />
-          <body name="rear_left_steer" pos="-0.623999953 0.264000058 -0.000999987125">
+          <body name="rear_left_steer" pos="-0.623999953 0.264000058 -0.000999987125" quat="1 0 0 0">
             <joint name="rear_left_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
             <inertial pos="2.38418579e-07 -0.1293028 -0.214050546" mass="6" diaginertia="0.206689801 0.121967544 0.128902217" />
             <geom name="rear_left_steer_098" type="mesh" mesh="rear_left_steer_098" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
             <geom name="rear_left_steer_collision_0" type="box" pos="0 -0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
-            <body name="rear_left_wheel" pos="-8.48770141e-08 -1.08718872e-07 -0.402200031">
+            <body name="rear_left_wheel" pos="-8.48770141e-08 -1.08718872e-07 -0.402200031" quat="1 0 0 0">
               <joint name="rear_left_wheel_joint" axis="0 1 0" type="hinge" />
               <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
               <geom name="rear_left_wheel_110" type="mesh" mesh="rear_left_wheel_110" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
@@ -301,7 +319,7 @@
               <geom name="rear_left_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
             </body>
           </body>
-          <body name="middle_left_wheel" pos="0.450999962 0.394999949 -0.403200018">
+          <body name="middle_left_wheel" pos="0.450999962 0.394999949 -0.403200018" quat="1 0 0 0">
             <joint name="middle_left_wheel_joint" axis="0 1 0" type="hinge" />
             <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
             <geom name="middle_left_wheel_107" type="mesh" mesh="middle_left_wheel_107" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
@@ -310,12 +328,12 @@
             <geom name="middle_left_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
           </body>
         </body>
-        <body name="front_left_steer" pos="0.881000042 0.263999879 -0.241999984">
+        <body name="front_left_steer" pos="0.881000042 0.263999879 -0.241999984" quat="1 0 0 0">
           <joint name="front_left_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
           <inertial pos="-0.00150239468 -0.16186142 -0.216786861" mass="6" diaginertia="0.239480336 0.121967318 0.161692979" />
           <geom name="front_left_steer_097" type="mesh" mesh="front_left_steer_097" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
           <geom name="front_left_steer_collision_0" type="box" pos="0 -0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
-          <body name="front_left_wheel" pos="-1.01089477e-07 1.29699707e-07 -0.402200031">
+          <body name="front_left_wheel" pos="-1.01089477e-07 1.29699707e-07 -0.402200031" quat="1 0 0 0">
             <joint name="front_left_wheel_joint" axis="0 1 0" type="hinge" />
             <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
             <geom name="front_left_wheel_104" type="mesh" mesh="front_left_wheel_104" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
@@ -325,25 +343,25 @@
           </body>
         </body>
       </body>
-      <body name="rocker_right" pos="0.21299994 -0.796999991 0.00670001507">
+      <body name="rocker_right" pos="0.21299994 -0.796999991 0.00670001507" quat="1 0 0 0">
         <joint name="rocker_right_joint" axis="0 1 0" type="hinge" range="-0.65 0.65" damping="15" armature="0.5" />
         <inertial pos="0.0860698223 -0.140186906 -0.102116972" mass="20" diaginertia="0.483562177 5.31304693 5.38875887" />
         <geom name="rocker_right_099" type="mesh" mesh="rocker_right_099" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="rocker_right_100" type="mesh" mesh="rocker_right_100" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="rocker_right_collision_0" type="cylinder" pos="0.440500021 -0.132000029 -0.120849967" quat="0.489877025 0.635251709 0.47280105 0.364602432" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.47546713" />
         <geom name="rocker_right_collision_1" type="cylinder" pos="-0.376499981 0 -0.120350003" quat="0.416989904 0.571068594 -0.571068673 -0.416989991" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.395267443" />
-        <body name="bogie_right" pos="-0.753000021 5.96046448e-08 -0.240999997">
+        <body name="bogie_right" pos="-0.753000021 5.96046448e-08 -0.240999997" quat="1 0 0 0">
           <joint name="bogie_right_joint" axis="0 1 0" type="hinge" range="-0.9 0.9" damping="15" armature="0.5" />
           <inertial pos="-0.0929299593 -0.144863188 -0.125501245" mass="15" diaginertia="0.69769246 2.36137258 2.06420524" />
           <geom name="bogie_right_101" type="mesh" mesh="bogie_right_101" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
-          <geom name="bogie_right_collision_0" type="cylinder" pos="0.225500047 -0.19750005 -0.201600015" quat="0.428107416 0.803836707 0.364527457 0.194139957" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.361246605" />
+          <geom name="bogie_right_collision_0" type="cylinder" pos="0.225500047 -0.19750005 -0.201600015" quat="0.428107278 0.80383678 0.364527432 0.194140004" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.361246605" />
           <geom name="bogie_right_collision_1" type="cylinder" pos="-0.311999977 -0.132000029 -0.000349998474" quat="0.589110456 0.589719342 -0.390829443 -0.390425813" rgba="0.5 0.5 0.5 0" group="3" size="0.043 0.338774437" />
-          <body name="rear_right_steer" pos="-0.624000072 -0.263999939 -0.000999987125">
+          <body name="rear_right_steer" pos="-0.624000072 -0.263999939 -0.000999987125" quat="1 0 0 0">
             <joint name="rear_right_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
             <inertial pos="-2.38418579e-07 0.124502301 -0.214050502" mass="6" diaginertia="0.20668998 0.121967558 0.128902383" />
             <geom name="rear_right_steer_103" type="mesh" mesh="rear_right_steer_103" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
             <geom name="rear_right_steer_collision_0" type="box" pos="0 0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
-            <body name="rear_right_wheel" pos="1.53541565e-07 -1.29699707e-07 -0.402200031">
+            <body name="rear_right_wheel" pos="1.53541565e-07 -1.29699707e-07 -0.402200031" quat="1 0 0 0">
               <joint name="rear_right_wheel_joint" axis="0 1 0" type="hinge" />
               <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
               <geom name="rear_right_wheel_119" type="mesh" mesh="rear_right_wheel_119" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
@@ -352,7 +370,7 @@
               <geom name="rear_right_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
             </body>
           </body>
-          <body name="middle_right_wheel" pos="0.451000081 -0.395000069 -0.403200018">
+          <body name="middle_right_wheel" pos="0.451000081 -0.395000069 -0.403200018" quat="1 0 0 0">
             <joint name="middle_right_wheel_joint" axis="0 1 0" type="hinge" />
             <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
             <geom name="middle_right_wheel_116" type="mesh" mesh="middle_right_wheel_116" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
@@ -361,12 +379,12 @@
             <geom name="middle_right_wheel_collision_0" type="cylinder" pos="0 0 0" quat="0.707106781 0.707106781 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.2625 0.15" />
           </body>
         </body>
-        <body name="front_right_steer" pos="0.880999923 -0.264000118 -0.241999984">
+        <body name="front_right_steer" pos="0.880999923 -0.264000118 -0.241999984" quat="1 0 0 0">
           <joint name="front_right_steer_joint" axis="0 0 1" type="hinge" range="-1.4 1.4" />
           <inertial pos="0.00100040436 0.15760541 -0.214049846" mass="6" diaginertia="0.239480184 0.121967291 0.161692853" />
           <geom name="front_right_steer_102" type="mesh" mesh="front_right_steer_102" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
           <geom name="front_right_steer_collision_0" type="box" pos="0 0.0899999738 -0.180000007" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.06 0.075 0.175" />
-          <body name="front_right_wheel" pos="1.37329102e-07 1.08718872e-07 -0.402200031">
+          <body name="front_right_wheel" pos="1.37329102e-07 1.08718872e-07 -0.402200031" quat="1 0 0 0">
             <joint name="front_right_wheel_joint" axis="0 1 0" type="hinge" />
             <inertial pos="0 0 0" mass="6" diaginertia="0.148359375 0.20671875 0.148359375" />
             <geom name="front_right_wheel_113" type="mesh" mesh="front_right_wheel_113" material="aluminum" contype="0" conaffinity="0" group="2" density="0" />
@@ -376,24 +394,55 @@
           </body>
         </body>
       </body>
-      <body name="mast_yaw_link" pos="0.679 -0.164 0.27">
+      <body name="mast_yaw_link" pos="0.679 -0.164 0.27" quat="1 0 0 0">
         <joint name="mast_yaw_joint" axis="0 0 1" type="hinge" range="-3.14159265 3.14159265" />
         <inertial pos="-0.01094383 -0.0433789715 0.335744739" mass="6" diaginertia="0.364122484 0.302664708 0.107341467" />
         <geom name="mast_yaw_link_122" type="mesh" mesh="mast_yaw_link_122" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="mast_yaw_link_123" type="mesh" mesh="mast_yaw_link_123" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="mast_yaw_link_124" type="mesh" mesh="mast_yaw_link_124" material="Material_0" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="mast_yaw_link_collision_0" type="cylinder" pos="0 0 0.340000033" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.05 0.325" />
-        <body name="head_pitch_link" pos="0 0 0.72">
+        <body name="head_pitch_link" pos="0 0 0.72" quat="1 0 0 0">
           <joint name="head_pitch_joint" axis="0 1 0" type="hinge" range="-0.65 0.65" />
-          <inertial pos="0.00789156556 0.000515446067 0.0599562526" mass="4" diaginertia="0.091974935 0.0345260603 0.109482164" />
+          <inertial pos="0.00789156556 0.000515505672 0.0599562526" mass="4.05" diaginertia="0.093124823 0.034957636 0.110850892" />
           <geom name="head_pitch_link_125" type="mesh" mesh="head_pitch_link_125" material="Material_3" contype="0" conaffinity="0" group="2" density="0" />
           <geom name="head_pitch_link_126" type="mesh" mesh="head_pitch_link_126" material="Material_1" contype="0" conaffinity="0" group="2" density="0" />
           <geom name="head_pitch_link_127" type="mesh" mesh="head_pitch_link_127" material="Material_38" contype="0" conaffinity="0" group="2" density="0" />
-          <geom name="head_pitch_link_collision_0" type="box" pos="0.0109999776 0 0.0750000477" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.08 0.25 0.07" />
-          <camera name="stereo_left" pos="0.143 0.2 0.061" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
-          <camera name="stereo_right" pos="0.143 -0.2 0.061" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
-          <camera name="dashcam_left" pos="0.143 0.155 0.113" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
-          <camera name="dashcam_right" pos="0.143 -0.155 0.113" xyaxes="0 -1 0 0 0 1" fovy="42.995661402296705" />
+          <geom name="head_pitch_link_128" type="mesh" mesh="head_pitch_link_128" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_129" type="mesh" mesh="head_pitch_link_129" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_130" type="mesh" mesh="head_pitch_link_130" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_131" type="mesh" mesh="head_pitch_link_131" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_132" type="mesh" mesh="head_pitch_link_132" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_133" type="mesh" mesh="head_pitch_link_133" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_134" type="mesh" mesh="head_pitch_link_134" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_135" type="mesh" mesh="head_pitch_link_135" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_136" type="mesh" mesh="head_pitch_link_136" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_137" type="mesh" mesh="head_pitch_link_137" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_138" type="mesh" mesh="head_pitch_link_138" material="PROMISE_thermal_white" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_139" type="mesh" mesh="head_pitch_link_139" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_140" type="mesh" mesh="head_pitch_link_140" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="head_pitch_link_collision_0" type="box" pos="-0.000848114491 0.000515460968 0.0403869152" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0715479255 0.250198208 0.0015" />
+          <geom name="head_pitch_link_collision_1" type="box" pos="-0.000848114491 0.000515460968 0.137466311" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0715479255 0.250198208 0.0015" />
+          <geom name="head_pitch_link_collision_2" type="box" pos="-0.0287578702 -0.206044823 0.0889265537" quat="0.923879533 0 0 -0.382683432" rgba="0.5 0.5 0.5 0" group="3" size="0.060213678 0.0015 0.050039649" />
+          <geom name="head_pitch_link_collision_3" type="box" pos="0.0417294502 -0.248182982 0.0889265537" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0289705 0.0015 0.050039649" />
+          <geom name="head_pitch_link_collision_4" type="box" pos="0.0417294502 0.249213994 0.0889265537" quat="6.123234e-17 0 0 1" rgba="0.5 0.5 0.5 0" group="3" size="0.0289705 0.0015 0.050039649" />
+          <geom name="head_pitch_link_collision_5" type="box" pos="-0.0287578702 0.207075357 0.0889265537" quat="0.382686145 0 0 -0.923878409" rgba="0.5 0.5 0.5 0" group="3" size="0.0602140315 0.0015 0.050039649" />
+          <geom name="head_pitch_link_collision_6" type="box" pos="-0.0708960295 0.000514999032 0.0889265537" quat="0.707106781 0 0 -0.707106781" rgba="0.5 0.5 0.5 0" group="3" size="0.165043 0.0015 0.050039649" />
+          <geom name="head_pitch_link_collision_7" type="box" pos="0.0691998005 -0.162341386 0.0889265537" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0015 0.0873413794 0.050039649" />
+          <geom name="head_pitch_link_collision_8" type="box" pos="0.0691998005 0.162856832 0.0889265537" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0015 0.0878568284 0.050039649" />
+          <geom name="head_pitch_link_collision_9" type="box" pos="0.0691998005 0 0.0409435034" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0015 0.075 0.00205655479" />
+          <geom name="head_pitch_link_collision_10" type="box" pos="0.0691998005 0 0.136983037" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0015 0.075 0.00198309422" />
+          <body name="os1_link" pos="0.013 0 0.0622" quat="0.98078528 0 0.195090322 0">
+            <inertial pos="-0.00378409028 3.35276127e-07 0.0291749239" mass="0.5" diaginertia="0.000581972727 0.000571747737 0.00062038713" />
+            <geom name="os1_link_141" type="mesh" mesh="os1_link_141" material="PROMISE_silver" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="os1_link_142" type="mesh" mesh="os1_link_142" material="OS1_optical_window" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="os1_link_143" type="mesh" mesh="os1_link_143" material="PROMISE_black_anodized" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="os1_link_collision_0" type="cylinder" pos="0 0 0.029175" quat="1 0 0 0" rgba="0.5 0.5 0.5 0" group="3" size="0.0435 0.029175" />
+            <site name="os1_lidar_frame" pos="0 0 0.0402" size=".003" rgba="0 .8 .6 0" group="4" />
+          </body>
+          <camera name="stereo_left" pos="0.156 0.2 0.061" xyaxes="0 -1 0 0 0 1" resolution="1280 720" fovy="42.995661402296705" />
+          <camera name="stereo_right" pos="0.156 -0.2 0.061" xyaxes="0 -1 0 0 0 1" resolution="1280 720" fovy="42.995661402296705" />
+          <camera name="dashcam_left" pos="0.156 0.155 0.113" xyaxes="0 -1 0 0 0 1" resolution="1280 720" fovy="42.995661402296705" />
+          <camera name="dashcam_right" pos="0.156 -0.155 0.113" xyaxes="0 -1 0 0 0 1" resolution="1280 720" fovy="42.995661402296705" />
         </body>
       </body>
       <site name="imu" size=".01" rgba="0 0 0 0" />
@@ -420,5 +469,10 @@
     <gyro name="imu_gyro" site="imu" />
     <accelerometer name="imu_accel" site="imu" />
     <framequat name="body_orientation" objtype="body" objname="base_link" />
+    <user name="os1_ranges" dim="131072" datatype="real" needstage="pos" objtype="site" objname="os1_lidar_frame" />
   </sensor>
+  <custom>
+    <text name="os1_driver" data="scripts/mujoco_sensors.py:OS1Scanner. Call update(data). Bare XML does not populate the user sensor." />
+    <text name="os1_profile_json" data="{&quot;name&quot;:&quot;os1&quot;,&quot;model&quot;:&quot;Ouster OS1 Rev8&quot;,&quot;parent&quot;:&quot;os1_link&quot;,&quot;frame&quot;:&quot;os1_lidar_frame&quot;,&quot;optical_offset&quot;:[0,0,0.0402],&quot;channels&quot;:128,&quot;columns&quot;:1024,&quot;rate_hz&quot;:10,&quot;vertical_fov_deg&quot;:44,&quot;vertical_min_deg&quot;:-22,&quot;vertical_max_deg&quot;:22,&quot;horizontal_fov_deg&quot;:360,&quot;min_range_m&quot;:0.5,&quot;max_range_m&quot;:170,&quot;housing_diameter_m&quot;:0.087,&quot;housing_height_m&quot;:0.05835,&quot;mass_kg&quot;:0.5,&quot;calibration&quot;:&quot;Uniform elevation, zero azimuth offsets, approximate optical origin; not device-calibrated beam intrinsics.&quot;,&quot;sampling&quot;:&quot;Instantaneous full frame, single geometric return; no packet transport, reflectivity, native RGB, dual returns or calibrated noise.&quot;,&quot;mount_rpy_rad&quot;:[0,0.39269908169872414,0],&quot;mount_pitch_down_deg&quot;:22.5,&quot;mount_anchor_world_m&quot;:[0.692,-0.164,1.9522],&quot;enclosure&quot;:{&quot;outer_bounds_m&quot;:[[0.6066039800643921,-0.413682758808136,1.928886890411377],[0.7496998310089111,0.08671365678310394,2.028966188430786]],&quot;wall_thickness_m&quot;:0.003,&quot;front_plane_x_m&quot;:0.7496998310089111,&quot;opening_width_m&quot;:0.15,&quot;opening_bottom_z_m&quot;:1.933,&quot;opening_top_z_m&quot;:2.025,&quot;opening_center_y_m&quot;:-0.164,&quot;note&quot;:&quot;True open aperture and hollow cavity; no glass cover. Original enclosure footprint and four camera meshes retained.&quot;},&quot;installation&quot;:&quot;Recessed inside white mast head, behind a front aperture. Enclosure blocks most side/rear directions; do not interpret the native 360-degree scan grid as unobstructed coverage.&quot;,&quot;head_visible_mask_encoding&quot;:&quot;zlib+packbits-little-base64&quot;,&quot;head_visible_mask_b64&quot;:&quot;eNrt28FthDAQBVCzRCKHSFYqIJ3QSjrBHaQlS2nEJfjoA8IRJpccVh4kf40c/hSwb8Us5u/Y5Py3FgOtlGs1QP0qny2SD3V/0b382AYI+DzieNeDP+F834NvVW8/+jPOjz34i+7ye3t/xfkbfUHh/L0LHxeAMn3NAOboqwZA34cPC2CBvmoAjPRVA2CirxoAN/qqAXTvxEcFwExfMwA6+qoB1NNXDaCBvmoAjfRVA6i+/y3RA84foqT5EXX/rZIlcDIR9Pzzs2z/O6DypxX8BQJOv81DsAbaF4Os6g/APnT9yfxr39Gnr3T6gz79qj/Qp6/oG/r06d/Wv/v6d/f8wf8fR72q+efs6a29/HHBd4AJ2KfML7PXAJjAnlM1r+eXaxqU/eoAtMxeA2ACm4qflP3qEYD1d1LbvLbS013kR5gvO3yRUL5gC/bsUnt/F/pD6RLAX4xoC9Si/NWI3z9DxLDymZItqNIlhD+KTmCt49Gl5jHMlc5KTiC9H1cJ4c+yE0Dj8S0R/ip9/2sHxEBfdhZF9ZVB/oVqHsAC/SvVPIDFvvzmASzRv1LNA9izJ88Puviogg==&quot;,&quot;head_visibility&quot;:{&quot;total_rays&quot;:131072,&quot;head_clear_rays&quot;:38314,&quot;head_blocked_rays&quot;:92758,&quot;forward_center_all_128_channels_clear&quot;:true,&quot;rear_center_all_channels_blocked&quot;:true,&quot;fully_clear_horizontal_sector_deg&quot;:[-44.6484375,44.6484375],&quot;native_vertical_fov_deg&quot;:44,&quot;scope&quot;:&quot;Only geometry rigidly attached to head_pitch_link; excludes OS1 case. Other rover/environment occlusion is dynamic.&quot;}}" />
+  </custom>
 </mujoco>

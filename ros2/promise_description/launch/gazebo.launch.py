@@ -18,4 +18,5 @@ def generate_launch_description():
     bridge=Node(package='ros_gz_bridge',executable='parameter_bridge',parameters=[{'config_file':str(share/'config/bridge.yaml'),'use_sim_time':True}])
     drive=Node(package='promise_description',executable='drive.py',parameters=[{'use_sim_time':True}])
     info=Node(package='promise_description',executable='stereo_info.py',parameters=[{'use_sim_time':True}])
-    return LaunchDescription([gazebo,rsp,bridge,spawn,RegisterEventHandler(OnProcessExit(target_action=spawn,on_exit=controllers)),drive,info])
+    lidar_filter=Node(package='promise_description',executable='lidar_filter.py',parameters=[{'use_sim_time':True,'profile':str(share/'config/os1_rev8_profile.json')}])
+    return LaunchDescription([gazebo,rsp,bridge,spawn,RegisterEventHandler(OnProcessExit(target_action=spawn,on_exit=controllers)),drive,info,lidar_filter])

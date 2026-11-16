@@ -6,18 +6,20 @@ The body and rocker-bogie geometry come from NASA's Curiosity model. All six whe
 
 ![PROMISE reconstruction](previews/promise_rover.png)
 
+**Sensor update (revision 0.3):** Four turret cameras and a CAD-derived Ouster OS1 Rev 8 lidar are included in every format. The OS1 is recessed inside the white mast enclosure, tilted down 22.5°, with a 150 × 92 mm front opening and an internal cradle. See [SENSORS.md](SENSORS.md) for the VisionSIM workflow, lidar activation, calibration assumptions and validation.
+
 ## Files
 
 Keep the folder structure intact: URDF, MJCF and USD use accompanying mesh or texture files.
 
 | Requested format | Entry point | What is included |
 |---|---|---|
-| ROS 2 / Gazebo URDF | `ros2/promise_description/urdf/promise.urdf` | 27 links including sensor frames; 16 movable joints; inertials and simplified collisions |
-| Gazebo configuration | `ros2/promise_description/urdf/promise.gazebo.urdf.xacro` | ROS 2 control, four cameras, camera calibration, controller launch and a lunar-gravity world |
-| MuJoCo 4.0 MJCF | `mujoco/promise.xml` | Native MJCF, floating base, 12 actuators, passive suspension, rocker differential, cameras, IMU and ground |
+| ROS 2 / Gazebo URDF | `ros2/promise_description/urdf/promise.urdf` | 29 links including sensor frames; 16 movable joints; inertials and simplified collisions |
+| Gazebo configuration | `ros2/promise_description/urdf/promise.gazebo.urdf.xacro` | ROS 2 control, four cameras, OS1 GPU lidar, camera calibration, controller launch and a lunar-gravity world |
+| MuJoCo 4.0 MJCF | `mujoco/promise.xml` | Native MJCF, floating base, 12 actuators, passive suspension, rocker differential, four cameras, IMU, OS1 user sensor/runner and ground |
 | General GLB | `glb/promise.glb` | glTF 2.0, embedded textures, named link hierarchy and one six-wheel animation |
 | Animated Blender | `blender/promise_wheel_animation.blend` | Editable meshes, named link pivots, packed textures, studio lights and an eight-second wheel loop |
-| Isaac Sim USD | `usd/promise.usdc` | Rigid bodies, articulation, joints, collision shapes, drives, camera prims and PhysX rocker mimic metadata |
+| Isaac Sim USD | `usd/promise.usdc` | Rigid bodies, articulation, joints, collision shapes, drives, camera prims, an RTX lidar profile and PhysX rocker mimic metadata |
 | Isaac Sim scene | `usd/promise_scene.usda` | References the rover; adds a ground plane, lighting and lunar gravity |
 
 `data/robot_spec.json` records link frames, masses, inertias, materials, collisions, camera estimates and donor provenance. `validation.json` records the checks actually run.
@@ -37,7 +39,7 @@ Keep the folder structure intact: URDF, MJCF and USD use accompanying mesh or te
 | Camera estimates | 1280 × 720, 10 Hz, 70° horizontal FOV; estimated baselines 0.40 m and 0.31 m |
 | Arm | Removed; no Curiosity arm links or arm control chain |
 | Drill | TRIDENT is fixed in the stowed driving pose; deployment and drilling are not simulated |
-| Estimated mass | 900 kg total; editable, not an asserted PROMISE flight mass |
+| Estimated mass | 900.55 kg total; editable, not an asserted PROMISE flight mass |
 | Dynamics | Estimated inertias, limits, damping, gains and friction; smooth-cylinder wheel contact |
 | Terrain | Rigid flat ground; no granular regolith, sinkage, soil shear or tread-resolved contact |
 
@@ -60,7 +62,7 @@ uv run --python 3.12 --with mujoco==4.0.0 scripts/mujoco_demo.py --headless --se
 uv run --python 3.12 --with mujoco==4.0.0 scripts/mujoco_demo.py --speed 0.10 --yaw-rate 0.03
 ```
 
-The demo settles for two seconds and ramps the commanded speed over two more seconds. `--gravity 9.81` selects Earth gravity. The validated default is lunar gravity, 1.62 m/s². The interactive example uses MuJoCo's Python viewer; the native XML can also be opened by compatible MuJoCo 4.0 tools.
+The demo settles for two seconds and ramps the commanded speed over two more seconds. `--gravity 9.81` selects Earth gravity. The validated default is lunar gravity, 1.62 m/s². The runner activates the 10 Hz Python lidar scanner by default; `--no-lidar` disables it for dynamics-only runs. The interactive example uses MuJoCo's Python viewer; the native XML can also be opened by compatible MuJoCo 4.0 tools.
 
 The six wheel actuators are torque-limited velocity servos. Four steering and two mast actuators are position servos. Actuator names are exposed in the XML. The two rockers and two bogies are passive. The rocker equality has finite solver compliance.
 
@@ -102,7 +104,7 @@ Direct controller topics:
 | `/promise/{camera}/image` | Image for each of the four camera names in the table above |
 | `/promise/{camera}/camera_info` | Estimated rectified calibration, synchronized to each image's header |
 
-`stereo_info.py` supplies the nonzero right-camera projection term `P[3] = -fx × baseline`. Independent Gazebo cameras otherwise provide monocular projection matrices. The calibration is synthetic, not flight calibration. `imu_link` is a frame in the ROS model; an IMU sensor is implemented in MJCF only. SCAN-3D hardware is represented visually; a lidar scan sensor and science-instrument data models are not implemented.
+`stereo_info.py` supplies the nonzero right-camera projection term `P[3] = -fx × baseline`. Independent Gazebo cameras otherwise provide monocular projection matrices. The calibration is synthetic, not flight calibration. `imu_link` is a frame in the ROS model; an IMU sensor is implemented in MJCF only. The requested OS1 Rev 8 replaces the visual-only turret lidar approximation. The Gazebo bridge publishes `/promise/os1/points_raw`; the launched `lidar_filter.py` applies the physical enclosure mask and publishes `/promise/os1/points` as PointCloud2. Science-instrument data models are not implemented.
 
 The bare `promise.urdf` is useful for RViz, URDF importers or other simulators. The xacro wrapper adds Gazebo-specific control and sensors. Gazebo's ros2_control velocity/position command interfaces do not reproduce the same actuator servo dynamics as MJCF.
 
@@ -123,25 +125,25 @@ Joint prims are under `/World/PROMISE/Joints`. Six wheel angular drives are velo
 ./python.sh /absolute/path/promise_rover/scripts/isaac_demo.py
 ```
 
-The helper targets the current `isaacsim` / `isaacsim.core.api` API family. Four camera prims are included beneath `head_pitch_link`; create render products in Isaac Sim for image output. A ROS bridge / OmniGraph pipeline is not embedded.
+The helper targets the `isaacsim` / `isaacsim.core.api` API family. Its raw RTX output needs the supplied head-aperture mask after decoding; see SENSORS.md. The included launcher creates four RTX camera sensors and the OS1 RTX lidar using the Isaac Sim 6.x experimental RTX API. Use `--capture PATH` for snapshots; see SENSORS.md. A ROS bridge / OmniGraph pipeline is not embedded.
 
 PhysX's documented mimic equation is `q_target + gearing*q_reference + offset = 0`, so the rocker mimic uses gearing **+1**. The URDF multiplier is **-1** for the equivalent relation. The PhysX schema is intentionally authored in USD even though standalone OpenUSD cannot evaluate it.
 
 ## What was verified
 
-The generated files were verified with Blender 4.5.3, MuJoCo **4.0.0**, yourdfpy, xacro and OpenUSD 26.11. See `validation.json` and `references/blender_validation.json` for the recorded results.
+The generated files were verified with Blender 4.5.3, MuJoCo **4.0.0**, yourdfpy, xacro and OpenUSD 26.11. See `validation.json`, `references/sensor_validation.json` and `references/blender_validation.json` for the recorded results.
 
 | Check | Result |
 |---|---|
-| URDF and all referenced Collada meshes | Parsed successfully; 27 links, 16 movable joints; nominal transforms match the common specification |
-| Gazebo xacro | Expanded; four camera sensors and 16 ros2_control joint declarations |
+| URDF and all referenced Collada meshes | Parsed successfully; 29 links, 16 movable joints; nominal transforms match the common specification |
+| Gazebo xacro | Expanded; four camera sensors, one GPU lidar and 16 ros2_control joint declarations |
 | MuJoCo stationary / forward / turning tests | Passed, finite state, zero numerical warnings, all six wheels touching ground at each test end |
 | MuJoCo forward run | 12 s simulated; approximately 0.862 m traveled after settling / acceleration |
 | Rocker differential | Maximum residual below 0.0006 rad in these flat-ground tests |
 | MuJoCo rendering | Textured model rendered successfully with EGL |
 | GLB | Valid binary container, embedded images, one animation driving all six wheels |
 | Blender | Reopened; six wheel actions checked at half cycle |
-| USD | Composed successfully, 17 rigid bodies, 16 revolute joints, no unresolved references |
+| USD | Composed successfully, 18 rigid bodies, 16 revolute joints, one fixed joint, no unresolved references |
 | Gazebo and Isaac Sim runtime | **Not run**: these applications were unavailable in the build environment |
 
 These checks establish file integrity and basic flat-ground behavior, not mission performance, terrain fidelity or flight qualification.
@@ -152,19 +154,20 @@ Use `scripts/build_geometry.py` for mesh selection, geometry changes, link ancho
 
 ```bash
 uv venv .build-bpy --python 3.11
-uv pip install --python .build-bpy/bin/python bpy==4.5.3 pillow numpy
+uv pip install --python .build-bpy/bin/python bpy==4.5.3 pillow numpy==1.26.4
 uv venv .build-sim --python 3.12
-uv pip install --python .build-sim/bin/python mujoco==4.0.0 usd-core==26.11 \
+uv pip install --python .build-sim/bin/python mujoco==4.0.0 usd-core==26.11 cadquery-ocp==8.0.1.1.0 \
   numpy scipy trimesh yourdfpy xacro pillow
 
 .build-sim/bin/python scripts/fetch_sources.py
 .build-bpy/bin/python scripts/inspect_sources.py
+.build-sim/bin/python scripts/prepare_os1_cad.py
 .build-bpy/bin/python scripts/build_geometry.py
 .build-sim/bin/python scripts/export_simulators.py
 .build-sim/bin/python scripts/validate.py
 ```
 
-The source archives are included in the complete package. `fetch_sources.py` verifies their pinned hashes and extracts them; it downloads missing files from NASA. It stops if NASA has replaced an asset with different bytes, so a changed source must be reviewed deliberately.
+The source archives are included in the complete package. `fetch_sources.py` verifies their pinned hashes and extracts them; it downloads missing files from NASA and Ouster. It stops if a publisher has replaced an asset with different bytes, so a changed source must be reviewed deliberately.
 
 Source geometry is transformed, segmented and assigned joint pivots explicitly; this is not a renamed static rover mesh. Visual LOD reduction is rejected if it displaces vertices beyond the source bounds. Simulation contacts use independent simple shapes.
 

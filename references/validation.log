@@ -1,0 +1,124 @@
+{
+  "urdf": {
+    "status": "PASS",
+    "links": 27,
+    "movable_joints": 16,
+    "wheel_joints": 6,
+    "mesh_parts": 128,
+    "nominal_link_transform_check": "PASS",
+    "mass_kg_estimated": 900
+  },
+  "gazebo_ros2": {
+    "status": "STRUCTURAL_PASS_RUNTIME_NOT_RUN",
+    "xacro_expansion": "PASS",
+    "camera_sensors": 4,
+    "ros2_control_joints": 16,
+    "runtime_reason": "Gazebo / ROS 2 are not installed in the build environment."
+  },
+  "mujoco": {
+    "version": "4.0.0",
+    "nq": 23,
+    "nv": 22,
+    "actuators": 12,
+    "test_cases": [
+      {
+        "name": "stationary",
+        "simulated_seconds": 6,
+        "final_position_m": [
+          1.853325909294449e-06,
+          -1.0674566318085424e-07,
+          0.8998791955430879
+        ],
+        "displacement_after_settle_m": [
+          -2.7481103205681102e-09,
+          5.637359960706666e-12,
+          9.425793479067579e-14
+        ],
+        "max_rocker_constraint_error_rad": 0.0005938648580724553,
+        "wheels_touching_ground_at_end": 6,
+        "warnings": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finite": true
+      },
+      {
+        "name": "forward",
+        "simulated_seconds": 12,
+        "final_position_m": [
+          0.861825490204667,
+          -4.587037416808003e-07,
+          0.8998791953836812
+        ],
+        "displacement_after_settle_m": [
+          0.8618236341306474,
+          -3.5195244113998536e-07,
+          -1.59312452119309e-10
+        ],
+        "max_rocker_constraint_error_rad": 0.0005938648580724553,
+        "wheels_touching_ground_at_end": 6,
+        "warnings": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finite": true
+      },
+      {
+        "name": "turn",
+        "simulated_seconds": 10,
+        "final_position_m": [
+          0.5612988042060216,
+          0.03230583628526094,
+          0.8999417579899401
+        ],
+        "displacement_after_settle_m": [
+          0.561296948132002,
+          0.03230594303656148,
+          6.256244694646806e-05
+        ],
+        "max_rocker_constraint_error_rad": 0.0005938648580724553,
+        "wheels_touching_ground_at_end": 6,
+        "warnings": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finite": true
+      }
+    ],
+    "status": "PASS"
+  },
+  "glb": {
+    "status": "PASS",
+    "bytes": 14566632,
+    "animations": 1,
+    "animated_wheels": 6,
+    "embedded_images": 7
+  },
+  "usd": {
+    "status": "STRUCTURAL_PASS_ISAAC_RUNTIME_NOT_RUN",
+    "openusd_version": [
+      0,
+      26,
+      11
+    ],
+    "revolute_joints": 16,
+    "rigid_bodies": 17,
+    "unresolved_references": [],
+    "note": "PhysxMimicJointAPI authored; evaluation requires Isaac Sim PhysX."
+  }
+}

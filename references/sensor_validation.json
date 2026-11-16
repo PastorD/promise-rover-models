@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "turret_pose_cases": 3,
+  "max_position_error_m": 6.638467553443661e-12,
+  "max_rotation_matrix_error": 3.205103454691839e-09,
+  "mujoco": "4.0.0",
+  "lidar": {
+    "rays": 131072,
+    "scan_wall_seconds": 0.6028545250001116,
+    "target_expected_m": 3.849410113643874,
+    "target_measured_m": 3.849410113643874,
+    "rate_hold_test": "PASS"
+  },
+  "cameras": {
+    "stereo_left": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6650002002716064
+    },
+    "stereo_right": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6650002002716064
+    },
+    "dashcam_left": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6650002002716064
+    },
+    "dashcam_right": {
+      "resolution": [
+        320,
+        180
+      ],
+      "target_depth_m": 3.6650002002716064
+    }
+  },
+  "glb_cameras": 4,
+  "usd": "128 emitter OmniLidar profile and 4 cameras structurally checked; Isaac runtime not run"
+}

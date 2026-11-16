@@ -1,11 +1,12 @@
 """Assemble NASA donor meshes, manually resegment the robot, and export visuals.
 Run with Blender 4.5's Python (bpy), see README. Units are meters, ROS FLU.
 """
-import bpy, bmesh, math, json, pathlib, re, numpy as np
+import bpy, bmesh, math, json, pathlib, re, sys, numpy as np
 from PIL import Image
 from mathutils import Matrix, Vector
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
 PKG=ROOT/'ros2/promise_description'
 MESH=PKG/'meshes'; TEX=PKG/'textures'
 for p in [MESH,TEX,ROOT/'blender',ROOT/'glb',ROOT/'previews',ROOT/'data']:p.mkdir(parents=True,exist_ok=True)
@@ -173,14 +174,49 @@ for y in [-.78,.78]:
         for col in range(3):basebox('Side LED',[-.75+(col-1)*.031,y+math.copysign(.032,y),1.01+(row-1)*.034],[.024,.003,.026],lamp,.001)
 provenance.append(dict(source='Manually authored approximation against NASA PROMISE render',objects=['arm deletion cover','NSS enclosure','HPSC / GPU exterior','UHF pedestal','illuminator arrays'],operation='Create simplified attachment geometry; placements are illustrative, not flight CAD.'))
 
+# User-requested recessed OS1 mount: a hollow enclosure with a front aperture.
+from mast_enclosure import rebuild_enclosure
+shell,head_collision_world,enclosure=rebuild_enclosure(groups['head_pitch_link'][0],white,box)
+groups['head_pitch_link'].extend(shell)
+os1_anchor=[.692,-.164,1.9522]
+os1_rpy=[0,math.radians(22.5),0]
+os1_rotation=Matrix.Rotation(os1_rpy[1],3,'Y')
+link('os1_link',os1_anchor,'head_pitch_link','os1_mount_joint',kind='fixed',mass=.5)
+links['os1_link']['rpy']=os1_rpy
+os1_materials=[silver,newmat('OS1_optical_window',(.018,.027,.024,1),.15,.18),dark]
+triangles=np.load(ROOT/'source_assets/os1_rev8_geometry.npz')['triangles']
+vertices=triangles.reshape((-1,3))@np.array(os1_rotation).T+np.array(os1_anchor)
+mesh=bpy.data.meshes.new('Ouster_OS1_Rev8_CAD');mesh.from_pydata(vertices.tolist(),[],np.arange(len(vertices)).reshape((-1,3)).tolist());mesh.update()
+ob=bpy.data.objects.new('Ouster_OS1_Rev8_physical_case',mesh);bpy.context.collection.objects.link(ob)
+for ma in os1_materials:mesh.materials.append(ma)
+for face,triangle in zip(mesh.polygons,triangles):
+    z=float(triangle[:,2].mean());face.material_index=1 if .021<z<.050 else 2 if z<.012 else 0
+simplify(ob,8000);groups['os1_link']=[ob]
+# Split the simplified faces at the optical-window material boundaries.
+# Classifying a long CAD triangle only by its centroid produced jagged bands.
+bm=bmesh.new();bm.from_mesh(ob.data)
+for z in (.012,.021,.050):
+    bmesh.ops.bisect_plane(bm,geom=list(bm.verts)+list(bm.edges)+list(bm.faces),dist=1e-7,plane_co=Vector(os1_anchor)+os1_rotation@Vector((0,0,z)),plane_no=os1_rotation@Vector((0,0,1)),clear_inner=False,clear_outer=False)
+for face in bm.faces:
+    z=(os1_rotation.inverted()@(face.calc_center_median()-Vector(os1_anchor))).z
+    face.material_index=1 if .021<z<.050 else 2 if z<.012 else 0
+bm.to_mesh(ob.data);bm.free();ob.data.update()
+plate=box('OS1_internal_tilt_plate',[0,0,-.0025],[.070,.070,.004],dark,.001)
+plate.data.transform(Matrix.Translation(Vector(os1_anchor))@os1_rotation.to_4x4())
+groups['head_pitch_link'].append(plate)
+groups['head_pitch_link'].append(box('OS1_internal_rear_support',[.665,-.164,1.945],[.008,.060,.024],dark,.001))
+links['head_pitch_link']['mass']+=.05
+provenance.append(dict(source='Ouster OS1 Rev8 XX STEP, 2026-04-30',objects=['OS1 physical case'],operation='Recess into the original white enclosure, near its front face; rotate +22.5 degrees around ROS +Y so forward rays point down. Hollow the box and cut a 150 x 92 mm front aperture; replace roof bracket with an internal tilted cradle. User-requested modification, not NASA flight CAD.'))
+
 # Build a consistent named link hierarchy. Mesh coordinates become link-local.
 empties={}
 for name,spec in links.items():
     e=bpy.data.objects.new(name,None);bpy.context.collection.objects.link(e);e.empty_display_size=.08
-    e.location=spec['anchor'];e['mass_kg_estimated']=spec['mass'];e['source_note']='Public NASA visualization, manually articulated; not flight CAD.'
+    e.location=spec['anchor'];e.rotation_euler=spec.get('rpy',[0,0,0]);e['mass_kg_estimated']=spec['mass'];e['source_note']='Public NASA visualization, manually articulated; not flight CAD.'
     empties[name]=e
     for o in groups[name]:
-        o.data.transform(Matrix.Translation(-Vector(spec['anchor'])))
+        orientation=Matrix.Rotation(spec.get('rpy',[0,0,0])[1],4,'Y')
+        o.data.transform(orientation.inverted()@Matrix.Translation(-Vector(spec['anchor'])))
         o.parent=e;o.matrix_parent_inverse=Matrix.Identity(4);o.matrix_basis=Matrix.Identity(4)
     if spec['parent']:
         e.parent=empties[spec['parent']];e.location=Vector(spec['anchor'])-Vector(links[spec['parent']]['anchor'])
@@ -196,6 +232,7 @@ def collision(name,typ,pos,size=None,radius=None,length=None,rpy=None):
     links[name]['collisions'].append(d)
 collision('base_link','box',[-.02,0,.92],[1.91,1.48,.46])
 collision('base_link','box',[-1.24,0,1.20],[.72,.64,.67],rpy=[0,-.27,0])
+links['os1_link']['collisions'].append(dict(type='cylinder',pos=[0,0,.029175],radius=.0435,length=.05835))
 for name,spec in links.items():
     a=spec['anchor']
     if name.endswith('_wheel'):collision(name,'cylinder',a,radius=.2625,length=.30,rpy=[math.pi/2,0,0])
@@ -208,7 +245,8 @@ for name,spec in links.items():
         for u,v in ends:
             u,v=Vector(u),Vector(v);q=(v-u).to_track_quat('Z','Y');collision(name,'cylinder',(u+v)/2,radius=.043,length=(v-u).length,rpy=list(q.to_euler()))
     elif name=='mast_yaw_link':collision(name,'cylinder',[.679,-.164,1.51],radius=.05,length=.65)
-    elif name=='head_pitch_link':collision(name,'box',[.69,-.164,1.965],[.16,.50,.14])
+    elif name=='head_pitch_link':
+        for c in head_collision_world:collision(name,c['type'],c['pos'],c['size'],rpy=c['rpy'])
 
 # Positive-definite box/cylinder estimates; total mass is a configurable estimate.
 for name,spec in links.items():
@@ -225,7 +263,20 @@ for name,spec in links.items():
 cameras=[]
 for pair,baseline,height in [('stereo',.40,1.951),('dashcam',.31,2.003)]:
     for side,sgn in [('left',1),('right',-1)]:
-        cameras.append(dict(name=f'{pair}_{side}',parent='head_pitch_link',position=[.822,-.164+sgn*baseline/2,height],baseline=baseline,width=1280,height=720,hfov=1.221730476,rate=10))
+        cameras.append(dict(name=f'{pair}_{side}',parent='head_pitch_link',position=[.835,-.164+sgn*baseline/2,height],baseline=baseline,width=1280,height=720,hfov=1.221730476,rate=10))
+lidar=dict(name='os1',model='Ouster OS1 Rev8',parent='os1_link',frame='os1_lidar_frame',optical_offset=[0,0,.0402],channels=128,columns=1024,rate_hz=10,vertical_fov_deg=44,vertical_min_deg=-22,vertical_max_deg=22,horizontal_fov_deg=360,min_range_m=.5,max_range_m=170,housing_diameter_m=.087,housing_height_m=.05835,mass_kg=.5,calibration='Uniform elevation, zero azimuth offsets, approximate optical origin; not device-calibrated beam intrinsics.',sampling='Instantaneous full frame, single geometric return; no packet transport, reflectivity, native RGB, dual returns or calibrated noise.')
+lidar.update(mount_rpy_rad=os1_rpy,mount_pitch_down_deg=22.5,mount_anchor_world_m=os1_anchor,enclosure=enclosure,installation='Recessed inside white mast head, behind a front aperture. Enclosure blocks most side/rear directions; do not interpret the native 360-degree scan grid as unobstructed coverage.')
+from head_visibility import calculate_visibility
+bpy.context.view_layer.update()
+optical_world=Vector(os1_anchor)+os1_rotation@Vector(lidar['optical_offset'])
+mask,visibility=calculate_visibility(groups['head_pitch_link'],np.array(optical_world),np.array(os1_rotation),lidar)
+lidar.update(head_visible_mask_encoding='zlib+packbits-little-base64',head_visible_mask_b64=mask,head_visibility=visibility)
+sensor_objects=[];optical_to_flu=Matrix(((0,0,-1),(-1,0,0),(0,1,0)))
+for c in cameras:
+    data=bpy.data.cameras.new(c['name']);data.type='PERSP';data.sensor_fit='HORIZONTAL';data.sensor_width=36;data.lens=36/(2*math.tan(c['hfov']/2));data.clip_start=.01;data.clip_end=170
+    ob=bpy.data.objects.new(c['name'],data);bpy.context.collection.objects.link(ob);ob.parent=empties[c['parent']];ob.location=Vector(c['position'])-Vector(links[c['parent']]['anchor']);ob.rotation_euler=optical_to_flu.to_euler();ob['sensor_type']='camera';ob['calibration_json']=json.dumps(c);sensor_objects.append(ob)
+ob=bpy.data.objects.new(lidar['frame'],None);bpy.context.collection.objects.link(ob);ob.parent=empties['os1_link'];ob.location=lidar['optical_offset'];ob.empty_display_type='ARROWS';ob.empty_display_size=.1;ob['sensor_type']='lidar';ob['profile_json']=json.dumps(lidar);sensor_objects.append(ob)
+bpy.data.texts.new('os1_rev8_profile.json').write(json.dumps(lidar,indent=2))
 
 # Save single-material geometry for MJCF/USD and Collada for ROS renderers.
 materials={};image_cache={};mesh_count=0
@@ -282,8 +333,11 @@ for name in links:
                 for k in range(1,len(a)+1,3):f.write('f '+' '.join(f'{i}/{i}/{i}' for i in range(k,k+3))+'\n')
             links[name]['visuals'].append(dict(mesh=ident,material=key,triangles=len(ts)))
 
-spec=dict(name='promise',date='2026-11-08',units='m',axes='X forward, Y left, Z up',base_height=.9,total_mass_kg=sum(l['mass'] for l in links.values()),links=links,materials=materials,cameras=cameras,provenance=provenance,notes=['Masses, inertias, joint limits, actuator gains, friction and optical calibration are estimates, not NASA flight parameters.','Latest public PROMISE visualization used for mast/payload geometry. TRIDENT is fixed in its stowed driving pose.','Rocker differential uses q_left + q_right = 0.','Tread geometry is visual; wheel contact is a smooth cylinder. No deformable regolith model.'])
+spec=dict(name='promise',revision='0.3.0',date='2026-11-14',units='m',axes='X forward, Y left, Z up',base_height=.9,total_mass_kg=sum(l['mass'] for l in links.values()),links=links,materials=materials,cameras=cameras,provenance=provenance,notes=['Masses, inertias, joint limits, actuator gains, friction and optical calibration are estimates, not NASA flight parameters.','Latest public PROMISE visualization used for mast/payload geometry. TRIDENT is fixed in its stowed driving pose.','Rocker differential uses q_left + q_right = 0.','Tread geometry is visual; wheel contact is a smooth cylinder. No deformable regolith model.'])
 (ROOT/'data/robot_spec.json').write_text(json.dumps(spec,indent=2))
+spec['lidar']=lidar;spec['notes'].append('OS1 Rev8 is a user-requested turret sensor substitution, not a NASA flight hardware claim.')
+(ROOT/'data/robot_spec.json').write_text(json.dumps(spec,indent=2))
+(ROOT/'data/os1_rev8_profile.json').write_text(json.dumps(lidar,indent=2))
 
 # All six wheels have a genuine looping animation around their own local Y axes.
 scene=bpy.context.scene;scene.frame_start=1;scene.frame_end=240;scene.render.fps=30
@@ -295,9 +349,10 @@ for name,e in empties.items():
         for k in fc.keyframe_points:k.interpolation='LINEAR'
         fc.modifiers.new('CYCLES')
 scene.frame_set(1)
-for o in bpy.data.objects:o.select_set(o in empties.values() or any(o in g for g in groups.values()))
+for o in bpy.data.objects:o.select_set(o in empties.values() or o in sensor_objects or any(o in g for g in groups.values()))
 bpy.context.view_layer.objects.active=empties['base_link']
-bpy.ops.export_scene.gltf(filepath=str(ROOT/'glb/promise.glb'),export_format='GLB',use_selection=True,export_animations=True,export_animation_mode='ACTIVE_ACTIONS',export_frame_range=True,export_force_sampling=True,export_yup=True,export_extras=True)
+scene.render.resolution_x=1280;scene.render.resolution_y=720;scene.render.resolution_percentage=100
+bpy.ops.export_scene.gltf(filepath=str(ROOT/'glb/promise.glb'),export_format='GLB',use_selection=True,export_animations=True,export_animation_mode='ACTIVE_ACTIONS',export_frame_range=True,export_force_sampling=True,export_yup=True,export_extras=True,export_cameras=True)
 
 # Studio context is excluded from the general-purpose GLB and simulator geometry.
 scene.world=bpy.data.worlds.new('PROMISE studio');scene.world.use_nodes=True

@@ -1,10 +1,10 @@
 {
   "name": "promise",
-  "date": "2026-11-08",
+  "date": "2026-11-14",
   "units": "m",
   "axes": "X forward, Y left, Z up",
   "base_height": 0.9,
-  "total_mass_kg": 900,
+  "total_mass_kg": 900.55,
   "links": {
     "base_link": {
       "name": "base_link",
@@ -669,7 +669,7 @@
           "length": 0.7224930656324728,
           "rpy": [
             2.1628518104553223,
-            -3.680727544974616e-08,
+            1.7442154387481423e-07,
             2.290097236633301
           ]
         },
@@ -974,8 +974,8 @@
           "radius": 0.043,
           "length": 0.7224932100049559,
           "rpy": [
-            2.162851333618164,
-            1.6769492106050166e-07,
+            2.162851572036743,
+            -5.8495054133800295e-08,
             0.8514955639839172
           ]
         },
@@ -1707,7 +1707,7 @@
         0
       ],
       "type": "revolute",
-      "mass": 4,
+      "mass": 4.05,
       "limits": [
         -0.65,
         0.65
@@ -1717,36 +1717,221 @@
         {
           "type": "box",
           "pos": [
-            0.010999977588653564,
-            0.0,
-            0.07500004768371582
+            -0.0008481144905090332,
+            0.0005154609680175781,
+            0.04038691520690918
           ],
           "size": [
-            0.16,
-            0.5,
-            0.14
+            0.14309585094451904,
+            0.5003964155912399,
+            0.003
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            -0.0008481144905090332,
+            0.0005154609680175781,
+            0.13746631145477295
+          ],
+          "size": [
+            0.14309585094451904,
+            0.5003964155912399,
+            0.003
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            -0.028757870197296143,
+            -0.20604482293128967,
+            0.08892655372619629
+          ],
+          "size": [
+            0.12042735590388093,
+            0.003,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            -0.7853981633974486
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            0.04172945022583008,
+            -0.2481829822063446,
+            0.08892655372619629
+          ],
+          "size": [
+            0.05794100000000002,
+            0.003,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            0.0
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            0.04172945022583008,
+            0.24921399354934692,
+            0.08892655372619629
+          ],
+          "size": [
+            0.05794100000000002,
+            0.003,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            3.141592653589793
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            -0.028757870197296143,
+            0.2070753574371338,
+            0.08892655372619629
+          ],
+          "size": [
+            0.12042806301273801,
+            0.003,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            -2.356188618580999
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            -0.07089602947235107,
+            0.0005149990320205688,
+            0.08892655372619629
+          ],
+          "size": [
+            0.330086,
+            0.003,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            -1.5707963267948966
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            0.06919980049133301,
+            -0.1623413860797882,
+            0.08892655372619629
+          ],
+          "size": [
+            0.003,
+            0.174682758808136,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            0.06919980049133301,
+            0.1628568321466446,
+            0.08892655372619629
+          ],
+          "size": [
+            0.003,
+            0.17571365678310397,
+            0.10007929801940918
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            0.06919980049133301,
+            0.0,
+            0.04094350337982178
+          ],
+          "size": [
+            0.003,
+            0.15,
+            0.004113109588623098
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "pos": [
+            0.06919980049133301,
+            0.0,
+            0.13698303699493408
+          ],
+          "size": [
+            0.003,
+            0.15,
+            0.003966188430786222
+          ],
+          "rpy": [
+            0,
+            0,
+            0
           ]
         }
       ],
       "com": [
         0.007891565561294556,
-        0.0005154460668563843,
+        0.0005155056715011597,
         0.059956252574920654
       ],
       "inertia": [
-        0.09197493496288,
-        0.03452606025284529,
-        0.1094821638390225
+        0.09312482297519646,
+        0.034957636006005856,
+        0.11085089221229072
       ],
       "bounds": [
         [
           -0.13179552555084229,
-          -0.24968275427818298,
+          -0.24968299269676208,
           -0.019931554794311523
         ],
         [
           0.1475786566734314,
-          0.25071364641189575,
+          0.2507140040397644,
           0.13984405994415283
         ]
       ],
@@ -1754,7 +1939,7 @@
         {
           "mesh": "head_pitch_link_125",
           "material": "Material_3",
-          "triangles": 794
+          "triangles": 774
         },
         {
           "mesh": "head_pitch_link_126",
@@ -1765,6 +1950,142 @@
           "mesh": "head_pitch_link_127",
           "material": "Material_38",
           "triangles": 149
+        },
+        {
+          "mesh": "head_pitch_link_128",
+          "material": "PROMISE_thermal_white",
+          "triangles": 20
+        },
+        {
+          "mesh": "head_pitch_link_129",
+          "material": "PROMISE_thermal_white",
+          "triangles": 20
+        },
+        {
+          "mesh": "head_pitch_link_130",
+          "material": "PROMISE_thermal_white",
+          "triangles": 12
+        },
+        {
+          "mesh": "head_pitch_link_131",
+          "material": "PROMISE_thermal_white",
+          "triangles": 12
+        },
+        {
+          "mesh": "head_pitch_link_132",
+          "material": "PROMISE_thermal_white",
+          "triangles": 12
+        },
+        {
+          "mesh": "head_pitch_link_133",
+          "material": "PROMISE_thermal_white",
+          "triangles": 12
+        },
+        {
+          "mesh": "head_pitch_link_134",
+          "material": "PROMISE_thermal_white",
+          "triangles": 12
+        },
+        {
+          "mesh": "head_pitch_link_135",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "head_pitch_link_136",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "head_pitch_link_137",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "head_pitch_link_138",
+          "material": "PROMISE_thermal_white",
+          "triangles": 108
+        },
+        {
+          "mesh": "head_pitch_link_139",
+          "material": "PROMISE_black_anodized",
+          "triangles": 108
+        },
+        {
+          "mesh": "head_pitch_link_140",
+          "material": "PROMISE_black_anodized",
+          "triangles": 108
+        }
+      ]
+    },
+    "os1_link": {
+      "name": "os1_link",
+      "anchor": [
+        0.692,
+        -0.164,
+        1.9522
+      ],
+      "parent": "head_pitch_link",
+      "joint": "os1_mount_joint",
+      "axis": null,
+      "type": "fixed",
+      "mass": 0.5,
+      "limits": null,
+      "mimic": null,
+      "collisions": [
+        {
+          "type": "cylinder",
+          "pos": [
+            0,
+            0,
+            0.029175
+          ],
+          "radius": 0.0435,
+          "length": 0.05835
+        }
+      ],
+      "rpy": [
+        0,
+        0.39269908169872414,
+        0
+      ],
+      "com": [
+        -0.003784090280532837,
+        3.3527612686157227e-07,
+        0.02917492389678955
+      ],
+      "inertia": [
+        0.0005819727269638472,
+        0.0005717477365254925,
+        0.0006203871301560063
+      ],
+      "bounds": [
+        [
+          -0.04656827449798584,
+          -0.04349491000175476,
+          -2.384185791015625e-07
+        ],
+        [
+          0.039000093936920166,
+          0.043495580554008484,
+          0.0583500862121582
+        ]
+      ],
+      "visuals": [
+        {
+          "mesh": "os1_link_141",
+          "material": "PROMISE_silver",
+          "triangles": 3817
+        },
+        {
+          "mesh": "os1_link_142",
+          "material": "OS1_optical_window",
+          "triangles": 822
+        },
+        {
+          "mesh": "os1_link_143",
+          "material": "PROMISE_black_anodized",
+          "triangles": 5795
         }
       ]
     }
@@ -2011,6 +2332,28 @@
       "metallic": 1.0,
       "roughness": 0.4000000059604645,
       "texture": "mars_2020_hub_jpg.png"
+    },
+    "PROMISE_silver": {
+      "rgba": [
+        0.5199999809265137,
+        0.550000011920929,
+        0.5799999833106995,
+        1.0
+      ],
+      "metallic": 0.800000011920929,
+      "roughness": 0.30000001192092896,
+      "texture": null
+    },
+    "OS1_optical_window": {
+      "rgba": [
+        0.017999999225139618,
+        0.027000000700354576,
+        0.024000000208616257,
+        1.0
+      ],
+      "metallic": 0.15000000596046448,
+      "roughness": 0.18000000715255737,
+      "texture": null
     }
   },
   "cameras": [
@@ -2018,7 +2361,7 @@
       "name": "stereo_left",
       "parent": "head_pitch_link",
       "position": [
-        0.822,
+        0.835,
         0.036000000000000004,
         1.951
       ],
@@ -2032,7 +2375,7 @@
       "name": "stereo_right",
       "parent": "head_pitch_link",
       "position": [
-        0.822,
+        0.835,
         -0.364,
         1.951
       ],
@@ -2046,7 +2389,7 @@
       "name": "dashcam_left",
       "parent": "head_pitch_link",
       "position": [
-        0.822,
+        0.835,
         -0.009000000000000008,
         2.003
       ],
@@ -2060,7 +2403,7 @@
       "name": "dashcam_right",
       "parent": "head_pitch_link",
       "position": [
-        0.822,
+        0.835,
         -0.319,
         2.003
       ],
@@ -2137,12 +2480,94 @@
         "illuminator arrays"
       ],
       "operation": "Create simplified attachment geometry; placements are illustrative, not flight CAD."
+    },
+    {
+      "source": "Ouster OS1 Rev8 XX STEP, 2026-04-30",
+      "objects": [
+        "OS1 physical case"
+      ],
+      "operation": "Recess into the original white enclosure, near its front face; rotate +22.5 degrees around ROS +Y so forward rays point down. Hollow the box and cut a 150 x 92 mm front aperture; replace roof bracket with an internal tilted cradle. User-requested modification, not NASA flight CAD."
     }
   ],
   "notes": [
     "Masses, inertias, joint limits, actuator gains, friction and optical calibration are estimates, not NASA flight parameters.",
     "Latest public PROMISE visualization used for mast/payload geometry. TRIDENT is fixed in its stowed driving pose.",
     "Rocker differential uses q_left + q_right = 0.",
-    "Tread geometry is visual; wheel contact is a smooth cylinder. No deformable regolith model."
-  ]
+    "Tread geometry is visual; wheel contact is a smooth cylinder. No deformable regolith model.",
+    "OS1 Rev8 is a user-requested turret sensor substitution, not a NASA flight hardware claim."
+  ],
+  "lidar": {
+    "name": "os1",
+    "model": "Ouster OS1 Rev8",
+    "parent": "os1_link",
+    "frame": "os1_lidar_frame",
+    "optical_offset": [
+      0,
+      0,
+      0.0402
+    ],
+    "channels": 128,
+    "columns": 1024,
+    "rate_hz": 10,
+    "vertical_fov_deg": 44,
+    "vertical_min_deg": -22,
+    "vertical_max_deg": 22,
+    "horizontal_fov_deg": 360,
+    "min_range_m": 0.5,
+    "max_range_m": 170,
+    "housing_diameter_m": 0.087,
+    "housing_height_m": 0.05835,
+    "mass_kg": 0.5,
+    "calibration": "Uniform elevation, zero azimuth offsets, approximate optical origin; not device-calibrated beam intrinsics.",
+    "sampling": "Instantaneous full frame, single geometric return; no packet transport, reflectivity, native RGB, dual returns or calibrated noise.",
+    "mount_rpy_rad": [
+      0,
+      0.39269908169872414,
+      0
+    ],
+    "mount_pitch_down_deg": 22.5,
+    "mount_anchor_world_m": [
+      0.692,
+      -0.164,
+      1.9522
+    ],
+    "enclosure": {
+      "outer_bounds_m": [
+        [
+          0.6066039800643921,
+          -0.413682758808136,
+          1.928886890411377
+        ],
+        [
+          0.7496998310089111,
+          0.08671365678310394,
+          2.028966188430786
+        ]
+      ],
+      "wall_thickness_m": 0.003,
+      "front_plane_x_m": 0.7496998310089111,
+      "opening_width_m": 0.15,
+      "opening_bottom_z_m": 1.933,
+      "opening_top_z_m": 2.025,
+      "opening_center_y_m": -0.164,
+      "note": "True open aperture and hollow cavity; no glass cover. Original enclosure footprint and four camera meshes retained."
+    },
+    "installation": "Recessed inside white mast head, behind a front aperture. Enclosure blocks most side/rear directions; do not interpret the native 360-degree scan grid as unobstructed coverage.",
+    "head_visible_mask_encoding": "zlib+packbits-little-base64",
+    "head_visible_mask_b64": "eNrt28FthDAQBVCzRCKHSFYqIJ3QSjrBHaQlS2nEJfjoA8IRJpccVh4kf40c/hSwb8Us5u/Y5Py3FgOtlGs1QP0qny2SD3V/0b382AYI+DzieNeDP+F834NvVW8/+jPOjz34i+7ye3t/xfkbfUHh/L0LHxeAMn3NAOboqwZA34cPC2CBvmoAjPRVA2CirxoAN/qqAXTvxEcFwExfMwA6+qoB1NNXDaCBvmoAjfRVA6i+/y3RA84foqT5EXX/rZIlcDIR9Pzzs2z/O6DypxX8BQJOv81DsAbaF4Os6g/APnT9yfxr39Gnr3T6gz79qj/Qp6/oG/r06d/Wv/v6d/f8wf8fR72q+efs6a29/HHBd4AJ2KfML7PXAJjAnlM1r+eXaxqU/eoAtMxeA2ACm4qflP3qEYD1d1LbvLbS013kR5gvO3yRUL5gC/bsUnt/F/pD6RLAX4xoC9Si/NWI3z9DxLDymZItqNIlhD+KTmCt49Gl5jHMlc5KTiC9H1cJ4c+yE0Dj8S0R/ip9/2sHxEBfdhZF9ZVB/oVqHsAC/SvVPIDFvvzmASzRv1LNA9izJ88Puviogg==",
+    "head_visibility": {
+      "total_rays": 131072,
+      "head_clear_rays": 38314,
+      "head_blocked_rays": 92758,
+      "forward_center_all_128_channels_clear": true,
+      "rear_center_all_channels_blocked": true,
+      "fully_clear_horizontal_sector_deg": [
+        -44.6484375,
+        44.6484375
+      ],
+      "native_vertical_fov_deg": 44,
+      "scope": "Only geometry rigidly attached to head_pitch_link; excludes OS1 case. Other rover/environment occlusion is dynamic."
+    }
+  },
+  "revision": "0.3.0"
 }

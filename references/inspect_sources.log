@@ -1,0 +1,490 @@
+Read blend: "source_assets/curiosity_clean/Curiosity Rover (MSL) (Clean).blend"
+curiosity _root_p 8 [[-0.5, -0.5, -0.5], [0.5, 0.5, 0.5]]
+curiosity antenna_HG_01 886 [[0.383, 0.368, 1.202], [0.586, 0.668, 1.416]]
+curiosity antenna_HG_02_p 8 [[0.453, 0.48, 1.32], [0.57, 0.596, 1.408]]
+curiosity antenna_HG_03 576 [[0.25, 0.117, 1.335], [0.532, 0.515, 1.416]]
+curiosity antenna_LG 195 [[0.462, 0.904, 1.355], [0.528, 0.97, 1.58]]
+curiosity antenna_UHF 452 [[-0.609, 0.979, 1.416], [-0.401, 1.187, 1.825]]
+curiosity APXS 164 [[0.561, -1.905, 1.874], [0.684, -1.779, 1.961]]
+curiosity arm_01.001 897 [[0.297, -1.382, 0.662], [0.654, -1.048, 0.963]]
+curiosity arm_02.001 1009 [[0.189, -2.207, 0.724], [0.661, -1.235, 0.942]]
+curiosity arm_03.001 1182 [[0.325, -2.189, 0.823], [0.631, -2.01, 1.702]]
+curiosity arm_04.001 1040 [[0.211, -2.121, 1.539], [0.548, -1.813, 1.828]]
+curiosity arm_05_head.001 1432 [[0.208, -2.214, 1.81], [0.714, -1.72, 2.006]]
+curiosity bit_01.001 398 [[0.387, -2.238, 1.854], [0.479, -2.111, 1.946]]
+curiosity bit_02 398 [[-0.533, -1.19, 0.66], [-0.392, -1.034, 0.752]]
+curiosity bit_03 378 [[-0.217, -1.167, 0.742], [-0.102, -1.024, 0.834]]
+curiosity body 8860 [[-0.744, -1.212, 0.633], [0.744, 1.634, 1.529]]
+curiosity body.001 144 [[0.345, -1.219, 0.963], [0.558, -1.007, 1.071]]
+curiosity Chassis 984 [[-0.769, -0.905, 0.656], [0.769, 1.177, 1.416]]
+curiosity ChemCam 345 [[-0.79, -0.849, 2.006], [-0.24, -0.566, 2.21]]
+curiosity CheMin 435 [[0.056, -0.751, 1.092], [0.249, -0.602, 1.141]]
+curiosity CHIMERA 954 [[0.513, -2.167, 1.789], [0.768, -1.92, 2.028]]
+curiosity cover_01 140 [[0.09, -0.709, 1.102], [0.213, -0.604, 1.145]]
+curiosity cover_02 92 [[-0.277, -0.757, 1.104], [-0.142, -0.681, 1.147]]
+curiosity cover_03 96 [[-0.186, -0.682, 1.104], [-0.118, -0.571, 1.147]]
+curiosity Cube_01_p 8 [[0.984, -1.166, 0.806], [1.132, -1.019, 0.954]]
+curiosity Cube_02_p 8 [[-1.136, -1.169, 0.806], [-0.988, -1.021, 0.954]]
+curiosity Cube_03_p 8 [[0.913, 0.466, 0.57], [1.061, 0.614, 0.717]]
+curiosity Cube_04_p 8 [[-1.066, 0.466, 0.57], [-0.918, 0.614, 0.717]]
+curiosity DAN_L 110 [[0.575, 0.732, 0.725], [0.578, 1.013, 1.02]]
+curiosity DAN_R 110 [[-0.578, 0.75, 0.689], [-0.575, 0.975, 1.089]]
+curiosity Drill 1115 [[0.26, -2.283, 1.838], [0.533, -1.706, 2.033]]
+curiosity Dust Removal Tool 276 [[0.127, -2.13, 1.875], [0.305, -2.005, 1.963]]
+curiosity HazCam - front 1478 [[-0.115, -0.953, 0.68], [0.194, -0.801, 0.774]]
+curiosity HazCam - rear 960 [[-0.593, 1.02, 0.755], [0.593, 1.085, 0.89]]
+curiosity HazCam_F 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity HazCam_rear_L 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity HazCam_rear_R 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity lens_covers_front 164 [[-0.097, -0.959, 0.671], [0.189, -0.888, 0.741]]
+curiosity lens_covers_rear 456 [[-0.576, 1.023, 0.725], [0.576, 1.09, 0.803]]
+curiosity MAHLI 298 [[0.166, -1.97, 1.838], [0.316, -1.841, 1.964]]
+curiosity MAHLI_cal_target 166 [[0.343, -1.137, 0.71], [0.438, -1.04, 0.901]]
+curiosity MAHLI_cam 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity MAHLI_LED_01 25 [[0.214, -1.862, 1.898], [0.218, -1.857, 1.903]]
+curiosity MAHLI_LED_02 25 [[0.212, -1.865, 1.895], [0.216, -1.86, 1.899]]
+curiosity MAHLI_LED_03 25 [[0.197, -1.888, 1.909], [0.2, -1.884, 1.913]]
+curiosity MAHLI_LED_04 25 [[0.198, -1.888, 1.914], [0.201, -1.883, 1.918]]
+curiosity MAHLI_lens_cover 180 [[0.179, -1.899, 1.885], [0.257, -1.826, 1.971]]
+curiosity MAHLI_lens_cover_p 8 [[0.184, -1.884, 1.908], [0.23, -1.835, 1.948]]
+curiosity MARDI 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity MARDI.001 168 [[0.585, -0.715, 0.661], [0.711, -0.612, 0.806]]
+curiosity mast_01.000 138 [[-0.732, -0.917, 1.463], [-0.541, -0.599, 1.559]]
+curiosity mast_01.001 924 [[-0.654, -0.818, 1.146], [-0.462, -0.596, 1.672]]
+curiosity mast_02.001 374 [[-0.675, -0.83, 1.672], [-0.404, -0.598, 1.954]]
+curiosity mast_03.001 1094 [[-0.696, -0.848, 1.745], [-0.244, -0.604, 2.006]]
+curiosity mast_p 8 [[-0.679, -0.836, 1.138], [-0.438, -0.595, 1.313]]
+curiosity MastCam 984 [[-0.683, -0.846, 1.928], [-0.348, -0.581, 2.007]]
+curiosity MastCam_L 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity MastCam_R 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity NavCam 1030 [[-0.769, -0.853, 1.89], [-0.262, -0.683, 2.007]]
+curiosity NavCam_top_L 8 [[-0.015, -0.015, -0.015], [0.015, 0.015, 0.015]]
+curiosity NavCam_top_R 8 [[-0.74, -0.857, 1.969], [-0.71, -0.827, 1.999]]
+curiosity RAD 141 [[0.286, -0.126, 1.116], [0.41, -0.003, 1.128]]
+curiosity radiators 96 [[-0.396, 0.752, 0.738], [0.396, 1.662, 1.564]]
+curiosity REMS 20 [[-0.257, -0.583, 1.116], [-0.191, -0.51, 1.129]]
+curiosity RTG 322 [[-0.297, 0.832, 0.763], [0.297, 1.581, 1.539]]
+curiosity SAM 643 [[-0.314, -0.771, 1.094], [-0.022, -0.535, 1.143]]
+curiosity shadow_arm 4 [[-1.0, -0.869, 0.0], [1.0, 0.765, 0.0]]
+curiosity sundial 259 [[-0.552, 0.343, 1.287], [-0.476, 0.419, 1.345]]
+curiosity suspension_arm_B2_L 620 [[0.737, 0.022, 0.202], [1.137, 1.243, 0.833]]
+curiosity suspension_arm_B2_R 620 [[-1.142, 0.022, 0.202], [-0.742, 1.243, 0.833]]
+curiosity suspension_arm_B_L 296 [[0.728, -0.276, 0.607], [0.851, 0.576, 0.955]]
+curiosity suspension_arm_B_L_p 8 [[0.697, -0.297, 0.787], [0.892, -0.131, 0.982]]
+curiosity suspension_arm_B_R 296 [[-0.856, -0.276, 0.607], [-0.732, 0.576, 0.955]]
+curiosity suspension_arm_B_R_p 8 [[-0.897, -0.297, 0.787], [-0.702, -0.131, 0.982]]
+curiosity suspension_arm_F_L 453 [[0.742, -1.172, 0.649], [1.138, -0.15, 0.954]]
+curiosity suspension_arm_F_L_p 8 [[0.669, -0.319, 0.756], [0.921, -0.104, 1.008]]
+curiosity suspension_arm_F_R 405 [[-1.142, -1.174, 0.651], [-0.746, -0.152, 0.957]]
+curiosity suspension_arm_F_R_p 8 [[-0.925, -0.321, 0.759], [-0.673, -0.107, 1.011]]
+curiosity suspension_axel_L 240 [[0.6, -0.315, 0.774], [0.751, -0.112, 1.138]]
+curiosity suspension_axel_L2 36 [[0.728, -0.268, 0.82], [0.87, -0.16, 0.95]]
+curiosity suspension_axel_R 240 [[-0.751, -0.316, 0.774], [-0.6, -0.112, 1.137]]
+curiosity suspension_axel_R2 36 [[-0.87, -0.268, 0.82], [-0.728, -0.16, 0.95]]
+curiosity suspension_rod_L 210 [[0.61, -0.26, 1.087], [0.672, 0.147, 1.183]]
+curiosity suspension_rod_R 210 [[-0.672, -0.26, 1.086], [-0.61, 0.148, 1.184]]
+curiosity suspension_steer_B_L 383 [[0.701, 1.059, 0.204], [1.163, 1.269, 0.651]]
+curiosity suspension_steer_B_R 383 [[-1.168, 1.059, 0.204], [-0.705, 1.269, 0.651]]
+curiosity suspension_steer_F_L 501 [[0.635, -1.198, 0.202], [1.163, -0.987, 0.649]]
+curiosity suspension_steer_F_R 501 [[-1.168, -1.2, 0.204], [-0.639, -0.99, 0.651]]
+curiosity suspension_xmember 454 [[-0.661, 0.065, 1.117], [0.661, 0.345, 1.179]]
+curiosity wheel_01_L 1541 [[0.861, -1.335, -0.002], [1.256, -0.85, 0.483]]
+curiosity wheel_01_R 1541 [[-1.26, -1.338, 0.0], [-0.866, -0.852, 0.486]]
+curiosity wheel_02_L 1541 [[0.991, -0.154, 0.001], [1.386, 0.332, 0.486]]
+curiosity wheel_02_R 1541 [[-1.391, -0.154, 0.001], [-0.996, 0.332, 0.486]]
+curiosity wheel_03_L 1541 [[0.861, 0.92, 0.001], [1.256, 1.405, 0.486]]
+curiosity wheel_03_R 1541 [[-1.26, 0.923, 0.001], [-0.866, 1.408, 0.486]]
+Read blend: "source_assets/perseverance_blend/Mars 2020 Perseverance Rover.blend"
+perseverance antenna_hg 4439 [[0.25, 0.118, 1.134], [0.586, 0.669, 1.434]]
+perseverance antenna_lg 328 [[0.462, 0.906, 1.422], [0.528, 0.972, 1.597]]
+perseverance antenna_uhf 1132 [[-0.609, 0.979, 1.434], [-0.401, 1.187, 1.846]]
+perseverance arm 1285 [[-0.611, -1.362, 0.925], [0.347, -1.003, 1.21]]
+perseverance arm.001 493 [[0.251, -1.292, 0.893], [0.584, -0.869, 1.242]]
+perseverance arm.002 792 [[-0.565, -1.079, 0.777], [0.339, -0.913, 1.136]]
+perseverance arm.003 640 [[0.17, -1.372, 0.68], [0.554, -1.007, 0.915]]
+perseverance arm.004 458 [[0.213, -1.107, 0.879], [0.538, -0.886, 1.228]]
+perseverance arm_01 412 [[-0.519, 0.198, 0.647], [-0.412, 0.28, 0.669]]
+perseverance arm_01_joint 348 [[-0.43, 0.19, 0.652], [-0.394, 0.287, 0.674]]
+perseverance arm_01_pivot 16 [[-0.43, 0.181, 0.652], [-0.412, 0.199, 0.669]]
+perseverance arm_02 465 [[0.01, 0.15, 0.632], [0.172, 0.315, 0.71]]
+perseverance arm_02.001 157 [[0.084, -0.098, 0.639], [0.254, 0.57, 0.69]]
+perseverance arm_02_joint 320 [[-0.003, 0.141, 0.677], [0.042, 0.32, 0.723]]
+perseverance arm_02_pivot 16 [[0.012, 0.14, 0.692], [0.027, 0.155, 0.708]]
+perseverance arm_cable_etc 1769 [[0.411, -1.234, 1.007], [0.664, -0.51, 1.283]]
+perseverance base 562 [[-0.707, -0.834, 1.134], [-0.42, -0.607, 1.289]]
+perseverance Body 1437 [[-0.774, -0.903, 0.674], [0.774, 1.178, 1.501]]
+perseverance Body.002 82 [[0.578, -0.857, 0.68], [0.644, -0.807, 0.795]]
+perseverance Body.003 82 [[-0.644, -0.857, 0.68], [-0.578, -0.807, 0.795]]
+perseverance Body_Parts 6880 [[-0.761, -0.879, 0.688], [0.761, 1.186, 1.502]]
+perseverance Body_Parts.001 1024 [[0.189, -0.184, 1.134], [0.414, -0.014, 1.283]]
+perseverance bottom 2609 [[-0.72, -0.878, 1.072], [-0.103, -0.318, 1.381]]
+perseverance bottom.001 92 [[-0.623, -0.624, 1.139], [-0.424, -0.386, 1.184]]
+perseverance bottom.002 288 [[-0.438, -0.704, 1.134], [-0.122, -0.27, 1.561]]
+perseverance bottom.003 228 [[-0.489, -0.719, 1.072], [-0.221, -0.395, 1.383]]
+perseverance box 941 [[-0.625, 0.299, 1.134], [-0.213, 0.686, 1.41]]
+perseverance calibration_target 26 [[-0.563, -1.228, 0.849], [-0.413, -1.208, 0.91]]
+perseverance calibration_target_bracket 162 [[-0.561, -1.208, 0.679], [-0.399, -0.851, 0.921]]
+perseverance corring_drill 165 [[0.362, -1.262, 1.375], [0.424, -1.191, 1.433]]
+perseverance cover_02 436 [[0.693, -1.206, 1.342], [0.719, -1.163, 1.392]]
+perseverance cover_03 436 [[0.752, -0.955, 1.393], [0.765, -0.907, 1.443]]
+perseverance Cylinder 16 [[-0.502, -0.864, 1.224], [-0.449, -0.814, 1.266]]
+perseverance Cylinder.001 64 [[-0.388, -0.305, 1.317], [-0.372, -0.287, 1.331]]
+perseverance Cylinder.002 16 [[-0.195, -0.124, 1.213], [-0.117, -0.051, 1.277]]
+perseverance Down_Look_Camera 875 [[0.585, -0.72, 0.67], [0.714, -0.616, 0.823]]
+perseverance hazcams_front 9238 [[-0.287, -1.067, 0.67], [0.133, -0.877, 0.832]]
+perseverance hazcams_front_cover 356 [[-0.283, -0.988, 0.617], [0.129, -0.887, 0.694]]
+perseverance hazcams_rear 6488 [[-0.531, 1.024, 0.707], [0.531, 1.224, 0.944]]
+perseverance hazcams_rear_cover_l 399 [[0.481, 1.05, 0.701], [0.57, 1.228, 0.879]]
+perseverance hazcams_rear_cover_r 396 [[-0.57, 1.05, 0.701], [-0.481, 1.228, 0.879]]
+perseverance hazcams_rear_wiring 184 [[-0.474, 0.891, 0.704], [0.474, 1.034, 0.756]]
+perseverance head 1125 [[-0.272, -0.658, 1.111], [0.419, 0.058, 1.415]]
+perseverance hinge 16 [[0.099, -0.965, 1.36], [0.12, -0.945, 1.379]]
+perseverance lab 8714 [[-0.446, -1.211, 0.75], [0.404, -0.407, 1.513]]
+perseverance lens 286 [[0.025, -0.238, 1.122], [0.234, -0.03, 1.232]]
+perseverance Mastcam_Z_cams 468 [[-0.082, -0.482, 1.108], [0.188, -0.147, 1.378]]
+perseverance microphones 16 [[0.604, 0.286, 1.009], [0.615, 0.313, 1.02]]
+perseverance microphones.001 16 [[0.106, -0.227, 1.108], [0.121, -0.212, 1.135]]
+perseverance Name_Chips 170 [[-0.104, 0.864, 1.421], [0.104, 0.949, 1.499]]
+perseverance NavCams 978 [[-0.132, -0.558, 1.105], [0.236, -0.073, 1.278]]
+perseverance pan_end cover 88 [[-0.315, 0.778, 0.672], [-0.066, 0.901, 0.674]]
+perseverance part_01 316 [[-0.496, -1.22, 0.7], [-0.257, -0.865, 0.926]]
+perseverance PIXL 525 [[0.095, -1.075, 1.297], [0.272, -0.842, 1.495]]
+perseverance PIXL_cover_01 308 [[0.088, -0.972, 1.367], [0.115, -0.933, 1.427]]
+perseverance probe 0 [[-0.762, -0.545, 1.617], [-0.762, -0.545, 1.617]]
+perseverance probe.001 176 [[-0.424, -0.461, 1.234], [-0.283, -0.286, 1.379]]
+perseverance RIMFAX 145 [[-0.306, 0.865, 0.677], [0.306, 1.247, 0.881]]
+perseverance rtg 6029 [[-0.575, 0.762, 0.69], [0.575, 1.736, 1.622]]
+perseverance suspension 13551 [[-1.167, -1.199, 0.217], [1.167, 1.269, 1.205]]
+perseverance top 2058 [[-0.252, -0.62, 1.121], [0.159, -0.204, 1.36]]
+perseverance turret_obj 8512 [[0.138, -1.359, 1.228], [0.728, -0.623, 1.528]]
+perseverance turret_obj.002 380 [[0.624, -1.215, 1.337], [0.746, -0.999, 1.546]]
+perseverance turret_obj.004 38 [[0.575, -1.219, 1.326], [0.746, -0.992, 1.535]]
+perseverance turret_obj.006 20 [[0.609, -1.121, 1.366], [0.746, -0.999, 1.528]]
+perseverance turret_parts 319 [[0.561, -1.207, 1.273], [0.701, -0.874, 1.549]]
+perseverance Up_Look_Camera 244 [[-0.41, 0.571, 1.303], [-0.366, 0.636, 1.351]]
+perseverance WATSON 362 [[0.625, -1.001, 1.332], [0.761, -0.871, 1.529]]
+perseverance Wheels_objs 34380 [[-1.352, -1.358, 0.001], [1.352, 1.428, 0.527]]
+20:08:09 | INFO: Data are loaded, start creating Blender stuff
+20:08:09 | INFO: Blender create Mesh node Mesh_0
+20:08:09 | INFO: Draco Decoder: Decode primitive Mesh_0
+DracoDecoder | Decoded 62919 vertices, 64077 indices
+20:08:09 | INFO: Blender create Mesh node Mesh_1
+20:08:09 | INFO: Draco Decoder: Decode primitive Mesh_1
+DracoDecoder | Decoded 177578 vertices, 223764 indices
+20:08:09 | INFO: Blender create Mesh node Mesh_2
+20:08:09 | INFO: Draco Decoder: Decode primitive Mesh_2
+DracoDecoder | Decoded 2112 vertices, 8796 indices
+20:08:09 | INFO: Blender create Mesh node Mesh_3
+20:08:09 | INFO: Draco Decoder: Decode primitive Mesh_3
+DracoDecoder | Decoded 183504 vertices, 213141 indices
+20:08:09 | INFO: Draco Decoder: Decode primitive Mesh_3
+DracoDecoder | Decoded 13997 vertices, 16893 indices
+20:08:09 | INFO: Draco Decoder: Decode primitive Mesh_3
+DracoDecoder | Decoded 1575 vertices, 3084 indices
+20:08:10 | INFO: Blender create Mesh node Mesh_4
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 353352 vertices, 523263 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 959 vertices, 1074 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 147078 vertices, 231963 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 16970 vertices, 25272 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 60710 vertices, 116250 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 341 vertices, 1065 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 2838 vertices, 4056 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 41685 vertices, 66624 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 89 vertices, 342 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 179 vertices, 720 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 552 vertices, 2121 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 3992 vertices, 18384 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 840 vertices, 900 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 60 vertices, 300 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 49 vertices, 237 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 7696 vertices, 19986 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 5596 vertices, 9372 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 33036 vertices, 63561 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 5919 vertices, 15078 indices
+20:08:10 | INFO: Draco Decoder: Decode primitive Mesh_4
+DracoDecoder | Decoded 11190 vertices, 19179 indices
+20:08:11 | INFO: Blender create Mesh node Mesh_5
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_5
+DracoDecoder | Decoded 14574 vertices, 14928 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_5
+DracoDecoder | Decoded 16730 vertices, 18516 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_5
+DracoDecoder | Decoded 20530 vertices, 24786 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_5
+DracoDecoder | Decoded 3767 vertices, 4725 indices
+20:08:11 | INFO: Blender create Mesh node Mesh_6
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_6
+DracoDecoder | Decoded 14415 vertices, 14769 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_6
+DracoDecoder | Decoded 16652 vertices, 18438 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_6
+DracoDecoder | Decoded 20451 vertices, 24705 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_6
+DracoDecoder | Decoded 3755 vertices, 4713 indices
+20:08:11 | INFO: Blender create Mesh node Mesh_7
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_7
+DracoDecoder | Decoded 14913 vertices, 15267 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_7
+DracoDecoder | Decoded 16889 vertices, 18675 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_7
+DracoDecoder | Decoded 20674 vertices, 24960 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_7
+DracoDecoder | Decoded 3767 vertices, 4725 indices
+20:08:11 | INFO: Blender create Mesh node Mesh_8
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_8
+DracoDecoder | Decoded 15122 vertices, 15432 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_8
+DracoDecoder | Decoded 16952 vertices, 18696 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_8
+DracoDecoder | Decoded 20716 vertices, 24960 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_8
+DracoDecoder | Decoded 3801 vertices, 4761 indices
+20:08:11 | INFO: Blender create Mesh node Mesh_9
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_9
+DracoDecoder | Decoded 14217 vertices, 14571 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_9
+DracoDecoder | Decoded 16538 vertices, 18294 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_9
+DracoDecoder | Decoded 20269 vertices, 24471 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_9
+DracoDecoder | Decoded 3733 vertices, 4659 indices
+20:08:11 | INFO: Blender create Mesh node Mesh_11
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 3484 vertices, 4260 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 78090 vertices, 84036 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 1089 vertices, 1359 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 5303 vertices, 5307 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 68693 vertices, 81759 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 463 vertices, 705 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 242 vertices, 246 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 82 vertices, 84 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 189 vertices, 189 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 33456 vertices, 37974 indices
+20:08:11 | INFO: Draco Decoder: Decode primitive Mesh_11
+DracoDecoder | Decoded 17101 vertices, 19707 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_10
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_10
+DracoDecoder | Decoded 14857 vertices, 15207 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_10
+DracoDecoder | Decoded 16844 vertices, 18642 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_10
+DracoDecoder | Decoded 20654 vertices, 24936 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_10
+DracoDecoder | Decoded 3553 vertices, 4455 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_12
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 3498 vertices, 4248 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 80557 vertices, 84645 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 1136 vertices, 1344 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 5207 vertices, 5211 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 5491 vertices, 5913 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 464 vertices, 702 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 247 vertices, 249 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 79 vertices, 81 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 178 vertices, 180 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 34326 vertices, 37992 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 17831 vertices, 19809 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_12
+DracoDecoder | Decoded 63934 vertices, 75612 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_13
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 19735 vertices, 25449 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 621 vertices, 621 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 192 vertices, 192 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 1722 vertices, 1926 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 308 vertices, 426 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 447 vertices, 741 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 2240 vertices, 2874 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 2271 vertices, 2499 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 2337 vertices, 2511 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_13
+DracoDecoder | Decoded 7179 vertices, 8661 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_14
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 19374 vertices, 24924 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 618 vertices, 618 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 192 vertices, 192 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 1748 vertices, 1968 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 308 vertices, 426 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 457 vertices, 753 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 2098 vertices, 2622 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 2293 vertices, 2511 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 2362 vertices, 2544 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_14
+DracoDecoder | Decoded 7112 vertices, 8646 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_15
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 14895 vertices, 18993 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 603 vertices, 603 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 192 vertices, 192 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 1737 vertices, 1935 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 307 vertices, 423 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 438 vertices, 732 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 2127 vertices, 2721 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 7038 vertices, 8562 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_15
+DracoDecoder | Decoded 11987 vertices, 13191 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_16
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 14433 vertices, 18435 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 603 vertices, 603 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 192 vertices, 192 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 1720 vertices, 1926 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 306 vertices, 420 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 451 vertices, 741 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 2095 vertices, 2619 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 7080 vertices, 8586 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_16
+DracoDecoder | Decoded 12061 vertices, 13323 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_17
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_17
+DracoDecoder | Decoded 12872 vertices, 13428 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_17
+DracoDecoder | Decoded 14865 vertices, 15405 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_17
+DracoDecoder | Decoded 204 vertices, 933 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_18
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_18
+DracoDecoder | Decoded 827 vertices, 1539 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_18
+DracoDecoder | Decoded 13071 vertices, 18144 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_18
+DracoDecoder | Decoded 15222 vertices, 18558 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_19
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_19
+DracoDecoder | Decoded 11070 vertices, 14568 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_19
+DracoDecoder | Decoded 310 vertices, 432 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_20
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_20
+DracoDecoder | Decoded 10715 vertices, 14907 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_20
+DracoDecoder | Decoded 42966 vertices, 49236 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_20
+DracoDecoder | Decoded 185 vertices, 690 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_20
+DracoDecoder | Decoded 13219 vertices, 16215 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_21
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_21
+DracoDecoder | Decoded 453 vertices, 1056 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_22
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_22
+DracoDecoder | Decoded 37178 vertices, 42741 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_22
+DracoDecoder | Decoded 1518 vertices, 1518 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_23
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_23
+DracoDecoder | Decoded 632 vertices, 1176 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_23
+DracoDecoder | Decoded 2794 vertices, 3555 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_23
+DracoDecoder | Decoded 3100 vertices, 4188 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_24
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_24
+DracoDecoder | Decoded 340 vertices, 672 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_24
+DracoDecoder | Decoded 1123 vertices, 1179 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_24
+DracoDecoder | Decoded 4123 vertices, 5457 indices
+20:08:12 | INFO: Blender create Mesh node Mesh_25
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_25
+DracoDecoder | Decoded 1227 vertices, 1671 indices
+20:08:12 | INFO: Draco Decoder: Decode primitive Mesh_25
+DracoDecoder | Decoded 40858 vertices, 47670 indices
+20:08:13 | INFO: glTF import finished in 3.59s
+promise Mesh_0 62919 [[0.158, -1.256, 1.392], [0.193, 0.068, 1.427]]
+promise Mesh_1 177578 [[0.057, -1.257, 0.886], [0.577, 0.426, 1.468]]
+promise Mesh_10 55908 [[1.017, -0.173, 0.001], [1.352, 0.353, 0.527]]
+promise Mesh_11 208192 [[0.503, -1.181, 0.198], [1.167, 1.249, 1.205]]
+promise Mesh_12 212948 [[-1.166, -1.18, 0.198], [-0.503, 1.251, 1.206]]
+promise Mesh_13 37052 [[0.719, 1.054, 0.192], [1.17, 1.272, 0.684]]
+promise Mesh_14 36562 [[-1.168, 1.061, 0.192], [-0.72, 1.272, 0.684]]
+promise Mesh_15 39324 [[-1.168, -1.201, 0.192], [-0.634, -0.99, 0.684]]
+promise Mesh_16 38941 [[0.637, -1.202, 0.192], [1.171, -0.991, 0.684]]
+promise Mesh_17 27941 [[-0.54, -0.983, 0.657], [0.539, 1.153, 0.91]]
+promise Mesh_18 29120 [[0.32, 0.11, 1.124], [0.629, 0.678, 1.44]]
+promise Mesh_19 11380 [[-0.631, -0.883, 0.704], [0.631, 1.08, 1.266]]
+promise Mesh_2 2112 [[0.069, -0.747, 1.187], [0.277, 0.325, 1.453]]
+promise Mesh_20 67085 [[-0.414, -0.827, 1.132], [0.087, -0.548, 2.03]]
+promise Mesh_21 453 [[-0.545, 0.514, 1.303], [-0.492, 0.566, 1.32]]
+promise Mesh_22 38696 [[-0.308, 0.802, 0.638], [0.308, 1.184, 0.843]]
+promise Mesh_23 6526 [[-0.609, 0.979, 1.579], [-0.401, 1.187, 1.624]]
+promise Mesh_24 5586 [[0.056, -0.741, 1.126], [0.19, -0.608, 1.148]]
+promise Mesh_24.001 5586 [[0.414, -0.743, 1.13], [0.487, -0.671, 1.142]]
+promise Mesh_25 42085 [[-0.502, -1.101, 0.553], [0.223, -0.49, 1.135]]
+promise Mesh_3 199076 [[0.043, -1.217, 1.128], [0.486, 0.366, 1.459]]
+promise Mesh_4 693131 [[-0.868, -0.904, 0.673], [0.868, 1.662, 1.582]]
+promise Mesh_5 55601 [[0.894, 0.854, -0.045], [1.23, 1.474, 0.575]]
+promise Mesh_6 55273 [[-1.232, 0.845, -0.054], [-0.897, 1.483, 0.584]]
+promise Mesh_7 56243 [[-1.232, -1.419, -0.054], [-0.897, -0.781, 0.584]]
+promise Mesh_8 56591 [[0.9, -1.355, 0.002], [1.235, -0.829, 0.528]]
+promise Mesh_9 54757 [[-1.369, -0.271, -0.097], [-1.034, 0.451, 0.625]]
+Info: Saved as "promise_reference.blend"

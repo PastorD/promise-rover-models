@@ -148,7 +148,7 @@
   </gazebo>
   <gazebo reference="head_pitch_link">
     <sensor name="stereo_left" type="camera">
-      <pose>0.143 0.2 0.061 0 0 0</pose>
+      <pose>0.156 0.2 0.061 0 0 0</pose>
       <topic>/promise/stereo_left</topic>
       <always_on>true</always_on>
       <update_rate>10</update_rate>
@@ -169,7 +169,7 @@
   </gazebo>
   <gazebo reference="head_pitch_link">
     <sensor name="stereo_right" type="camera">
-      <pose>0.143 -0.2 0.061 0 0 0</pose>
+      <pose>0.156 -0.2 0.061 0 0 0</pose>
       <topic>/promise/stereo_right</topic>
       <always_on>true</always_on>
       <update_rate>10</update_rate>
@@ -190,7 +190,7 @@
   </gazebo>
   <gazebo reference="head_pitch_link">
     <sensor name="dashcam_left" type="camera">
-      <pose>0.143 0.155 0.113 0 0 0</pose>
+      <pose>0.156 0.155 0.113 0 0 0</pose>
       <topic>/promise/dashcam_left</topic>
       <always_on>true</always_on>
       <update_rate>10</update_rate>
@@ -211,7 +211,7 @@
   </gazebo>
   <gazebo reference="head_pitch_link">
     <sensor name="dashcam_right" type="camera">
-      <pose>0.143 -0.155 0.113 0 0 0</pose>
+      <pose>0.156 -0.155 0.113 0 0 0</pose>
       <topic>/promise/dashcam_right</topic>
       <always_on>true</always_on>
       <update_rate>10</update_rate>
@@ -228,6 +228,37 @@
           <far>100</far>
         </clip>
       </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="os1_link">
+    <sensor name="os1_rev8" type="gpu_lidar">
+      <pose>0 0 0.0402 0 0 0</pose>
+      <topic>/promise/os1</topic>
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <visualize>false</visualize>
+      <gz_frame_id>os1_lidar_frame</gz_frame_id>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>1024</samples>
+            <resolution>1</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>6.277049384028044</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>128</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.3839724354387525</min_angle>
+            <max_angle>0.3839724354387525</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.5</min>
+          <max>170</max>
+          <resolution>0.001</resolution>
+        </range>
+      </lidar>
     </sensor>
   </gazebo>
 </robot>

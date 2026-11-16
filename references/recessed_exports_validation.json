@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "revision": "0.3.0",
+  "urdf_mount_pitch_down_deg": 22.500000017261833,
+  "glb_max_transform_error": 2.1587678422640977e-07,
+  "usd_max_transform_error": 2.8139301844198883e-07,
+  "usd_fixed_joint_orientation": "PASS",
+  "mask_rays": 131072,
+  "mask_clear_rays": 38314,
+  "ros_pointcloud_filter": "PASS; organized clouds, both byte orders, padded rows, auxiliary fields preserved",
+  "gazebo_runtime": "NOT RUN",
+  "isaac_runtime": "NOT RUN; raw RTX output needs documented post-filter"
+}

@@ -1,0 +1,41 @@
+{
+  "head_visible_mask_encoding": "zlib+packbits-little-base64",
+  "head_visible_mask_b64": "eNrt28FthDAQBVCzRCKHSFYqIJ3QSjrBHaQlS2nEJfjoA8IRJpccVh4kf40c/hSwb8Us5u/Y5Py3FgOtlGs1QP0qny2SD3V/0b382AYI+DzieNeDP+F834NvVW8/+jPOjz34i+7ye3t/xfkbfUHh/L0LHxeAMn3NAOboqwZA34cPC2CBvmoAjPRVA2CirxoAN/qqAXTvxEcFwExfMwA6+qoB1NNXDaCBvmoAjfRVA6i+/y3RA84foqT5EXX/rZIlcDIR9Pzzs2z/O6DypxX8BQJOv81DsAbaF4Os6g/APnT9yfxr39Gnr3T6gz79qj/Qp6/oG/r06d/Wv/v6d/f8wf8fR72q+efs6a29/HHBd4AJ2KfML7PXAJjAnlM1r+eXaxqU/eoAtMxeA2ACm4qflP3qEYD1d1LbvLbS013kR5gvO3yRUL5gC/bsUnt/F/pD6RLAX4xoC9Si/NWI3z9DxLDymZItqNIlhD+KTmCt49Gl5jHMlc5KTiC9H1cJ4c+yE0Dj8S0R/ip9/2sHxEBfdhZF9ZVB/oVqHsAC/SvVPIDFvvzmASzRv1LNA9izJ88Puviogg==",
+  "head_visibility": {
+    "total_rays": 131072,
+    "head_clear_rays": 38314,
+    "head_blocked_rays": 92758,
+    "forward_center_all_128_channels_clear": true,
+    "rear_center_all_channels_blocked": true,
+    "fully_clear_horizontal_sector_deg": [
+      -44.6484375,
+      44.6484375
+    ],
+    "native_vertical_fov_deg": 44,
+    "scope": "Only geometry rigidly attached to head_pitch_link; excludes OS1 case. Other rover/environment occlusion is dynamic.",
+    "status": "PASS",
+    "mount_pitch_down_deg": 22.50000186881285,
+    "optical_origin_m": [
+      0.7073838710784912,
+      -0.164000004529953,
+      1.98934006690979
+    ],
+    "case_bounds_m": [
+      [
+        0.6508302688598633,
+        -0.20749491453170776,
+        1.9374698400497437
+      ],
+      [
+        0.7491454482078552,
+        -0.12050442397594452,
+        2.0205297470092773
+      ]
+    ],
+    "housing_front_recess_mm": 0.5543828010559082,
+    "front_aperture_mm": [
+      150,
+      92
+    ]
+  }
+}

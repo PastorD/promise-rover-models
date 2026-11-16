@@ -18,5 +18,13 @@
     "file": "perseverance_blend.zip",
     "sha256": "5a359ba0b28efd2846f788fee036ae7839db91a3e17b708f8132857f7ed7bf46",
     "size_bytes": 6966559
+  },
+  {
+    "file": "os1_rev8_cad.zip",
+    "sha256": "aff6c538f809491ee2aa4d9885da5b21cf794c458f82db24dcf0afb9c07a7c83"
+  },
+  {
+    "file": "os1_rev8_datasheet.pdf",
+    "sha256": "67edd0a0c0ee6e28b50089e15eb29fa80bf3d82d4770bc9880ab6ac6fef49b90"
   }
 ]

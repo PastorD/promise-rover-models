@@ -1,17 +1,18 @@
 {
   "urdf": {
     "status": "PASS",
-    "links": 27,
+    "links": 29,
     "movable_joints": 16,
     "wheel_joints": 6,
-    "mesh_parts": 128,
+    "mesh_parts": 144,
     "nominal_link_transform_check": "PASS",
-    "mass_kg_estimated": 900
+    "mass_kg_estimated": 900.55
   },
   "gazebo_ros2": {
     "status": "STRUCTURAL_PASS_RUNTIME_NOT_RUN",
     "xacro_expansion": "PASS",
     "camera_sensors": 4,
+    "lidar_sensors": 1,
     "ros2_control_joints": 16,
     "runtime_reason": "Gazebo / ROS 2 are not installed in the build environment."
   },
@@ -25,16 +26,16 @@
         "name": "stationary",
         "simulated_seconds": 6,
         "final_position_m": [
-          1.853325909294449e-06,
-          -1.0674566318085424e-07,
-          0.8998791955430879
+          1.8783120387968667e-06,
+          -1.1252250753253393e-07,
+          0.8998791735602125
         ],
         "displacement_after_settle_m": [
-          -2.7481103205681102e-09,
-          5.637359960706666e-12,
-          9.425793479067579e-14
+          -2.772484614720955e-09,
+          5.56014845686952e-12,
+          -3.8191672047105385e-14
         ],
-        "max_rocker_constraint_error_rad": 0.0005938648580724553,
+        "max_rocker_constraint_error_rad": 0.0005932889978648023,
         "wheels_touching_ground_at_end": 6,
         "warnings": [
           0,
@@ -51,16 +52,16 @@
         "name": "forward",
         "simulated_seconds": 12,
         "final_position_m": [
-          0.861825490204667,
-          -4.587037416808003e-07,
-          0.8998791953836812
+          0.8618044890117297,
+          -4.733427055983174e-07,
+          0.899879173401136
         ],
         "displacement_after_settle_m": [
-          0.8618236341306474,
-          -3.5195244113998536e-07,
-          -1.59312452119309e-10
+          0.8618026079272063,
+          -3.6081463791732657e-07,
+          -1.5911472139862326e-10
         ],
-        "max_rocker_constraint_error_rad": 0.0005938648580724553,
+        "max_rocker_constraint_error_rad": 0.0005932889978648023,
         "wheels_touching_ground_at_end": 6,
         "warnings": [
           0,
@@ -77,16 +78,16 @@
         "name": "turn",
         "simulated_seconds": 10,
         "final_position_m": [
-          0.5612988042060216,
-          0.03230583628526094,
-          0.8999417579899401
+          0.5600086442202561,
+          0.032162625764132015,
+          0.8999418605976921
         ],
         "displacement_after_settle_m": [
-          0.561296948132002,
-          0.03230594303656148,
-          6.256244694646806e-05
+          0.5600067631357327,
+          0.0321627382921997,
+          6.268703744138904e-05
         ],
-        "max_rocker_constraint_error_rad": 0.0005938648580724553,
+        "max_rocker_constraint_error_rad": 0.0005932889978648023,
         "wheels_touching_ground_at_end": 6,
         "warnings": [
           0,
@@ -104,7 +105,7 @@
   },
   "glb": {
     "status": "PASS",
-    "bytes": 14566632,
+    "bytes": 15361884,
     "animations": 1,
     "animated_wheels": 6,
     "embedded_images": 7
@@ -117,7 +118,8 @@
       11
     ],
     "revolute_joints": 16,
-    "rigid_bodies": 17,
+    "fixed_joints": 1,
+    "rigid_bodies": 18,
     "unresolved_references": [],
     "note": "PhysxMimicJointAPI authored; evaluation requires Isaac Sim PhysX."
   }

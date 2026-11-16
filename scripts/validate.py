@@ -25,9 +25,9 @@ report['urdf']={'status':'PASS','links':len(robot.robot.links),'movable_joints':
 import xacro.substitution_args
 xacro.substitution_args._eval_find=lambda package:str(P) if package=='promise_description' else (_ for _ in ()).throw(ValueError(package))
 expanded=xacro.process_file(str(P/'urdf/promise.gazebo.urdf.xacro')).toxml();eroot=E.fromstring(expanded)
-assert len(eroot.findall('.//sensor'))==4
+assert len(eroot.findall('.//sensor'))==5
 assert len(eroot.findall('ros2_control/joint'))==16
-report['gazebo_ros2']={'status':'STRUCTURAL_PASS_RUNTIME_NOT_RUN','xacro_expansion':'PASS','camera_sensors':4,'ros2_control_joints':16,'runtime_reason':'Gazebo / ROS 2 are not installed in the build environment.'}
+report['gazebo_ros2']={'status':'STRUCTURAL_PASS_RUNTIME_NOT_RUN','xacro_expansion':'PASS','camera_sensors':4,'lidar_sensors':1,'ros2_control_joints':16,'runtime_reason':'Gazebo / ROS 2 are not installed in the build environment.'}
 
 m=mujoco.MjModel.from_xml_path(str(ROOT/'mujoco/promise.xml'))
 assert mujoco.__version__.startswith('4.0');assert m.nu==12 and m.nv==22
@@ -77,6 +77,7 @@ for j in joints:
     for rel in ['physics:body0','physics:body1']:
         targets=j.GetRelationship(rel).GetTargets();assert len(targets)==1 and stage.GetPrimAtPath(targets[0])
 layers,assets,unresolved=UsdUtils.ComputeAllDependencies(str(ROOT/'usd/promise_scene.usda'));assert not unresolved,unresolved
-assert len([p for p in stage.Traverse() if p.HasAPI(UsdPhysics.RigidBodyAPI)])==17
-report['usd']={'status':'STRUCTURAL_PASS_ISAAC_RUNTIME_NOT_RUN','openusd_version':Usd.GetVersion(),'revolute_joints':len(joints),'rigid_bodies':17,'unresolved_references':list(unresolved),'note':'PhysxMimicJointAPI authored; evaluation requires Isaac Sim PhysX.'}
+assert len([p for p in stage.Traverse() if p.HasAPI(UsdPhysics.RigidBodyAPI)])==18
+assert len([p for p in stage.Traverse() if p.IsA(UsdPhysics.FixedJoint)])==1
+report['usd']={'status':'STRUCTURAL_PASS_ISAAC_RUNTIME_NOT_RUN','openusd_version':Usd.GetVersion(),'revolute_joints':len(joints),'fixed_joints':1,'rigid_bodies':18,'unresolved_references':list(unresolved),'note':'PhysxMimicJointAPI authored; evaluation requires Isaac Sim PhysX.'}
 (ROOT/'validation.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
