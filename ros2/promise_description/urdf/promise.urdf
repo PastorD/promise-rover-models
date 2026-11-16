@@ -256,321 +256,226 @@
         <mesh filename="package://promise_description/meshes/base_link_049.dae" />
       </geometry>
     </visual>
-    <visual name="base_link_050">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_050.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_051">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_051.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_052">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_052.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_053">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_053.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_054">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_054.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_055">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_055.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_056">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_056.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_057">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_057.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_058">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_058.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_059">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_059.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_060">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_060.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_061">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_061.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_062">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_062.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_063">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_063.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_064">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_064.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_065">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_065.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_066">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_066.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_067">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_067.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_068">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_068.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_069">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_069.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_070">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_070.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_071">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_071.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_072">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_072.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_073">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_073.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_074">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_074.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_075">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_075.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_076">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_076.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_077">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_077.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_078">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_078.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_079">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_079.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_080">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_080.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_081">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_081.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_082">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_082.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_083">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_083.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_084">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_084.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_085">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_085.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_086">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_086.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_087">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_087.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_088">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_088.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_089">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_089.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_090">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_090.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_091">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_091.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_092">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_092.dae" />
-      </geometry>
-    </visual>
-    <visual name="base_link_093">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/base_link_093.dae" />
-      </geometry>
-    </visual>
     <collision name="base_link_collision_0">
-      <origin xyz="-0.0199999996 0 0.0200000405" rpy="0 0 0" />
+      <origin xyz="-0.109999999 0 0.0400000215" rpy="0 0 0" />
       <geometry>
-        <box size="1.91 1.48 0.46" />
+        <box size="2.03 1.2 0.53" />
       </geometry>
     </collision>
     <collision name="base_link_collision_1">
-      <origin xyz="-1.24000001 0 0.300000072" rpy="0 -0.27 0" />
+      <origin xyz="-1.42999995 0 0.340000033" rpy="0 0 0" />
       <geometry>
-        <box size="0.72 0.64 0.67" />
+        <box size="0.46 0.84 0.58" />
       </geometry>
     </collision>
   </link>
   <link name="rocker_left">
     <inertial>
-      <origin xyz="0.0848184228 0.135658562 -0.102836758" rpy="0 0 0" />
+      <origin xyz="0.0853951573 0.0724884868 0.0214886963" rpy="0 0 0" />
       <mass value="20" />
-      <inertia ixx="0.4826311059705842" iyy="5.296774318961213" izz="5.374905014889866" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="1.0822158355001517" iyy="5.736275314153764" izz="5.698820345015487" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="rocker_left_094">
+    <visual name="rocker_left_050">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rocker_left_094.dae" />
+        <mesh filename="package://promise_description/meshes/rocker_left_050.dae" />
       </geometry>
     </visual>
-    <visual name="rocker_left_095">
+    <visual name="rocker_left_051">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rocker_left_095.dae" />
+        <mesh filename="package://promise_description/meshes/rocker_left_051.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_052">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_052.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_053">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_053.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_054">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_054.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_055">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_055.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_056">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_056.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_057">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_057.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_058">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_058.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_left_059">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_left_059.dae" />
       </geometry>
     </visual>
     <collision name="rocker_left_collision_0">
-      <origin xyz="0.440499961 0.132000029 -0.120849967" rpy="1.82778704 -2.24501555e-08 1.86194062" />
+      <origin xyz="0.44145 0.132399976 -0.114499986" rpy="1.81430542 3.5082337e-08 1.86218035" />
       <geometry>
-        <cylinder radius="0.043" length="0.9509341336427963" />
+        <cylinder radius="0.043" length="0.9497749402398249" />
       </geometry>
     </collision>
     <collision name="rocker_left_collision_1">
-      <origin xyz="-0.37650004 0 -0.120350003" rpy="1.88018608 1.56707411e-08 -1.57079637" />
+      <origin xyz="-0.377000034 0 -0.11500001" rpy="1.86687052 6.77442173e-08 -1.57079649" />
       <geometry>
-        <cylinder radius="0.043" length="0.7905350367246572" />
+        <cylinder radius="0.043" length="0.7882994512643783" />
       </geometry>
     </collision>
   </link>
   <joint name="rocker_left_joint" type="revolute">
     <parent link="base_link" />
     <child link="rocker_left" />
-    <origin xyz="0.213000059 0.796999991 0.00670001507" rpy="0 0 0" />
+    <origin xyz="0.214 0.8 -0.006" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="150" velocity="0.6" lower="-0.65" upper="0.65" />
     <dynamics damping="15" friction="0.05" />
   </joint>
   <link name="bogie_left">
     <inertial>
-      <origin xyz="-0.0929295421 0.14006272 -0.125501201" rpy="0 0 0" />
+      <origin xyz="-0.0513953865 0.150512576 -0.136301547" rpy="0 0 0" />
       <mass value="15" />
-      <inertia ixx="0.6976912509492429" iyy="2.3613709446122058" izz="2.0642049352107827" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.7766100320491853" iyy="2.707523755603072" izz="2.3981265252121853" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="bogie_left_096">
+    <visual name="bogie_left_060">
       <geometry>
-        <mesh filename="package://promise_description/meshes/bogie_left_096.dae" />
+        <mesh filename="package://promise_description/meshes/bogie_left_060.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_061">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_061.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_062">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_062.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_063">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_063.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_064">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_064.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_065">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_065.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_066">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_066.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_067">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_067.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_068">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_068.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_left_069">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_left_069.dae" />
       </geometry>
     </visual>
     <collision name="bogie_left_collision_0">
-      <origin xyz="0.225499988 0.19749999 -0.201600015" rpy="2.16285181 1.74421544e-07 2.29009724" />
+      <origin xyz="0.224871188 0.192257941 -0.199938983" rpy="2.16509581 -2.48570746e-08 2.2781682" />
       <geometry>
-        <cylinder radius="0.043" length="0.7224930656324728" />
+        <cylinder radius="0.043" length="0.7141589548253955" />
       </geometry>
     </collision>
     <collision name="bogie_left_collision_1">
-      <origin xyz="-0.312000036 0.131999969 -0.000349998474" rpy="1.57182968 5.6484474e-08 -1.97103679" />
+      <origin xyz="-0.312449992 0.131249964 0.000500023365" rpy="1.5693208 -7.691348e-09 -1.96848142" />
       <geometry>
-        <cylinder radius="0.043" length="0.6775489342692181" />
+        <cylinder radius="0.043" length="0.6777958098952962" />
       </geometry>
     </collision>
   </link>
   <joint name="bogie_left_joint" type="revolute">
     <parent link="rocker_left" />
     <child link="bogie_left" />
-    <origin xyz="-0.753000021 5.96046448e-08 -0.240999997" rpy="0 0 0" />
+    <origin xyz="-0.754 0 -0.23" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="150" velocity="0.6" lower="-0.9" upper="0.9" />
     <dynamics damping="15" friction="0.05" />
   </joint>
   <link name="front_left_steer">
     <inertial>
-      <origin xyz="-0.00150239468 -0.16186142 -0.216786861" rpy="0 0 0" />
+      <origin xyz="-6.69956207e-05 -0.160719484 -0.201907396" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.2394803362513187" iyy="0.12196731794361426" izz="0.16169297891303813" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.26361249689565547" iyy="0.1435311268346382" izz="0.16455196291592422" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="front_left_steer_097">
+    <visual name="front_left_steer_070">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_left_steer_097.dae" />
+        <mesh filename="package://promise_description/meshes/front_left_steer_070.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_071">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_071.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_072">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_072.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_073">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_073.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_074">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_074.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_075">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_075.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_076">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_076.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_077">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_077.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_steer_078">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_steer_078.dae" />
       </geometry>
     </visual>
     <collision name="front_left_steer_collision_0">
-      <origin xyz="0 -0.0899999738 -0.180000007" rpy="0 0 0" />
+      <origin xyz="0 -0.0900000334 -0.179999977" rpy="0 0 0" />
       <geometry>
         <box size="0.12 0.15 0.35" />
       </geometry>
@@ -579,24 +484,69 @@
   <joint name="front_left_steer_joint" type="revolute">
     <parent link="rocker_left" />
     <child link="front_left_steer" />
-    <origin xyz="0.881000042 0.263999879 -0.241999984" rpy="0 0 0" />
+    <origin xyz="0.8829 0.2648 -0.254" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit effort="150" velocity="0.6" lower="-1.4" upper="1.4" />
     <dynamics damping="0.1" friction="0.05" />
   </joint>
   <link name="rear_left_steer">
     <inertial>
-      <origin xyz="2.38418579e-07 -0.1293028 -0.214050546" rpy="0 0 0" />
+      <origin xyz="-0.000260353088 -0.118351579 -0.201907396" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.20668980121762148" iyy="0.12196754438080193" izz="0.12890221744215324" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.2220419032888188" iyy="0.14352454092620093" izz="0.12297478340065027" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="rear_left_steer_098">
+    <visual name="rear_left_steer_079">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_left_steer_098.dae" />
+        <mesh filename="package://promise_description/meshes/rear_left_steer_079.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_080">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_080.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_081">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_081.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_082">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_082.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_083">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_083.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_084">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_084.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_085">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_085.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_086">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_086.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_087">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_087.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_steer_088">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_steer_088.dae" />
       </geometry>
     </visual>
     <collision name="rear_left_steer_collision_0">
-      <origin xyz="0 -0.0899999738 -0.180000007" rpy="0 0 0" />
+      <origin xyz="0 -0.0899999738 -0.179999977" rpy="0 0 0" />
       <geometry>
         <box size="0.12 0.15 0.35" />
       </geometry>
@@ -605,44 +555,89 @@
   <joint name="rear_left_steer_joint" type="revolute">
     <parent link="bogie_left" />
     <child link="rear_left_steer" />
-    <origin xyz="-0.623999953 0.264000058 -0.000999987125" rpy="0 0 0" />
+    <origin xyz="-0.6249 0.2625 -0.024" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit effort="150" velocity="0.6" lower="-1.4" upper="1.4" />
     <dynamics damping="0.1" friction="0.05" />
   </joint>
   <link name="rocker_right">
     <inertial>
-      <origin xyz="0.0860698223 -0.140186906 -0.102116972" rpy="0 0 0" />
+      <origin xyz="0.0857679844 -0.072476238 0.0219071507" rpy="0 0 0" />
       <mass value="20" />
-      <inertia ixx="0.4835621766078961" iyy="5.313046928213894" izz="5.388758867214302" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="1.0819220968474081" iyy="5.728749764951336" izz="5.689695564605544" ixy="0" ixz="0" iyz="0" />
     </inertial>
+    <visual name="rocker_right_089">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_089.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_090">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_090.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_091">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_091.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_092">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_092.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_093">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_093.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_094">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_094.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_095">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_095.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_096">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_096.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_097">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_097.dae" />
+      </geometry>
+    </visual>
+    <visual name="rocker_right_098">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rocker_right_098.dae" />
+      </geometry>
+    </visual>
     <visual name="rocker_right_099">
       <geometry>
         <mesh filename="package://promise_description/meshes/rocker_right_099.dae" />
       </geometry>
     </visual>
-    <visual name="rocker_right_100">
-      <geometry>
-        <mesh filename="package://promise_description/meshes/rocker_right_100.dae" />
-      </geometry>
-    </visual>
     <collision name="rocker_right_collision_0">
-      <origin xyz="0.440500021 -0.132000029 -0.120849967" rpy="1.82778692 1.06993554e-07 1.27965212" />
+      <origin xyz="0.440550029 -0.130899966 -0.114499986" rpy="1.81496298 6.82281396e-08 1.28197622" />
       <geometry>
-        <cylinder radius="0.043" length="0.9509342590029842" />
+        <cylinder radius="0.043" length="0.947268464388967" />
       </geometry>
     </collision>
     <collision name="rocker_right_collision_1">
-      <origin xyz="-0.376499981 0 -0.120350003" rpy="1.8801862 3.40383401e-08 -1.57079649" />
+      <origin xyz="-0.377000034 0 -0.11500001" rpy="1.86687052 6.77442173e-08 -1.57079649" />
       <geometry>
-        <cylinder radius="0.043" length="0.7905348859289362" />
+        <cylinder radius="0.043" length="0.7882994512643783" />
       </geometry>
     </collision>
   </link>
   <joint name="rocker_right_joint" type="revolute">
     <parent link="base_link" />
     <child link="rocker_right" />
-    <origin xyz="0.21299994 -0.796999991 0.00670001507" rpy="0 0 0" />
+    <origin xyz="0.214 -0.8 -0.006" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="150" velocity="0.6" lower="-0.65" upper="0.65" />
     <dynamics damping="15" friction="0.05" />
@@ -650,49 +645,139 @@
   </joint>
   <link name="bogie_right">
     <inertial>
-      <origin xyz="-0.0929299593 -0.144863188 -0.125501245" rpy="0 0 0" />
+      <origin xyz="-0.0527519584 -0.150293767 -0.136296034" rpy="0 0 0" />
       <mass value="15" />
-      <inertia ixx="0.69769246031401" iyy="2.3613725775452865" izz="2.0642052394915744" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.7765426429278399" iyy="2.710064124006113" izz="2.4005655227259837" ixy="0" ixz="0" iyz="0" />
     </inertial>
+    <visual name="bogie_right_100">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_100.dae" />
+      </geometry>
+    </visual>
     <visual name="bogie_right_101">
       <geometry>
         <mesh filename="package://promise_description/meshes/bogie_right_101.dae" />
       </geometry>
     </visual>
-    <collision name="bogie_right_collision_0">
-      <origin xyz="0.225500047 -0.19750005 -0.201600015" rpy="2.16285157 -5.84950541e-08 0.851495564" />
+    <visual name="bogie_right_102">
       <geometry>
-        <cylinder radius="0.043" length="0.7224932100049559" />
+        <mesh filename="package://promise_description/meshes/bogie_right_102.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_103">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_103.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_104">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_104.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_105">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_105.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_106">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_106.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_107">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_107.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_108">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_108.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_109">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_109.dae" />
+      </geometry>
+    </visual>
+    <visual name="bogie_right_110">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/bogie_right_110.dae" />
+      </geometry>
+    </visual>
+    <collision name="bogie_right_collision_0">
+      <origin xyz="0.22497648 -0.200822532 -0.199873209" rpy="2.15610147 -4.7557922e-08 0.842063785" />
+      <geometry>
+        <cylinder radius="0.043" length="0.7235839250655806" />
       </geometry>
     </collision>
     <collision name="bogie_right_collision_1">
-      <origin xyz="-0.311999977 -0.132000029 -0.000349998474" rpy="1.57182944 -1.14696952e-07 -1.17055559" />
+      <origin xyz="-0.313350022 -0.130899966 0.000500023365" rpy="1.56932402 -3.76618239e-08 -1.17508793" />
       <geometry>
-        <cylinder radius="0.043" length="0.6775488737891657" />
+        <cylinder radius="0.043" length="0.6791856065356633" />
       </geometry>
     </collision>
   </link>
   <joint name="bogie_right_joint" type="revolute">
     <parent link="rocker_right" />
     <child link="bogie_right" />
-    <origin xyz="-0.753000021 5.96046448e-08 -0.240999997" rpy="0 0 0" />
+    <origin xyz="-0.754 0 -0.23" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="150" velocity="0.6" lower="-0.9" upper="0.9" />
     <dynamics damping="15" friction="0.05" />
   </joint>
   <link name="front_right_steer">
     <inertial>
-      <origin xyz="0.00100040436 0.15760541 -0.214049846" rpy="0 0 0" />
+      <origin xyz="0.000129103661 0.160651654 -0.201907396" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.23948018363144463" iyy="0.121967291303962" izz="0.16169285293281632" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.2635576794975041" iyy="0.1435311268346382" izz="0.16449714551777284" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="front_right_steer_102">
+    <visual name="front_right_steer_111">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_right_steer_102.dae" />
+        <mesh filename="package://promise_description/meshes/front_right_steer_111.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_112">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_112.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_113">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_113.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_114">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_114.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_115">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_115.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_116">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_116.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_117">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_117.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_118">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_118.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_steer_119">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_steer_119.dae" />
       </geometry>
     </visual>
     <collision name="front_right_steer_collision_0">
-      <origin xyz="0 0.0899999738 -0.180000007" rpy="0 0 0" />
+      <origin xyz="0 0.0899999738 -0.179999977" rpy="0 0 0" />
       <geometry>
         <box size="0.12 0.15 0.35" />
       </geometry>
@@ -701,24 +786,69 @@
   <joint name="front_right_steer_joint" type="revolute">
     <parent link="rocker_right" />
     <child link="front_right_steer" />
-    <origin xyz="0.880999923 -0.264000118 -0.241999984" rpy="0 0 0" />
+    <origin xyz="0.8811 -0.2618 -0.254" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit effort="150" velocity="0.6" lower="-1.4" upper="1.4" />
     <dynamics damping="0.1" friction="0.05" />
   </joint>
   <link name="rear_right_steer">
     <inertial>
-      <origin xyz="-2.38418579e-07 0.124502301 -0.214050502" rpy="0 0 0" />
+      <origin xyz="0.000101685524 0.117995471 -0.201907396" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.20668997983143989" iyy="0.12196755770064449" izz="0.12890238273612908" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.22175601240976484" iyy="0.1435311268346382" izz="0.12269547843003359" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="rear_right_steer_103">
+    <visual name="rear_right_steer_120">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_right_steer_103.dae" />
+        <mesh filename="package://promise_description/meshes/rear_right_steer_120.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_121">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_121.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_122">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_122.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_123">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_123.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_124">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_124.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_125">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_125.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_126">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_126.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_127">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_127.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_128">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_128.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_steer_129">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_steer_129.dae" />
       </geometry>
     </visual>
     <collision name="rear_right_steer_collision_0">
-      <origin xyz="0 0.0899999738 -0.180000007" rpy="0 0 0" />
+      <origin xyz="0 0.0899999738 -0.179999977" rpy="0 0 0" />
       <geometry>
         <box size="0.12 0.15 0.35" />
       </geometry>
@@ -727,7 +857,7 @@
   <joint name="rear_right_steer_joint" type="revolute">
     <parent link="bogie_right" />
     <child link="rear_right_steer" />
-    <origin xyz="-0.624000072 -0.263999939 -0.000999987125" rpy="0 0 0" />
+    <origin xyz="-0.6267 -0.2618 -0.024" rpy="0 0 0" />
     <axis xyz="0 0 1" />
     <limit effort="150" velocity="0.6" lower="-1.4" upper="1.4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -736,34 +866,39 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.14835937500000002" iyy="0.20671875000000003" izz="0.14835937500000002" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.16205522189097593" iyy="0.20801148088826038" izz="0.16205522189097593" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="front_left_wheel_104">
+    <visual name="front_left_wheel_130">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_left_wheel_104.dae" />
+        <mesh filename="package://promise_description/meshes/front_left_wheel_130.dae" />
       </geometry>
     </visual>
-    <visual name="front_left_wheel_105">
+    <visual name="front_left_wheel_131">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_left_wheel_105.dae" />
+        <mesh filename="package://promise_description/meshes/front_left_wheel_131.dae" />
       </geometry>
     </visual>
-    <visual name="front_left_wheel_106">
+    <visual name="front_left_wheel_132">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_left_wheel_106.dae" />
+        <mesh filename="package://promise_description/meshes/front_left_wheel_132.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_left_wheel_133">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_left_wheel_133.dae" />
       </geometry>
     </visual>
     <collision name="front_left_wheel_collision_0">
       <origin xyz="0 0 0" rpy="1.57079633 0 0" />
       <geometry>
-        <cylinder radius="0.2625" length="0.3" />
+        <cylinder radius="0.2633195023086721" length="0.3407329788759689" />
       </geometry>
     </collision>
   </link>
   <joint name="front_left_wheel_joint" type="continuous">
     <parent link="front_left_steer" />
     <child link="front_left_wheel" />
-    <origin xyz="-1.01089477e-07 1.29699707e-07 -0.402200031" rpy="0 0 0" />
+    <origin xyz="-0.00461943753 0.00272151211 -0.375048931" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="80" velocity="4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -772,34 +907,39 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.14835937500000002" iyy="0.20671875000000003" izz="0.14835937500000002" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.16269662072425708" iyy="0.20859348872658762" izz="0.16269662072425708" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="middle_left_wheel_107">
+    <visual name="middle_left_wheel_134">
       <geometry>
-        <mesh filename="package://promise_description/meshes/middle_left_wheel_107.dae" />
+        <mesh filename="package://promise_description/meshes/middle_left_wheel_134.dae" />
       </geometry>
     </visual>
-    <visual name="middle_left_wheel_108">
+    <visual name="middle_left_wheel_135">
       <geometry>
-        <mesh filename="package://promise_description/meshes/middle_left_wheel_108.dae" />
+        <mesh filename="package://promise_description/meshes/middle_left_wheel_135.dae" />
       </geometry>
     </visual>
-    <visual name="middle_left_wheel_109">
+    <visual name="middle_left_wheel_136">
       <geometry>
-        <mesh filename="package://promise_description/meshes/middle_left_wheel_109.dae" />
+        <mesh filename="package://promise_description/meshes/middle_left_wheel_136.dae" />
+      </geometry>
+    </visual>
+    <visual name="middle_left_wheel_137">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/middle_left_wheel_137.dae" />
       </geometry>
     </visual>
     <collision name="middle_left_wheel_collision_0">
       <origin xyz="0 0 0" rpy="1.57079633 0 0" />
       <geometry>
-        <cylinder radius="0.2625" length="0.3" />
+        <cylinder radius="0.26368762373092625" length="0.3417597880411424" />
       </geometry>
     </collision>
   </link>
   <joint name="middle_left_wheel_joint" type="continuous">
     <parent link="bogie_left" />
     <child link="middle_left_wheel" />
-    <origin xyz="0.450999962 0.394999949 -0.403200018" rpy="0 0 0" />
+    <origin xyz="0.449742351 0.384515833 -0.399877984" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="80" velocity="4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -808,34 +948,39 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.14835937500000002" iyy="0.20671875000000003" izz="0.14835937500000002" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.16242085361307323" iyy="0.2082211130781902" izz="0.16242085361307323" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="rear_left_wheel_110">
+    <visual name="rear_left_wheel_138">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_left_wheel_110.dae" />
+        <mesh filename="package://promise_description/meshes/rear_left_wheel_138.dae" />
       </geometry>
     </visual>
-    <visual name="rear_left_wheel_111">
+    <visual name="rear_left_wheel_139">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_left_wheel_111.dae" />
+        <mesh filename="package://promise_description/meshes/rear_left_wheel_139.dae" />
       </geometry>
     </visual>
-    <visual name="rear_left_wheel_112">
+    <visual name="rear_left_wheel_140">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_left_wheel_112.dae" />
+        <mesh filename="package://promise_description/meshes/rear_left_wheel_140.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_left_wheel_141">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_left_wheel_141.dae" />
       </geometry>
     </visual>
     <collision name="rear_left_wheel_collision_0">
       <origin xyz="0 0 0" rpy="1.57079633 0 0" />
       <geometry>
-        <cylinder radius="0.2625" length="0.3" />
+        <cylinder radius="0.2634521544659107" length="0.34149757561065686" />
       </geometry>
     </collision>
   </link>
   <joint name="rear_left_wheel_joint" type="continuous">
     <parent link="rear_left_steer" />
     <child link="rear_left_wheel" />
-    <origin xyz="-8.48770141e-08 -1.08718872e-07 -0.402200031" rpy="0 0 0" />
+    <origin xyz="0.000492987053 -0.000688178436 -0.374932202" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="80" velocity="4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -844,34 +989,39 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.14835937500000002" iyy="0.20671875000000003" izz="0.14835937500000002" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.16167729437610756" iyy="0.20804506413857554" izz="0.16167729437610756" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="front_right_wheel_113">
+    <visual name="front_right_wheel_142">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_right_wheel_113.dae" />
+        <mesh filename="package://promise_description/meshes/front_right_wheel_142.dae" />
       </geometry>
     </visual>
-    <visual name="front_right_wheel_114">
+    <visual name="front_right_wheel_143">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_right_wheel_114.dae" />
+        <mesh filename="package://promise_description/meshes/front_right_wheel_143.dae" />
       </geometry>
     </visual>
-    <visual name="front_right_wheel_115">
+    <visual name="front_right_wheel_144">
       <geometry>
-        <mesh filename="package://promise_description/meshes/front_right_wheel_115.dae" />
+        <mesh filename="package://promise_description/meshes/front_right_wheel_144.dae" />
+      </geometry>
+    </visual>
+    <visual name="front_right_wheel_145">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/front_right_wheel_145.dae" />
       </geometry>
     </visual>
     <collision name="front_right_wheel_collision_0">
       <origin xyz="0 0 0" rpy="1.57079633 0 0" />
       <geometry>
-        <cylinder radius="0.2625" length="0.3" />
+        <cylinder radius="0.26334075778895016" length="0.33957256163247285" />
       </geometry>
     </collision>
   </link>
   <joint name="front_right_wheel_joint" type="continuous">
     <parent link="front_right_steer" />
     <child link="front_right_wheel" />
-    <origin xyz="1.37329102e-07 1.08718872e-07 -0.402200031" rpy="0 0 0" />
+    <origin xyz="0.00474746649 -0.00272787068 -0.375046043" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="80" velocity="4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -880,34 +1030,39 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.14835937500000002" iyy="0.20671875000000003" izz="0.14835937500000002" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.16237673313341047" iyy="0.20822776877482022" izz="0.16237673313341047" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="middle_right_wheel_116">
+    <visual name="middle_right_wheel_146">
       <geometry>
-        <mesh filename="package://promise_description/meshes/middle_right_wheel_116.dae" />
+        <mesh filename="package://promise_description/meshes/middle_right_wheel_146.dae" />
       </geometry>
     </visual>
-    <visual name="middle_right_wheel_117">
+    <visual name="middle_right_wheel_147">
       <geometry>
-        <mesh filename="package://promise_description/meshes/middle_right_wheel_117.dae" />
+        <mesh filename="package://promise_description/meshes/middle_right_wheel_147.dae" />
       </geometry>
     </visual>
-    <visual name="middle_right_wheel_118">
+    <visual name="middle_right_wheel_148">
       <geometry>
-        <mesh filename="package://promise_description/meshes/middle_right_wheel_118.dae" />
+        <mesh filename="package://promise_description/meshes/middle_right_wheel_148.dae" />
+      </geometry>
+    </visual>
+    <visual name="middle_right_wheel_149">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/middle_right_wheel_149.dae" />
       </geometry>
     </visual>
     <collision name="middle_right_wheel_collision_0">
       <origin xyz="0 0 0" rpy="1.57079633 0 0" />
       <geometry>
-        <cylinder radius="0.2625" length="0.3" />
+        <cylinder radius="0.2634563649985959" length="0.34135860541665086" />
       </geometry>
     </collision>
   </link>
   <joint name="middle_right_wheel_joint" type="continuous">
     <parent link="bogie_right" />
     <child link="middle_right_wheel" />
-    <origin xyz="0.451000081 -0.395000069 -0.403200018" rpy="0 0 0" />
+    <origin xyz="0.449952949 -0.401645154 -0.399746463" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="80" velocity="4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -916,34 +1071,39 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="6" />
-      <inertia ixx="0.14835937500000002" iyy="0.20671875000000003" izz="0.14835937500000002" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.16220496760259406" iyy="0.20818923414584178" izz="0.16220496760259406" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="rear_right_wheel_119">
+    <visual name="rear_right_wheel_150">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_right_wheel_119.dae" />
+        <mesh filename="package://promise_description/meshes/rear_right_wheel_150.dae" />
       </geometry>
     </visual>
-    <visual name="rear_right_wheel_120">
+    <visual name="rear_right_wheel_151">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_right_wheel_120.dae" />
+        <mesh filename="package://promise_description/meshes/rear_right_wheel_151.dae" />
       </geometry>
     </visual>
-    <visual name="rear_right_wheel_121">
+    <visual name="rear_right_wheel_152">
       <geometry>
-        <mesh filename="package://promise_description/meshes/rear_right_wheel_121.dae" />
+        <mesh filename="package://promise_description/meshes/rear_right_wheel_152.dae" />
+      </geometry>
+    </visual>
+    <visual name="rear_right_wheel_153">
+      <geometry>
+        <mesh filename="package://promise_description/meshes/rear_right_wheel_153.dae" />
       </geometry>
     </visual>
     <collision name="rear_right_wheel_collision_0">
       <origin xyz="0 0 0" rpy="1.57079633 0 0" />
       <geometry>
-        <cylinder radius="0.2625" length="0.3" />
+        <cylinder radius="0.26343198625441683" length="0.34091157366587943" />
       </geometry>
     </collision>
   </link>
   <joint name="rear_right_wheel_joint" type="continuous">
     <parent link="rear_right_steer" />
     <child link="rear_right_wheel" />
-    <origin xyz="1.53541565e-07 -1.29699707e-07 -0.402200031" rpy="0 0 0" />
+    <origin xyz="0.002345744 -0.00273490647 -0.374950017" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit effort="80" velocity="4" />
     <dynamics damping="0.1" friction="0.05" />
@@ -954,19 +1114,19 @@
       <mass value="6" />
       <inertia ixx="0.36412248368227845" iyy="0.3026647075494111" izz="0.10734146742410478" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="mast_yaw_link_122">
+    <visual name="mast_yaw_link_154">
       <geometry>
-        <mesh filename="package://promise_description/meshes/mast_yaw_link_122.dae" />
+        <mesh filename="package://promise_description/meshes/mast_yaw_link_154.dae" />
       </geometry>
     </visual>
-    <visual name="mast_yaw_link_123">
+    <visual name="mast_yaw_link_155">
       <geometry>
-        <mesh filename="package://promise_description/meshes/mast_yaw_link_123.dae" />
+        <mesh filename="package://promise_description/meshes/mast_yaw_link_155.dae" />
       </geometry>
     </visual>
-    <visual name="mast_yaw_link_124">
+    <visual name="mast_yaw_link_156">
       <geometry>
-        <mesh filename="package://promise_description/meshes/mast_yaw_link_124.dae" />
+        <mesh filename="package://promise_description/meshes/mast_yaw_link_156.dae" />
       </geometry>
     </visual>
     <collision name="mast_yaw_link_collision_0">
@@ -986,100 +1146,100 @@
   </joint>
   <link name="head_pitch_link">
     <inertial>
-      <origin xyz="0.00789156556 0.000515505672 0.0599562526" rpy="0 0 0" />
+      <origin xyz="0.0085375607 0.000515505672 0.0599562526" rpy="0 0 0" />
       <mass value="4.05" />
-      <inertia ixx="0.09312482297519646" iyy="0.034957636006005856" izz="0.11085089221229072" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.09312482297519646" iyy="0.03471455898275688" izz="0.11060781518904177" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="head_pitch_link_125">
+    <visual name="head_pitch_link_157">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_125.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_157.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_126">
+    <visual name="head_pitch_link_158">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_126.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_158.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_127">
+    <visual name="head_pitch_link_159">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_127.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_159.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_128">
+    <visual name="head_pitch_link_160">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_128.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_160.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_129">
+    <visual name="head_pitch_link_161">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_129.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_161.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_130">
+    <visual name="head_pitch_link_162">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_130.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_162.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_131">
+    <visual name="head_pitch_link_163">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_131.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_163.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_132">
+    <visual name="head_pitch_link_164">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_132.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_164.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_133">
+    <visual name="head_pitch_link_165">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_133.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_165.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_134">
+    <visual name="head_pitch_link_166">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_134.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_166.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_135">
+    <visual name="head_pitch_link_167">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_135.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_167.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_136">
+    <visual name="head_pitch_link_168">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_136.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_168.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_137">
+    <visual name="head_pitch_link_169">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_137.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_169.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_138">
+    <visual name="head_pitch_link_170">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_138.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_170.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_139">
+    <visual name="head_pitch_link_171">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_139.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_171.dae" />
       </geometry>
     </visual>
-    <visual name="head_pitch_link_140">
+    <visual name="head_pitch_link_172">
       <geometry>
-        <mesh filename="package://promise_description/meshes/head_pitch_link_140.dae" />
+        <mesh filename="package://promise_description/meshes/head_pitch_link_172.dae" />
       </geometry>
     </visual>
     <collision name="head_pitch_link_collision_0">
-      <origin xyz="-0.000848114491 0.000515460968 0.0403869152" rpy="0 0 0" />
+      <origin xyz="-0.000848114491 0.000515431166 0.0403869152" rpy="0 0 0" />
       <geometry>
-        <box size="0.143095851 0.500396416 0.003" />
+        <box size="0.143095851 0.500396445 0.003" />
       </geometry>
     </collision>
     <collision name="head_pitch_link_collision_1">
-      <origin xyz="-0.000848114491 0.000515460968 0.137466311" rpy="0 0 0" />
+      <origin xyz="-0.000848114491 0.000515431166 0.137466311" rpy="0 0 0" />
       <geometry>
-        <box size="0.143095851 0.500396416 0.003" />
+        <box size="0.143095851 0.500396445 0.003" />
       </geometry>
     </collision>
     <collision name="head_pitch_link_collision_2">
@@ -1101,21 +1261,21 @@
       </geometry>
     </collision>
     <collision name="head_pitch_link_collision_5">
-      <origin xyz="-0.0287578702 0.207075357 0.0889265537" rpy="0 0 -2.35618862" />
+      <origin xyz="-0.0287578702 0.207075849 0.0889265537" rpy="0 0 -2.35619449" />
       <geometry>
-        <box size="0.120428063 0.003 0.100079298" />
+        <box size="0.120427356 0.003 0.100079298" />
       </geometry>
     </collision>
     <collision name="head_pitch_link_collision_6">
-      <origin xyz="-0.0708960295 0.000514999032 0.0889265537" rpy="0 0 -1.57079633" />
+      <origin xyz="-0.0708960295 0.000515505672 0.0889265537" rpy="0 0 -1.57079633" />
       <geometry>
-        <box size="0.330086 0.003 0.100079298" />
+        <box size="0.330087 0.003 0.100079298" />
       </geometry>
     </collision>
     <collision name="head_pitch_link_collision_7">
       <origin xyz="0.0691998005 -0.162341386 0.0889265537" rpy="0 0 0" />
       <geometry>
-        <box size="0.003 0.174682759 0.100079298" />
+        <box size="0.003 0.174682789 0.100079298" />
       </geometry>
     </collision>
     <collision name="head_pitch_link_collision_8">
@@ -1151,19 +1311,19 @@
       <mass value="0.5" />
       <inertia ixx="0.0005819727269638472" iyy="0.0005717477365254925" izz="0.0006203871301560063" ixy="0" ixz="0" iyz="0" />
     </inertial>
-    <visual name="os1_link_141">
+    <visual name="os1_link_173">
       <geometry>
-        <mesh filename="package://promise_description/meshes/os1_link_141.dae" />
+        <mesh filename="package://promise_description/meshes/os1_link_173.dae" />
       </geometry>
     </visual>
-    <visual name="os1_link_142">
+    <visual name="os1_link_174">
       <geometry>
-        <mesh filename="package://promise_description/meshes/os1_link_142.dae" />
+        <mesh filename="package://promise_description/meshes/os1_link_174.dae" />
       </geometry>
     </visual>
-    <visual name="os1_link_143">
+    <visual name="os1_link_175">
       <geometry>
-        <mesh filename="package://promise_description/meshes/os1_link_143.dae" />
+        <mesh filename="package://promise_description/meshes/os1_link_175.dae" />
       </geometry>
     </visual>
     <collision name="os1_link_collision_0">

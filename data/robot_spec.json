@@ -1,6 +1,7 @@
 {
   "name": "promise",
-  "date": "2026-11-14",
+  "revision": "0.4.0",
+  "date": "2026-11-16",
   "units": "m",
   "axes": "X forward, Y left, Z up",
   "base_height": 0.9,
@@ -24,32 +25,27 @@
         {
           "type": "box",
           "pos": [
-            -0.019999999552965164,
+            -0.10999999940395355,
             0.0,
-            0.020000040531158447
+            0.04000002145767212
           ],
           "size": [
-            1.91,
-            1.48,
-            0.46
+            2.03,
+            1.2,
+            0.53
           ]
         },
         {
           "type": "box",
           "pos": [
-            -1.2400000095367432,
+            -1.4299999475479126,
             0.0,
-            0.30000007152557373
+            0.3400000333786011
           ],
           "size": [
-            0.72,
-            0.64,
-            0.67
-          ],
-          "rpy": [
-            0,
-            -0.27,
-            0
+            0.46,
+            0.84,
+            0.58
           ]
         }
       ],
@@ -65,495 +61,275 @@
       ],
       "bounds": [
         [
-          -1.661749243736267,
-          -0.870278000831604,
-          -0.3473200798034668
+          -1.6616781949996948,
+          -1.0404423475265503,
+          -0.4690697193145752
         ],
         [
           1.25653076171875,
-          0.8703056573867798,
+          1.0906543731689453,
           0.7237149477005005
         ]
       ],
       "visuals": [
         {
           "mesh": "base_link_000",
-          "material": "tex_01",
-          "triangles": 2237
+          "material": "Material_1",
+          "triangles": 4445
         },
         {
           "mesh": "base_link_001",
-          "material": "tex_02",
-          "triangles": 1715
+          "material": "Material_1",
+          "triangles": 4497
         },
         {
           "mesh": "base_link_002",
-          "material": "tex_04",
-          "triangles": 802
+          "material": "Material_0",
+          "triangles": 19275
         },
         {
           "mesh": "base_link_003",
-          "material": "tex_03",
-          "triangles": 712
+          "material": "Material_1",
+          "triangles": 65465
         },
         {
           "mesh": "base_link_004",
-          "material": "tex_01_001",
-          "triangles": 2
+          "material": "Material_1",
+          "triangles": 4794
         },
         {
           "mesh": "base_link_005",
-          "material": "parts_AO",
-          "triangles": 2411
+          "material": "Material_3",
+          "triangles": 4149
         },
         {
           "mesh": "base_link_006",
-          "material": "tex_03",
-          "triangles": 10
+          "material": "Material_38",
+          "triangles": 311
         },
         {
           "mesh": "base_link_007",
-          "material": "tex_01",
-          "triangles": 267
+          "material": "Material_0",
+          "triangles": 6176
         },
         {
           "mesh": "base_link_008",
-          "material": "tex_02",
-          "triangles": 246
+          "material": "Material_1",
+          "triangles": 6048
         },
         {
           "mesh": "base_link_009",
-          "material": "tex_05",
-          "triangles": 490
+          "material": "Material_3",
+          "triangles": 513
         },
         {
           "mesh": "base_link_010",
-          "material": "tex_03",
-          "triangles": 56
+          "material": "Material_1",
+          "triangles": 4823
         },
         {
           "mesh": "base_link_011",
-          "material": "tex_03",
-          "triangles": 352
-        },
-        {
-          "mesh": "base_link_012",
-          "material": "tex_02",
-          "triangles": 216
-        },
-        {
-          "mesh": "base_link_013",
-          "material": "tex_03_002",
-          "triangles": 232
-        },
-        {
-          "mesh": "base_link_014",
-          "material": "tex_03",
-          "triangles": 34
-        },
-        {
-          "mesh": "base_link_015",
-          "material": "tex_03_002",
-          "triangles": 232
-        },
-        {
-          "mesh": "base_link_016",
-          "material": "tex_03",
-          "triangles": 34
-        },
-        {
-          "mesh": "base_link_017",
-          "material": "tex_02",
-          "triangles": 336
-        },
-        {
-          "mesh": "base_link_018",
-          "material": "tex_05",
-          "triangles": 140
-        },
-        {
-          "mesh": "base_link_019",
-          "material": "tex_03",
-          "triangles": 240
-        },
-        {
-          "mesh": "base_link_020",
-          "material": "tex_03",
-          "triangles": 240
-        },
-        {
-          "mesh": "base_link_021",
-          "material": "Material_0",
-          "triangles": 18849
-        },
-        {
-          "mesh": "base_link_022",
-          "material": "Material_1",
-          "triangles": 64001
-        },
-        {
-          "mesh": "base_link_023",
-          "material": "Material_2",
-          "triangles": 2932
-        },
-        {
-          "mesh": "base_link_024",
-          "material": "Material_0",
-          "triangles": 51145
-        },
-        {
-          "mesh": "base_link_025",
-          "material": "Material_1",
-          "triangles": 5589
-        },
-        {
-          "mesh": "base_link_026",
-          "material": "Material_3",
-          "triangles": 1028
-        },
-        {
-          "mesh": "base_link_027",
-          "material": "Material_3",
-          "triangles": 2020
-        },
-        {
-          "mesh": "base_link_028",
-          "material": "Material_1",
-          "triangles": 1491
-        },
-        {
-          "mesh": "base_link_029",
-          "material": "Material_38",
-          "triangles": 20
-        },
-        {
-          "mesh": "base_link_030",
-          "material": "Material_3",
-          "triangles": 512
-        },
-        {
-          "mesh": "base_link_031",
-          "material": "Material_1",
-          "triangles": 6045
-        },
-        {
-          "mesh": "base_link_032",
-          "material": "Material_0",
-          "triangles": 6140
-        },
-        {
-          "mesh": "base_link_033",
-          "material": "Material_1",
-          "triangles": 3378
-        },
-        {
-          "mesh": "base_link_034",
           "material": "Material_39",
           "triangles": 144
         },
         {
-          "mesh": "base_link_035",
+          "mesh": "base_link_012",
+          "material": "Material_2",
+          "triangles": 2867
+        },
+        {
+          "mesh": "base_link_013",
           "material": "Material_38",
           "triangles": 352
         },
         {
-          "mesh": "base_link_036",
-          "material": "Material_1",
-          "triangles": 14185
-        },
-        {
-          "mesh": "base_link_037",
+          "mesh": "base_link_014",
           "material": "Material_0",
           "triangles": 506
         },
         {
-          "mesh": "base_link_038",
-          "material": "Material_3",
-          "triangles": 392
+          "mesh": "base_link_015",
+          "material": "Material_1",
+          "triangles": 14233
         },
         {
-          "mesh": "base_link_039",
+          "mesh": "base_link_016",
           "material": "Material_0",
           "triangles": 1185
         },
         {
-          "mesh": "base_link_040",
+          "mesh": "base_link_017",
           "material": "Material_1",
           "triangles": 1396
         },
         {
-          "mesh": "base_link_041",
+          "mesh": "base_link_018",
+          "material": "Material_3",
+          "triangles": 392
+        },
+        {
+          "mesh": "base_link_019",
+          "material": "Material_0",
+          "triangles": 393
+        },
+        {
+          "mesh": "base_link_020",
           "material": "Material_3",
           "triangles": 224
+        },
+        {
+          "mesh": "base_link_021",
+          "material": "Material_8",
+          "triangles": 1817
+        },
+        {
+          "mesh": "base_link_022",
+          "material": "Material_0",
+          "triangles": 393
+        },
+        {
+          "mesh": "base_link_023",
+          "material": "Material_3",
+          "triangles": 224
+        },
+        {
+          "mesh": "base_link_024",
+          "material": "Material_8",
+          "triangles": 1817
+        },
+        {
+          "mesh": "base_link_025",
+          "material": "Material_1",
+          "triangles": 14024
+        },
+        {
+          "mesh": "base_link_026",
+          "material": "Material_3",
+          "triangles": 551
+        },
+        {
+          "mesh": "base_link_027",
+          "material": "Material_0",
+          "triangles": 54454
+        },
+        {
+          "mesh": "base_link_028",
+          "material": "Material_1",
+          "triangles": 5618
+        },
+        {
+          "mesh": "base_link_029",
+          "material": "Material_3",
+          "triangles": 1028
+        },
+        {
+          "mesh": "base_link_030",
+          "material": "Material_0",
+          "triangles": 358
+        },
+        {
+          "mesh": "base_link_031",
+          "material": "Material_1",
+          "triangles": 37858
+        },
+        {
+          "mesh": "base_link_032",
+          "material": "Material_10",
+          "triangles": 114
+        },
+        {
+          "mesh": "base_link_033",
+          "material": "Material_11",
+          "triangles": 240
+        },
+        {
+          "mesh": "base_link_034",
+          "material": "Material_12",
+          "triangles": 706
+        },
+        {
+          "mesh": "base_link_035",
+          "material": "Material_13",
+          "triangles": 6119
+        },
+        {
+          "mesh": "base_link_036",
+          "material": "Material_14",
+          "triangles": 300
+        },
+        {
+          "mesh": "base_link_037",
+          "material": "Material_15",
+          "triangles": 100
+        },
+        {
+          "mesh": "base_link_038",
+          "material": "Material_16",
+          "triangles": 79
+        },
+        {
+          "mesh": "base_link_039",
+          "material": "Material_17",
+          "triangles": 6651
+        },
+        {
+          "mesh": "base_link_040",
+          "material": "Material_18",
+          "triangles": 3124
+        },
+        {
+          "mesh": "base_link_041",
+          "material": "Material_19",
+          "triangles": 20994
         },
         {
           "mesh": "base_link_042",
-          "material": "Material_0",
-          "triangles": 393
+          "material": "Material_20",
+          "triangles": 5008
         },
         {
           "mesh": "base_link_043",
-          "material": "Material_8",
-          "triangles": 1819
+          "material": "Material_21",
+          "triangles": 6334
         },
         {
           "mesh": "base_link_044",
-          "material": "Material_3",
-          "triangles": 291
+          "material": "Material_4",
+          "triangles": 165492
         },
         {
           "mesh": "base_link_045",
-          "material": "Material_1",
-          "triangles": 5762
+          "material": "Material_5",
+          "triangles": 70128
         },
         {
           "mesh": "base_link_046",
-          "material": "Material_3",
-          "triangles": 224
+          "material": "Material_6",
+          "triangles": 8417
         },
         {
           "mesh": "base_link_047",
-          "material": "Material_0",
-          "triangles": 393
+          "material": "Material_7",
+          "triangles": 353
         },
         {
           "mesh": "base_link_048",
           "material": "Material_8",
-          "triangles": 1819
+          "triangles": 1343
         },
         {
           "mesh": "base_link_049",
-          "material": "PROMISE_thermal_white",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_050",
-          "material": "PROMISE_thermal_white",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_051",
-          "material": "PROMISE_thermal_white",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_052",
-          "material": "PROMISE_thermal_white",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_053",
-          "material": "PROMISE_thermal_white",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_054",
-          "material": "PROMISE_black_anodized",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_055",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_056",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_057",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_058",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_059",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_060",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_061",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_062",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_063",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_064",
-          "material": "PROMISE_black_anodized",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_065",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_066",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_067",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_068",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_069",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_070",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_071",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_072",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_073",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_074",
-          "material": "PROMISE_black_anodized",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_075",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_076",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_077",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_078",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_079",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_080",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_081",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_082",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_083",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_084",
-          "material": "PROMISE_black_anodized",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_085",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_086",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_087",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_088",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_089",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_090",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_091",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_092",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
-        },
-        {
-          "mesh": "base_link_093",
-          "material": "PROMISE_illuminator",
-          "triangles": 108
+          "material": "Material_9",
+          "triangles": 21893
         }
       ]
     },
     "rocker_left": {
       "name": "rocker_left",
       "anchor": [
-        0.21300005912780762,
-        0.796999990940094,
-        0.9067000150680542
+        0.214,
+        0.8,
+        0.894
       ],
       "parent": "base_link",
       "joint": "rocker_left_joint",
@@ -573,75 +349,115 @@
         {
           "type": "cylinder",
           "pos": [
-            0.4404999613761902,
-            0.13200002908706665,
-            -0.12084996700286865
+            0.44144999980926514,
+            0.13239997625350952,
+            -0.11449998617172241
           ],
           "radius": 0.043,
-          "length": 0.9509341336427963,
+          "length": 0.9497749402398249,
           "rpy": [
-            1.8277870416641235,
-            -2.2450155512387937e-08,
-            1.861940622329712
+            1.8143054246902466,
+            3.5082337035419187e-08,
+            1.8621803522109985
           ]
         },
         {
           "type": "cylinder",
           "pos": [
-            -0.37650004029273987,
+            -0.37700003385543823,
             0.0,
-            -0.12035000324249268
+            -0.11500000953674316
           ],
           "radius": 0.043,
-          "length": 0.7905350367246572,
+          "length": 0.7882994512643783,
           "rpy": [
-            1.8801860809326172,
-            1.5670741149165224e-08,
-            -1.5707963705062866
+            1.8668705224990845,
+            6.774421734689895e-08,
+            -1.5707964897155762
           ]
         }
       ],
       "com": [
-        0.08481842279434204,
-        0.13565856218338013,
-        -0.10283675789833069
+        0.08539515733718872,
+        0.07248848676681519,
+        0.021488696336746216
       ],
       "inertia": [
-        0.4826311059705842,
-        5.296774318961213,
-        5.374905014889866
+        1.0822158355001517,
+        5.736275314153764,
+        5.698820345015487
       ],
       "bounds": [
         [
-          -0.789354681968689,
-          -0.06941980123519897,
-          -0.27701348066329956
+          -0.7957779169082642,
+          -0.20743483304977417,
+          -0.2682962417602539
         ],
         [
-          0.958991527557373,
-          0.34073692560195923,
-          0.07133996486663818
+          0.9665682315826416,
+          0.35241180658340454,
+          0.31127363443374634
         ]
       ],
       "visuals": [
         {
-          "mesh": "rocker_left_094",
-          "material": "PROMISE_black_anodized",
-          "triangles": 451
+          "mesh": "rocker_left_050",
+          "material": "Material_0",
+          "triangles": 615
         },
         {
-          "mesh": "rocker_left_095",
-          "material": "PROMISE_black_anodized",
-          "triangles": 334
+          "mesh": "rocker_left_051",
+          "material": "Material_1",
+          "triangles": 22947
+        },
+        {
+          "mesh": "rocker_left_052",
+          "material": "Material_10",
+          "triangles": 50
+        },
+        {
+          "mesh": "rocker_left_053",
+          "material": "Material_12",
+          "triangles": 63
+        },
+        {
+          "mesh": "rocker_left_054",
+          "material": "Material_13",
+          "triangles": 223
+        },
+        {
+          "mesh": "rocker_left_055",
+          "material": "Material_2",
+          "triangles": 1473
+        },
+        {
+          "mesh": "rocker_left_056",
+          "material": "Material_21",
+          "triangles": 12203
+        },
+        {
+          "mesh": "rocker_left_057",
+          "material": "Material_26",
+          "triangles": 264
+        },
+        {
+          "mesh": "rocker_left_058",
+          "material": "Material_27",
+          "triangles": 4920
+        },
+        {
+          "mesh": "rocker_left_059",
+          "material": "Material_28",
+          "triangles": 4266
         }
       ]
     },
     "bogie_left": {
       "name": "bogie_left",
       "anchor": [
-        -0.5399999618530273,
-        0.7970000505447388,
-        0.6657000184059143
+        -0.54,
+        0.8,
+        0.664
       ],
       "parent": "rocker_left",
       "joint": "bogie_left_joint",
@@ -661,70 +477,115 @@
         {
           "type": "cylinder",
           "pos": [
-            0.2254999876022339,
-            0.19749999046325684,
-            -0.20160001516342163
+            0.2248711884021759,
+            0.19225794076919556,
+            -0.19993898272514343
           ],
           "radius": 0.043,
-          "length": 0.7224930656324728,
+          "length": 0.7141589548253955,
           "rpy": [
-            2.1628518104553223,
-            1.7442154387481423e-07,
-            2.290097236633301
+            2.165095806121826,
+            -2.485707462085429e-08,
+            2.278168201446533
           ]
         },
         {
           "type": "cylinder",
           "pos": [
-            -0.312000036239624,
-            0.13199996948242188,
-            -0.00034999847412109375
+            -0.31244999170303345,
+            0.13124996423721313,
+            0.000500023365020752
           ],
           "radius": 0.043,
-          "length": 0.6775489342692181,
+          "length": 0.6777958098952962,
           "rpy": [
-            1.5718296766281128,
-            5.6484473986984085e-08,
-            -1.9710367918014526
+            1.569320797920227,
+            -7.691348002936138e-09,
+            -1.968481421470642
           ]
         }
       ],
       "com": [
-        -0.09292954206466675,
-        0.14006271958351135,
-        -0.12550120055675507
+        -0.05139538645744324,
+        0.15051257610321045,
+        -0.13630154728889465
       ],
       "inertia": [
-        0.6976912509492429,
-        2.3613709446122058,
-        2.0642049352107827
+        0.7766100320491853,
+        2.707523755603072,
+        2.3981265252121853
       ],
       "bounds": [
         [
-          -0.703493595123291,
-          -0.06006854772567749,
-          -0.4409147799015045
+          -0.7093498110771179,
+          -0.0656384825706482,
+          -0.46584779024124146
         ],
         [
-          0.5176345109939575,
-          0.3401939868927002,
-          0.18991237878799438
+          0.6065590381622314,
+          0.3666636347770691,
+          0.19324469566345215
         ]
       ],
       "visuals": [
         {
-          "mesh": "bogie_left_096",
-          "material": "PROMISE_black_anodized",
-          "triangles": 597
+          "mesh": "bogie_left_060",
+          "material": "Material_0",
+          "triangles": 724
+        },
+        {
+          "mesh": "bogie_left_061",
+          "material": "Material_1",
+          "triangles": 222
+        },
+        {
+          "mesh": "bogie_left_062",
+          "material": "Material_10",
+          "triangles": 31
+        },
+        {
+          "mesh": "bogie_left_063",
+          "material": "Material_11",
+          "triangles": 28
+        },
+        {
+          "mesh": "bogie_left_064",
+          "material": "Material_13",
+          "triangles": 12
+        },
+        {
+          "mesh": "bogie_left_065",
+          "material": "Material_2",
+          "triangles": 296
+        },
+        {
+          "mesh": "bogie_left_066",
+          "material": "Material_21",
+          "triangles": 13646
+        },
+        {
+          "mesh": "bogie_left_067",
+          "material": "Material_26",
+          "triangles": 187
+        },
+        {
+          "mesh": "bogie_left_068",
+          "material": "Material_27",
+          "triangles": 7433
+        },
+        {
+          "mesh": "bogie_left_069",
+          "material": "Material_28",
+          "triangles": 2236
         }
       ]
     },
     "front_left_steer": {
       "name": "front_left_steer",
       "anchor": [
-        1.0940001010894775,
-        1.060999870300293,
-        0.6647000312805176
+        1.0969,
+        1.0648,
+        0.64
       ],
       "parent": "rocker_left",
       "joint": "front_left_steer_joint",
@@ -745,8 +606,8 @@
           "type": "box",
           "pos": [
             0.0,
-            -0.0899999737739563,
-            -0.18000000715255737
+            -0.09000003337860107,
+            -0.17999997735023499
           ],
           "size": [
             0.12,
@@ -756,41 +617,81 @@
         }
       ],
       "com": [
-        -0.001502394676208496,
-        -0.16186141967773438,
-        -0.21678686141967773
+        -6.699562072753906e-05,
+        -0.16071948409080505,
+        -0.20190739631652832
       ],
       "inertia": [
-        0.2394803362513187,
-        0.12196731794361426,
-        0.16169297891303813
+        0.26361249689565547,
+        0.1435311268346382,
+        0.16455196291592422
       ],
       "bounds": [
         [
-          -0.10659754276275635,
-          -0.42606115341186523,
-          -0.4402564764022827
+          -0.1055072546005249,
+          -0.4274746775627136,
+          -0.4481753706932068
         ],
         [
-          0.10359275341033936,
-          0.10233831405639648,
-          0.006682753562927246
+          0.10537326335906982,
+          0.10603570938110352,
+          0.044360578060150146
         ]
       ],
       "visuals": [
         {
-          "mesh": "front_left_steer_097",
-          "material": "PROMISE_black_anodized",
-          "triangles": 489
+          "mesh": "front_left_steer_070",
+          "material": "Material_21",
+          "triangles": 4435
+        },
+        {
+          "mesh": "front_left_steer_071",
+          "material": "Material_29",
+          "triangles": 6144
+        },
+        {
+          "mesh": "front_left_steer_072",
+          "material": "Material_30",
+          "triangles": 201
+        },
+        {
+          "mesh": "front_left_steer_073",
+          "material": "Material_31",
+          "triangles": 64
+        },
+        {
+          "mesh": "front_left_steer_074",
+          "material": "Material_32",
+          "triangles": 642
+        },
+        {
+          "mesh": "front_left_steer_075",
+          "material": "Material_33",
+          "triangles": 140
+        },
+        {
+          "mesh": "front_left_steer_076",
+          "material": "Material_34",
+          "triangles": 247
+        },
+        {
+          "mesh": "front_left_steer_077",
+          "material": "Material_35",
+          "triangles": 873
+        },
+        {
+          "mesh": "front_left_steer_078",
+          "material": "Material_37",
+          "triangles": 2862
         }
       ]
     },
     "rear_left_steer": {
       "name": "rear_left_steer",
       "anchor": [
-        -1.1639999151229858,
-        1.061000108718872,
-        0.6647000312805176
+        -1.1649,
+        1.0625,
+        0.64
       ],
       "parent": "bogie_left",
       "joint": "rear_left_steer_joint",
@@ -812,7 +713,7 @@
           "pos": [
             0.0,
             -0.0899999737739563,
-            -0.18000000715255737
+            -0.17999997735023499
           ],
           "size": [
             0.12,
@@ -822,41 +723,86 @@
         }
       ],
       "com": [
-        2.384185791015625e-07,
-        -0.12930279970169067,
-        -0.2140505462884903
+        -0.00026035308837890625,
+        -0.11835157871246338,
+        -0.20190739631652832
       ],
       "inertia": [
-        0.20668980121762148,
-        0.12196754438080193,
-        0.12890221744215324
+        0.2220419032888188,
+        0.14352454092620093,
+        0.12297478340065027
       ],
       "bounds": [
         [
-          -0.10509490966796875,
-          -0.3604004383087158,
-          -0.43752041459083557
+          -0.10568499565124512,
+          -0.34279096126556396,
+          -0.4481753706932068
         ],
         [
-          0.10509538650512695,
-          0.10179483890533447,
-          0.00941932201385498
+          0.1051642894744873,
+          0.10608780384063721,
+          0.044360578060150146
         ]
       ],
       "visuals": [
         {
-          "mesh": "rear_left_steer_098",
-          "material": "PROMISE_black_anodized",
-          "triangles": 434
+          "mesh": "rear_left_steer_079",
+          "material": "Material_21",
+          "triangles": 837
+        },
+        {
+          "mesh": "rear_left_steer_080",
+          "material": "Material_29",
+          "triangles": 8477
+        },
+        {
+          "mesh": "rear_left_steer_081",
+          "material": "Material_30",
+          "triangles": 207
+        },
+        {
+          "mesh": "rear_left_steer_082",
+          "material": "Material_31",
+          "triangles": 64
+        },
+        {
+          "mesh": "rear_left_steer_083",
+          "material": "Material_32",
+          "triangles": 642
+        },
+        {
+          "mesh": "rear_left_steer_084",
+          "material": "Material_33",
+          "triangles": 142
+        },
+        {
+          "mesh": "rear_left_steer_085",
+          "material": "Material_34",
+          "triangles": 247
+        },
+        {
+          "mesh": "rear_left_steer_086",
+          "material": "Material_35",
+          "triangles": 958
+        },
+        {
+          "mesh": "rear_left_steer_087",
+          "material": "Material_36",
+          "triangles": 830
+        },
+        {
+          "mesh": "rear_left_steer_088",
+          "material": "Material_37",
+          "triangles": 2887
         }
       ]
     },
     "rocker_right": {
       "name": "rocker_right",
       "anchor": [
-        0.21299993991851807,
-        -0.796999990940094,
-        0.9067000150680542
+        0.214,
+        -0.8,
+        0.894
       ],
       "parent": "base_link",
       "joint": "rocker_right_joint",
@@ -879,75 +825,120 @@
         {
           "type": "cylinder",
           "pos": [
-            0.44050002098083496,
-            -0.13200002908706665,
-            -0.12084996700286865
+            0.4405500292778015,
+            -0.13089996576309204,
+            -0.11449998617172241
           ],
           "radius": 0.043,
-          "length": 0.9509342590029842,
+          "length": 0.947268464388967,
           "rpy": [
-            1.827786922454834,
-            1.0699355357246532e-07,
-            1.2796521186828613
+            1.8149629831314087,
+            6.822813958251572e-08,
+            1.2819762229919434
           ]
         },
         {
           "type": "cylinder",
           "pos": [
-            -0.3764999806880951,
+            -0.37700003385543823,
             0.0,
-            -0.12035000324249268
+            -0.11500000953674316
           ],
           "radius": 0.043,
-          "length": 0.7905348859289362,
+          "length": 0.7882994512643783,
           "rpy": [
-            1.8801862001419067,
-            3.403834014648055e-08,
+            1.8668705224990845,
+            6.774421734689895e-08,
             -1.5707964897155762
           ]
         }
       ],
       "com": [
-        0.08606982231140137,
-        -0.14018690586090088,
-        -0.10211697220802307
+        0.08576798439025879,
+        -0.07247623801231384,
+        0.021907150745391846
       ],
       "inertia": [
-        0.4835621766078961,
-        5.313046928213894,
-        5.388758867214302
+        1.0819220968474081,
+        5.728749764951336,
+        5.689695564605544
       ],
       "bounds": [
         [
-          -0.7893548011779785,
-          -0.34499305486679077,
-          -0.2770134210586548
+          -0.7947087287902832,
+          -0.35214585065841675,
+          -0.26804667711257935
         ],
         [
-          0.9614944458007812,
-          0.06461924314498901,
-          0.07277947664260864
+          0.9662446975708008,
+          0.20719337463378906,
+          0.31186097860336304
         ]
       ],
       "visuals": [
         {
-          "mesh": "rocker_right_099",
-          "material": "PROMISE_black_anodized",
-          "triangles": 451
+          "mesh": "rocker_right_089",
+          "material": "Material_0",
+          "triangles": 613
         },
         {
-          "mesh": "rocker_right_100",
-          "material": "PROMISE_black_anodized",
-          "triangles": 334
+          "mesh": "rocker_right_090",
+          "material": "Material_1",
+          "triangles": 23145
+        },
+        {
+          "mesh": "rocker_right_091",
+          "material": "Material_10",
+          "triangles": 52
+        },
+        {
+          "mesh": "rocker_right_092",
+          "material": "Material_12",
+          "triangles": 60
+        },
+        {
+          "mesh": "rocker_right_093",
+          "material": "Material_13",
+          "triangles": 222
+        },
+        {
+          "mesh": "rocker_right_094",
+          "material": "Material_2",
+          "triangles": 1437
+        },
+        {
+          "mesh": "rocker_right_095",
+          "material": "Material_21",
+          "triangles": 10460
+        },
+        {
+          "mesh": "rocker_right_096",
+          "material": "Material_26",
+          "triangles": 257
+        },
+        {
+          "mesh": "rocker_right_097",
+          "material": "Material_27",
+          "triangles": 4941
+        },
+        {
+          "mesh": "rocker_right_098",
+          "material": "Material_28",
+          "triangles": 4234
+        },
+        {
+          "mesh": "rocker_right_099",
+          "material": "Material_8",
+          "triangles": 1525
         }
       ]
     },
     "bogie_right": {
       "name": "bogie_right",
       "anchor": [
-        -0.5400000810623169,
-        -0.7969999313354492,
-        0.6657000184059143
+        -0.54,
+        -0.8,
+        0.664
       ],
       "parent": "rocker_right",
       "joint": "bogie_right_joint",
@@ -967,70 +958,120 @@
         {
           "type": "cylinder",
           "pos": [
-            0.22550004720687866,
-            -0.1975000500679016,
-            -0.20160001516342163
+            0.22497648000717163,
+            -0.20082253217697144,
+            -0.1998732089996338
           ],
           "radius": 0.043,
-          "length": 0.7224932100049559,
+          "length": 0.7235839250655806,
           "rpy": [
-            2.162851572036743,
-            -5.8495054133800295e-08,
-            0.8514955639839172
+            2.1561014652252197,
+            -4.755792204491627e-08,
+            0.8420637845993042
           ]
         },
         {
           "type": "cylinder",
           "pos": [
-            -0.31199997663497925,
-            -0.13200002908706665,
-            -0.00034999847412109375
+            -0.31335002183914185,
+            -0.13089996576309204,
+            0.000500023365020752
           ],
           "radius": 0.043,
-          "length": 0.6775488737891657,
+          "length": 0.6791856065356633,
           "rpy": [
-            1.5718294382095337,
-            -1.1469695238019995e-07,
-            -1.170555591583252
+            1.569324016571045,
+            -3.766182388176276e-08,
+            -1.1750879287719727
           ]
         }
       ],
       "com": [
-        -0.09292995929718018,
-        -0.14486318826675415,
-        -0.12550124526023865
+        -0.05275195837020874,
+        -0.15029376745224,
+        -0.13629603385925293
       ],
       "inertia": [
-        0.69769246031401,
-        2.3613725775452865,
-        2.0642052394915744
+        0.7765426429278399,
+        2.710064124006113,
+        2.4005655227259837
       ],
       "bounds": [
         [
-          -0.7034940719604492,
-          -0.3449944257736206,
-          -0.44091522693634033
+          -0.7110897898674011,
+          -0.36640578508377075,
+          -0.4658474326133728
         ],
         [
-          0.5176341533660889,
-          0.055268049240112305,
-          0.18991273641586304
+          0.6055858731269836,
+          0.06581825017929077,
+          0.19325536489486694
         ]
       ],
       "visuals": [
         {
+          "mesh": "bogie_right_100",
+          "material": "Material_0",
+          "triangles": 718
+        },
+        {
           "mesh": "bogie_right_101",
-          "material": "PROMISE_black_anodized",
-          "triangles": 597
+          "material": "Material_1",
+          "triangles": 221
+        },
+        {
+          "mesh": "bogie_right_102",
+          "material": "Material_10",
+          "triangles": 30
+        },
+        {
+          "mesh": "bogie_right_103",
+          "material": "Material_11",
+          "triangles": 27
+        },
+        {
+          "mesh": "bogie_right_104",
+          "material": "Material_13",
+          "triangles": 12
+        },
+        {
+          "mesh": "bogie_right_105",
+          "material": "Material_2",
+          "triangles": 300
+        },
+        {
+          "mesh": "bogie_right_106",
+          "material": "Material_21",
+          "triangles": 13480
+        },
+        {
+          "mesh": "bogie_right_107",
+          "material": "Material_26",
+          "triangles": 184
+        },
+        {
+          "mesh": "bogie_right_108",
+          "material": "Material_27",
+          "triangles": 7422
+        },
+        {
+          "mesh": "bogie_right_109",
+          "material": "Material_28",
+          "triangles": 2310
+        },
+        {
+          "mesh": "bogie_right_110",
+          "material": "Material_8",
+          "triangles": 368
         }
       ]
     },
     "front_right_steer": {
       "name": "front_right_steer",
       "anchor": [
-        1.0939998626708984,
-        -1.061000108718872,
-        0.6647000312805176
+        1.0951,
+        -1.0618,
+        0.64
       ],
       "parent": "rocker_right",
       "joint": "front_right_steer_joint",
@@ -1052,7 +1093,7 @@
           "pos": [
             0.0,
             0.0899999737739563,
-            -0.18000000715255737
+            -0.17999997735023499
           ],
           "size": [
             0.12,
@@ -1062,41 +1103,81 @@
         }
       ],
       "com": [
-        0.0010004043579101562,
-        0.15760540962219238,
-        -0.21404984593391418
+        0.0001291036605834961,
+        0.16065165400505066,
+        -0.20190739631652832
       ],
       "inertia": [
-        0.23948018363144463,
-        0.121967291303962,
-        0.16169285293281632
+        0.2635576794975041,
+        0.1435311268346382,
+        0.16449714551777284
       ],
       "bounds": [
         [
-          -0.1040947437286377,
-          -0.10659420490264893,
-          -0.4375194311141968
+          -0.10531115531921387,
+          -0.10605216026306152,
+          -0.4481753706932068
         ],
         [
-          0.10609555244445801,
-          0.4218050241470337,
-          0.009419739246368408
+          0.10556936264038086,
+          0.42735546827316284,
+          0.044360578060150146
         ]
       ],
       "visuals": [
         {
-          "mesh": "front_right_steer_102",
-          "material": "PROMISE_black_anodized",
-          "triangles": 489
+          "mesh": "front_right_steer_111",
+          "material": "Material_21",
+          "triangles": 4385
+        },
+        {
+          "mesh": "front_right_steer_112",
+          "material": "Material_29",
+          "triangles": 6330
+        },
+        {
+          "mesh": "front_right_steer_113",
+          "material": "Material_30",
+          "triangles": 201
+        },
+        {
+          "mesh": "front_right_steer_114",
+          "material": "Material_31",
+          "triangles": 64
+        },
+        {
+          "mesh": "front_right_steer_115",
+          "material": "Material_32",
+          "triangles": 645
+        },
+        {
+          "mesh": "front_right_steer_116",
+          "material": "Material_33",
+          "triangles": 141
+        },
+        {
+          "mesh": "front_right_steer_117",
+          "material": "Material_34",
+          "triangles": 244
+        },
+        {
+          "mesh": "front_right_steer_118",
+          "material": "Material_35",
+          "triangles": 907
+        },
+        {
+          "mesh": "front_right_steer_119",
+          "material": "Material_37",
+          "triangles": 2854
         }
       ]
     },
     "rear_right_steer": {
       "name": "rear_right_steer",
       "anchor": [
-        -1.164000153541565,
-        -1.060999870300293,
-        0.6647000312805176
+        -1.1667,
+        -1.0618,
+        0.64
       ],
       "parent": "bogie_right",
       "joint": "rear_right_steer_joint",
@@ -1118,7 +1199,7 @@
           "pos": [
             0.0,
             0.0899999737739563,
-            -0.18000000715255737
+            -0.17999997735023499
           ],
           "size": [
             0.12,
@@ -1128,41 +1209,86 @@
         }
       ],
       "com": [
-        -2.384185791015625e-07,
-        0.12450230121612549,
-        -0.2140505015850067
+        0.0001016855239868164,
+        0.11799547076225281,
+        -0.20190739631652832
       ],
       "inertia": [
-        0.20668997983143989,
-        0.12196755770064449,
-        0.12890238273612908
+        0.22175601240976484,
+        0.1435311268346382,
+        0.12269547843003359
       ],
       "bounds": [
         [
-          -0.10509538650512695,
-          -0.10659551620483398,
-          -0.4375203847885132
+          -0.10533857345581055,
+          -0.10612523555755615,
+          -0.4481753706932068
         ],
         [
-          0.10509490966796875,
-          0.35560011863708496,
-          0.009419381618499756
+          0.10554194450378418,
+          0.34211617708206177,
+          0.044360578060150146
         ]
       ],
       "visuals": [
         {
-          "mesh": "rear_right_steer_103",
-          "material": "PROMISE_black_anodized",
-          "triangles": 434
+          "mesh": "rear_right_steer_120",
+          "material": "Material_21",
+          "triangles": 848
+        },
+        {
+          "mesh": "rear_right_steer_121",
+          "material": "Material_29",
+          "triangles": 8302
+        },
+        {
+          "mesh": "rear_right_steer_122",
+          "material": "Material_30",
+          "triangles": 206
+        },
+        {
+          "mesh": "rear_right_steer_123",
+          "material": "Material_31",
+          "triangles": 64
+        },
+        {
+          "mesh": "rear_right_steer_124",
+          "material": "Material_32",
+          "triangles": 656
+        },
+        {
+          "mesh": "rear_right_steer_125",
+          "material": "Material_33",
+          "triangles": 142
+        },
+        {
+          "mesh": "rear_right_steer_126",
+          "material": "Material_34",
+          "triangles": 251
+        },
+        {
+          "mesh": "rear_right_steer_127",
+          "material": "Material_35",
+          "triangles": 874
+        },
+        {
+          "mesh": "rear_right_steer_128",
+          "material": "Material_36",
+          "triangles": 834
+        },
+        {
+          "mesh": "rear_right_steer_129",
+          "material": "Material_37",
+          "triangles": 2882
         }
       ]
     },
     "front_left_wheel": {
       "name": "front_left_wheel",
       "anchor": [
-        1.094,
-        1.061,
-        0.2625
+        1.0922805624724408,
+        1.067521512111569,
+        0.2649510687971996
       ],
       "parent": "front_left_steer",
       "joint": "front_left_wheel_joint",
@@ -1183,8 +1309,8 @@
             0.0,
             0.0
           ],
-          "radius": 0.2625,
-          "length": 0.3,
+          "radius": 0.2633195023086721,
+          "length": 0.3407329788759689,
           "rpy": [
             1.5707963267948966,
             0,
@@ -1192,54 +1318,59 @@
           ]
         }
       ],
-      "wheel_radius": 0.2625,
-      "wheel_width": 0.33538020374196315,
+      "wheel_radius": 0.2633195023086721,
+      "wheel_width": 0.3407329788759689,
       "com": [
         0.0,
         0.0,
         0.0
       ],
       "inertia": [
-        0.14835937500000002,
-        0.20671875000000003,
-        0.14835937500000002
+        0.16205522189097593,
+        0.20801148088826038,
+        0.16205522189097593
       ],
       "bounds": [
         [
-          -0.26249998807907104,
-          -0.16769009828567505,
-          -0.26249992847442627
+          -0.26323920488357544,
+          -0.17036640644073486,
+          -0.2630528211593628
         ],
         [
-          0.2625000476837158,
-          0.16769015789031982,
-          0.26249992847442627
+          0.2629433870315552,
+          0.17036652565002441,
+          0.26316961646080017
         ]
       ],
       "visuals": [
         {
-          "mesh": "front_left_wheel_104",
-          "material": "aluminum",
-          "triangles": 3936
+          "mesh": "front_left_wheel_130",
+          "material": "Material_22",
+          "triangles": 5144
         },
         {
-          "mesh": "front_left_wheel_105",
-          "material": "aluminum_black",
-          "triangles": 7200
+          "mesh": "front_left_wheel_131",
+          "material": "Material_23",
+          "triangles": 6219
         },
         {
-          "mesh": "front_left_wheel_106",
-          "material": "hub",
-          "triangles": 200
+          "mesh": "front_left_wheel_132",
+          "material": "Material_24",
+          "triangles": 8309
+        },
+        {
+          "mesh": "front_left_wheel_133",
+          "material": "Material_25",
+          "triangles": 1587
         }
       ]
     },
     "middle_left_wheel": {
       "name": "middle_left_wheel",
       "anchor": [
-        -0.089,
-        1.192,
-        0.2625
+        -0.0902576490980508,
+        1.1845158333185952,
+        0.26412201625074955
       ],
       "parent": "bogie_left",
       "joint": "middle_left_wheel_joint",
@@ -1260,8 +1391,8 @@
             0.0,
             0.0
           ],
-          "radius": 0.2625,
-          "length": 0.3,
+          "radius": 0.26368762373092625,
+          "length": 0.3417597880411424,
           "rpy": [
             1.5707963267948966,
             0,
@@ -1269,54 +1400,59 @@
           ]
         }
       ],
-      "wheel_radius": 0.2625,
-      "wheel_width": 0.3353801656915047,
+      "wheel_radius": 0.26368762373092625,
+      "wheel_width": 0.3417597880411424,
       "com": [
         0.0,
         0.0,
         0.0
       ],
       "inertia": [
-        0.14835937500000002,
-        0.20671875000000003,
-        0.14835937500000002
+        0.16269662072425708,
+        0.20859348872658762,
+        0.16269662072425708
       ],
       "bounds": [
         [
-          -0.26249998807907104,
-          -0.16769015789031982,
-          -0.2624998986721039
+          -0.26301684975624084,
+          -0.17087984085083008,
+          -0.2628656327724457
         ],
         [
-          0.26249998807907104,
-          0.16769003868103027,
-          0.26249992847442627
+          0.2636846601963043,
+          0.17087984085083008,
+          0.26294463872909546
         ]
       ],
       "visuals": [
         {
-          "mesh": "middle_left_wheel_107",
-          "material": "aluminum",
-          "triangles": 3936
+          "mesh": "middle_left_wheel_134",
+          "material": "Material_22",
+          "triangles": 5069
         },
         {
-          "mesh": "middle_left_wheel_108",
-          "material": "aluminum_black",
-          "triangles": 7200
+          "mesh": "middle_left_wheel_135",
+          "material": "Material_23",
+          "triangles": 6203
         },
         {
-          "mesh": "middle_left_wheel_109",
-          "material": "hub",
-          "triangles": 200
+          "mesh": "middle_left_wheel_136",
+          "material": "Material_24",
+          "triangles": 8293
+        },
+        {
+          "mesh": "middle_left_wheel_137",
+          "material": "Material_25",
+          "triangles": 1485
         }
       ]
     },
     "rear_left_wheel": {
       "name": "rear_left_wheel",
       "anchor": [
-        -1.164,
-        1.061,
-        0.2625
+        -1.1644070129469997,
+        1.0618118215639019,
+        0.2650677976917332
       ],
       "parent": "rear_left_steer",
       "joint": "rear_left_wheel_joint",
@@ -1337,8 +1473,8 @@
             0.0,
             0.0
           ],
-          "radius": 0.2625,
-          "length": 0.3,
+          "radius": 0.2634521544659107,
+          "length": 0.34149757561065686,
           "rpy": [
             1.5707963267948966,
             0,
@@ -1346,54 +1482,59 @@
           ]
         }
       ],
-      "wheel_radius": 0.2625,
-      "wheel_width": 0.3356535359604965,
+      "wheel_radius": 0.2634521544659107,
+      "wheel_width": 0.34149757561065686,
       "com": [
         0.0,
         0.0,
         0.0
       ],
       "inertia": [
-        0.14835937500000002,
-        0.20671875000000003,
-        0.14835937500000002
+        0.16242085361307323,
+        0.2082211130781902,
+        0.16242085361307323
       ],
       "bounds": [
         [
-          -0.26249992847442627,
-          -0.16782677173614502,
-          -0.26249998807907104
+          -0.262783408164978,
+          -0.170748770236969,
+          -0.2626975178718567
         ],
         [
-          0.2625000476837158,
-          0.16782677173614502,
-          0.26249998807907104
+          0.2626630663871765,
+          0.17074882984161377,
+          0.2626754343509674
         ]
       ],
       "visuals": [
         {
-          "mesh": "rear_left_wheel_110",
-          "material": "aluminum",
-          "triangles": 3936
+          "mesh": "rear_left_wheel_138",
+          "material": "Material_22",
+          "triangles": 4976
         },
         {
-          "mesh": "rear_left_wheel_111",
-          "material": "aluminum_black",
-          "triangles": 7200
+          "mesh": "rear_left_wheel_139",
+          "material": "Material_23",
+          "triangles": 6161
         },
         {
-          "mesh": "rear_left_wheel_112",
-          "material": "hub",
-          "triangles": 200
+          "mesh": "rear_left_wheel_140",
+          "material": "Material_24",
+          "triangles": 8243
+        },
+        {
+          "mesh": "rear_left_wheel_141",
+          "material": "Material_25",
+          "triangles": 1575
         }
       ]
     },
     "front_right_wheel": {
       "name": "front_right_wheel",
       "anchor": [
-        1.094,
-        -1.061,
-        0.2625
+        1.0998474664871551,
+        -1.0645278706829278,
+        0.264953956549941
       ],
       "parent": "front_right_steer",
       "joint": "front_right_wheel_joint",
@@ -1414,8 +1555,8 @@
             0.0,
             0.0
           ],
-          "radius": 0.2625,
-          "length": 0.3,
+          "radius": 0.26334075778895016,
+          "length": 0.33957256163247285,
           "rpy": [
             1.5707963267948966,
             0,
@@ -1423,54 +1564,59 @@
           ]
         }
       ],
-      "wheel_radius": 0.2625,
-      "wheel_width": 0.33538033940664086,
+      "wheel_radius": 0.26334075778895016,
+      "wheel_width": 0.33957256163247285,
       "com": [
         0.0,
         0.0,
         0.0
       ],
       "inertia": [
-        0.14835937500000002,
-        0.20671875000000003,
-        0.14835937500000002
+        0.16167729437610756,
+        0.20804506413857554,
+        0.16167729437610756
       ],
       "bounds": [
         [
-          -0.26249998807907104,
-          -0.16769015789031982,
-          -0.26249998807907104
+          -0.26284146308898926,
+          -0.16978633403778076,
+          -0.2629390358924866
         ],
         [
-          0.2625000476837158,
-          0.16769015789031982,
-          0.26249998807907104
+          0.2631216049194336,
+          0.169786274433136,
+          0.2631135582923889
         ]
       ],
       "visuals": [
         {
-          "mesh": "front_right_wheel_113",
-          "material": "aluminum",
-          "triangles": 3936
+          "mesh": "front_right_wheel_142",
+          "material": "Material_22",
+          "triangles": 5089
         },
         {
-          "mesh": "front_right_wheel_114",
-          "material": "aluminum_black",
-          "triangles": 7200
+          "mesh": "front_right_wheel_143",
+          "material": "Material_23",
+          "triangles": 6214
         },
         {
-          "mesh": "front_right_wheel_115",
-          "material": "hub",
-          "triangles": 200
+          "mesh": "front_right_wheel_144",
+          "material": "Material_24",
+          "triangles": 8301
+        },
+        {
+          "mesh": "front_right_wheel_145",
+          "material": "Material_25",
+          "triangles": 1575
         }
       ]
     },
     "middle_right_wheel": {
       "name": "middle_right_wheel",
       "anchor": [
-        -0.089,
-        -1.192,
-        0.2625
+        -0.0900470505769738,
+        -1.2016451540515158,
+        0.264253537236019
       ],
       "parent": "bogie_right",
       "joint": "middle_right_wheel_joint",
@@ -1491,8 +1637,8 @@
             0.0,
             0.0
           ],
-          "radius": 0.2625,
-          "length": 0.3,
+          "radius": 0.2634563649985959,
+          "length": 0.34135860541665086,
           "rpy": [
             1.5707963267948966,
             0,
@@ -1500,54 +1646,59 @@
           ]
         }
       ],
-      "wheel_radius": 0.2625,
-      "wheel_width": 0.3353801656915047,
+      "wheel_radius": 0.2634563649985959,
+      "wheel_width": 0.34135860541665086,
       "com": [
         0.0,
         0.0,
         0.0
       ],
       "inertia": [
-        0.14835937500000002,
-        0.20671875000000003,
-        0.14835937500000002
+        0.16237673313341047,
+        0.20822776877482022,
+        0.16237673313341047
       ],
       "bounds": [
         [
-          -0.26249998807907104,
-          -0.16769003868103027,
-          -0.2624998986721039
+          -0.2629391849040985,
+          -0.17067933082580566,
+          -0.26308417320251465
         ],
         [
-          0.26249998807907104,
-          0.16769015789031982,
-          0.26249992847442627
+          0.2633044421672821,
+          0.17067933082580566,
+          0.2628423273563385
         ]
       ],
       "visuals": [
         {
-          "mesh": "middle_right_wheel_116",
-          "material": "aluminum",
-          "triangles": 3936
+          "mesh": "middle_right_wheel_146",
+          "material": "Material_22",
+          "triangles": 4857
         },
         {
-          "mesh": "middle_right_wheel_117",
-          "material": "aluminum_black",
-          "triangles": 7200
+          "mesh": "middle_right_wheel_147",
+          "material": "Material_23",
+          "triangles": 6087
         },
         {
-          "mesh": "middle_right_wheel_118",
-          "material": "hub",
-          "triangles": 200
+          "mesh": "middle_right_wheel_148",
+          "material": "Material_24",
+          "triangles": 8138
+        },
+        {
+          "mesh": "middle_right_wheel_149",
+          "material": "Material_25",
+          "triangles": 1553
         }
       ]
     },
     "rear_right_wheel": {
       "name": "rear_right_wheel",
       "anchor": [
-        -1.164,
-        -1.061,
-        0.2625
+        -1.1643542559987803,
+        -1.0645349064728966,
+        0.2650499826343768
       ],
       "parent": "rear_right_steer",
       "joint": "rear_right_wheel_joint",
@@ -1568,8 +1719,8 @@
             0.0,
             0.0
           ],
-          "radius": 0.2625,
-          "length": 0.3,
+          "radius": 0.26343198625441683,
+          "length": 0.34091157366587943,
           "rpy": [
             1.5707963267948966,
             0,
@@ -1577,45 +1728,50 @@
           ]
         }
       ],
-      "wheel_radius": 0.2625,
-      "wheel_width": 0.33538020374196315,
+      "wheel_radius": 0.26343198625441683,
+      "wheel_width": 0.34091157366587943,
       "com": [
         0.0,
         0.0,
         0.0
       ],
       "inertia": [
-        0.14835937500000002,
-        0.20671875000000003,
-        0.14835937500000002
+        0.16220496760259406,
+        0.20818923414584178,
+        0.16220496760259406
       ],
       "bounds": [
         [
-          -0.26249992847442627,
-          -0.16769015789031982,
-          -0.26249992847442627
+          -0.26305150985717773,
+          -0.17045581340789795,
+          -0.2630496323108673
         ],
         [
-          0.2625000476837158,
-          0.16769009828567505,
-          0.26249992847442627
+          0.2630987763404846,
+          0.17045575380325317,
+          0.2630254626274109
         ]
       ],
       "visuals": [
         {
-          "mesh": "rear_right_wheel_119",
-          "material": "aluminum",
-          "triangles": 3936
+          "mesh": "rear_right_wheel_150",
+          "material": "Material_22",
+          "triangles": 4923
         },
         {
-          "mesh": "rear_right_wheel_120",
-          "material": "aluminum_black",
-          "triangles": 7200
+          "mesh": "rear_right_wheel_151",
+          "material": "Material_23",
+          "triangles": 6135
         },
         {
-          "mesh": "rear_right_wheel_121",
-          "material": "hub",
-          "triangles": 200
+          "mesh": "rear_right_wheel_152",
+          "material": "Material_24",
+          "triangles": 8216
+        },
+        {
+          "mesh": "rear_right_wheel_153",
+          "material": "Material_25",
+          "triangles": 1571
         }
       ]
     },
@@ -1676,19 +1832,19 @@
       ],
       "visuals": [
         {
-          "mesh": "mast_yaw_link_122",
-          "material": "Material_3",
-          "triangles": 3925
+          "mesh": "mast_yaw_link_154",
+          "material": "Material_0",
+          "triangles": 5403
         },
         {
-          "mesh": "mast_yaw_link_123",
+          "mesh": "mast_yaw_link_155",
           "material": "Material_1",
           "triangles": 7058
         },
         {
-          "mesh": "mast_yaw_link_124",
-          "material": "Material_0",
-          "triangles": 5403
+          "mesh": "mast_yaw_link_156",
+          "material": "Material_3",
+          "triangles": 3925
         }
       ]
     },
@@ -1718,12 +1874,12 @@
           "type": "box",
           "pos": [
             -0.0008481144905090332,
-            0.0005154609680175781,
+            0.0005154311656951904,
             0.04038691520690918
           ],
           "size": [
             0.14309585094451904,
-            0.5003964155912399,
+            0.5003964453935623,
             0.003
           ],
           "rpy": [
@@ -1736,12 +1892,12 @@
           "type": "box",
           "pos": [
             -0.0008481144905090332,
-            0.0005154609680175781,
+            0.0005154311656951904,
             0.13746631145477295
           ],
           "size": [
             0.14309585094451904,
-            0.5003964155912399,
+            0.5003964453935623,
             0.003
           ],
           "rpy": [
@@ -1808,29 +1964,29 @@
           "type": "box",
           "pos": [
             -0.028757870197296143,
-            0.2070753574371338,
+            0.20707584917545319,
             0.08892655372619629
           ],
           "size": [
-            0.12042806301273801,
+            0.12042735590388089,
             0.003,
             0.10007929801940918
           ],
           "rpy": [
             0,
             0,
-            -2.356188618580999
+            -2.356194490192345
           ]
         },
         {
           "type": "box",
           "pos": [
             -0.07089602947235107,
-            0.0005149990320205688,
+            0.0005155056715011597,
             0.08892655372619629
           ],
           "size": [
-            0.330086,
+            0.33008699999999996,
             0.003,
             0.10007929801940918
           ],
@@ -1849,7 +2005,7 @@
           ],
           "size": [
             0.003,
-            0.174682758808136,
+            0.17468278861045838,
             0.10007929801940918
           ],
           "rpy": [
@@ -1914,18 +2070,18 @@
         }
       ],
       "com": [
-        0.007891565561294556,
+        0.00853756070137024,
         0.0005155056715011597,
         0.059956252574920654
       ],
       "inertia": [
         0.09312482297519646,
-        0.034957636006005856,
-        0.11085089221229072
+        0.03471455898275688,
+        0.11060781518904177
       ],
       "bounds": [
         [
-          -0.13179552555084229,
+          -0.13050353527069092,
           -0.24968299269676208,
           -0.019931554794311523
         ],
@@ -1937,82 +2093,82 @@
       ],
       "visuals": [
         {
-          "mesh": "head_pitch_link_125",
-          "material": "Material_3",
-          "triangles": 774
-        },
-        {
-          "mesh": "head_pitch_link_126",
+          "mesh": "head_pitch_link_157",
           "material": "Material_1",
-          "triangles": 6074
+          "triangles": 9248
         },
         {
-          "mesh": "head_pitch_link_127",
+          "mesh": "head_pitch_link_158",
+          "material": "Material_3",
+          "triangles": 1016
+        },
+        {
+          "mesh": "head_pitch_link_159",
           "material": "Material_38",
-          "triangles": 149
+          "triangles": 230
         },
         {
-          "mesh": "head_pitch_link_128",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_160",
+          "material": "Material_3",
           "triangles": 20
         },
         {
-          "mesh": "head_pitch_link_129",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_161",
+          "material": "Material_3",
           "triangles": 20
         },
         {
-          "mesh": "head_pitch_link_130",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_162",
+          "material": "Material_3",
           "triangles": 12
         },
         {
-          "mesh": "head_pitch_link_131",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_163",
+          "material": "Material_3",
           "triangles": 12
         },
         {
-          "mesh": "head_pitch_link_132",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_164",
+          "material": "Material_3",
           "triangles": 12
         },
         {
-          "mesh": "head_pitch_link_133",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_165",
+          "material": "Material_3",
           "triangles": 12
         },
         {
-          "mesh": "head_pitch_link_134",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_166",
+          "material": "Material_3",
           "triangles": 12
         },
         {
-          "mesh": "head_pitch_link_135",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_167",
+          "material": "Material_3",
           "triangles": 108
         },
         {
-          "mesh": "head_pitch_link_136",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_168",
+          "material": "Material_3",
           "triangles": 108
         },
         {
-          "mesh": "head_pitch_link_137",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_169",
+          "material": "Material_3",
           "triangles": 108
         },
         {
-          "mesh": "head_pitch_link_138",
-          "material": "PROMISE_thermal_white",
+          "mesh": "head_pitch_link_170",
+          "material": "Material_3",
           "triangles": 108
         },
         {
-          "mesh": "head_pitch_link_139",
+          "mesh": "head_pitch_link_171",
           "material": "PROMISE_black_anodized",
           "triangles": 108
         },
         {
-          "mesh": "head_pitch_link_140",
+          "mesh": "head_pitch_link_172",
           "material": "PROMISE_black_anodized",
           "triangles": 108
         }
@@ -2073,17 +2229,17 @@
       ],
       "visuals": [
         {
-          "mesh": "os1_link_141",
+          "mesh": "os1_link_173",
           "material": "PROMISE_silver",
           "triangles": 3817
         },
         {
-          "mesh": "os1_link_142",
+          "mesh": "os1_link_174",
           "material": "OS1_optical_window",
           "triangles": 822
         },
         {
-          "mesh": "os1_link_143",
+          "mesh": "os1_link_175",
           "material": "PROMISE_black_anodized",
           "triangles": 5795
         }
@@ -2100,105 +2256,7 @@
       ],
       "metallic": 0,
       "roughness": 0.5,
-      "texture": null
-    },
-    "tex_01": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": "tex_01_png.png"
-    },
-    "tex_02": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": "tex_02_png.png"
-    },
-    "tex_04": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": "tex_04_png.png"
-    },
-    "tex_03": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": "tex_03_png.png"
-    },
-    "tex_01_001": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": "tex_01_png.png"
-    },
-    "parts_AO": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": "parts_AO_png_001.png"
-    },
-    "tex_05": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": null
-    },
-    "tex_03_002": {
-      "rgba": [
-        0.800000011920929,
-        0.800000011920929,
-        0.800000011920929,
-        1.0
-      ],
-      "metallic": 0.0,
-      "roughness": 0.5,
-      "texture": null
-    },
-    "Material_0": {
-      "rgba": [
-        0.4500780701637268,
-        0.4500780701637268,
-        0.4500780701637268,
-        1.0
-      ],
-      "metallic": 1.0,
-      "roughness": 0.42181816697120667,
+      "emission": 0,
       "texture": null
     },
     "Material_1": {
@@ -2210,17 +2268,19 @@
       ],
       "metallic": 1.0,
       "roughness": 0.5,
+      "emission": 0.0,
       "texture": null
     },
-    "Material_2": {
+    "Material_0": {
       "rgba": [
-        0.09462860226631165,
-        0.028214111924171448,
-        0.0057484484277665615,
+        0.4500780701637268,
+        0.4500780701637268,
+        0.4500780701637268,
         1.0
       ],
       "metallic": 1.0,
-      "roughness": 0.5309090614318848,
+      "roughness": 0.42181816697120667,
+      "emission": 0.0,
       "texture": null
     },
     "Material_3": {
@@ -2232,6 +2292,7 @@
       ],
       "metallic": 0.0,
       "roughness": 0.5,
+      "emission": 0.0,
       "texture": null
     },
     "Material_38": {
@@ -2243,6 +2304,7 @@
       ],
       "metallic": 1.0,
       "roughness": 0.009999999776482582,
+      "emission": 0.0,
       "texture": null
     },
     "Material_39": {
@@ -2254,6 +2316,19 @@
       ],
       "metallic": 0.0,
       "roughness": 1.0,
+      "emission": 1.0,
+      "texture": null
+    },
+    "Material_2": {
+      "rgba": [
+        0.09462860226631165,
+        0.028214111924171448,
+        0.0057484484277665615,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5309090614318848,
+      "emission": 0.0,
       "texture": null
     },
     "Material_8": {
@@ -2265,17 +2340,403 @@
       ],
       "metallic": 1.0,
       "roughness": 0.2781818211078644,
+      "emission": 0.0,
       "texture": null
     },
-    "PROMISE_thermal_white": {
+    "Material_10": {
       "rgba": [
-        0.8199999928474426,
-        0.8399999737739563,
-        0.8600000143051147,
+        0.8000074625015259,
+        0.006314469501376152,
+        0.0068426067009568214,
         1.0
       ],
-      "metallic": 0.18000000715255737,
-      "roughness": 0.4300000071525574,
+      "metallic": 0.0,
+      "roughness": 0.767100989818573,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_11": {
+      "rgba": [
+        0.8000156879425049,
+        0.6569108963012695,
+        0.06480743736028671,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.767100989818573,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_12": {
+      "rgba": [
+        0.004507672041654587,
+        0.009282891638576984,
+        0.8000156879425049,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.767100989818573,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_13": {
+      "rgba": [
+        0.5135084390640259,
+        0.22577102482318878,
+        0.09523411840200424,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3181818127632141,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_14": {
+      "rgba": [
+        0.018921155482530594,
+        0.0218588188290596,
+        0.04006252437829971,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_15": {
+      "rgba": [
+        0.15268318355083466,
+        0.011858902871608734,
+        0.014466533437371254,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.0,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_16": {
+      "rgba": [
+        0.11302187293767929,
+        0.18509960174560547,
+        0.8000074625015259,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_17": {
+      "rgba": [
+        0.25886809825897217,
+        0.25886809825897217,
+        0.25886809825897217,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_18": {
+      "rgba": [
+        0.6023744940757751,
+        0.6522270441055298,
+        0.7053484916687012,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 1.0,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_19": {
+      "rgba": [
+        0.22584348917007446,
+        0.22584348917007446,
+        0.22584348917007446,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.2719869613647461,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_20": {
+      "rgba": [
+        0.5442919135093689,
+        0.5442919135093689,
+        0.5442919135093689,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.2719869613647461,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_21": {
+      "rgba": [
+        0.028886865824460983,
+        0.028886865824460983,
+        0.028886865824460983,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3145454525947571,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_4": {
+      "rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_5": {
+      "rgba": [
+        0.06446322053670883,
+        0.06446322053670883,
+        0.06446322053670883,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_6": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.7309091091156006,
+      "roughness": 0.303636372089386,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_7": {
+      "rgba": [
+        0.3072916865348816,
+        0.09468695521354675,
+        0.054044321179389954,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.34727272391319275,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_9": {
+      "rgba": [
+        0.11141298711299896,
+        0.11141298711299896,
+        0.11141298711299896,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.28545454144477844,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_26": {
+      "rgba": [
+        0.013992918655276299,
+        0.013992918655276299,
+        0.013992918655276299,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.45818182826042175,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_27": {
+      "rgba": [
+        0.05984675884246826,
+        0.05984675884246826,
+        0.05984675884246826,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.38599348068237305,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_28": {
+      "rgba": [
+        0.0400623120367527,
+        0.0400623120367527,
+        0.0400623120367527,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.6563518047332764,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_29": {
+      "rgba": [
+        0.018451957032084465,
+        0.027806544676423073,
+        0.04006257653236389,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.4745454490184784,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_30": {
+      "rgba": [
+        0.004072911571711302,
+        0.005798757076263428,
+        0.010159543715417385,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8781818151473999,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_31": {
+      "rgba": [
+        0.24751287698745728,
+        0.004254739731550217,
+        0.004254739731550217,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.18727272748947144,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_32": {
+      "rgba": [
+        0.44108107686042786,
+        0.2607401907444,
+        0.05131923407316208,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_33": {
+      "rgba": [
+        0.027001935988664627,
+        0.0544072687625885,
+        0.8000074625015259,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_34": {
+      "rgba": [
+        0.013077949173748493,
+        0.05825698375701904,
+        0.012898806482553482,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_35": {
+      "rgba": [
+        0.5785255432128906,
+        0.5785255432128906,
+        0.5785255432128906,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.2327272742986679,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_37": {
+      "rgba": [
+        0.11558905988931656,
+        0.11960144340991974,
+        0.21521280705928802,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.4418181777000427,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_36": {
+      "rgba": [
+        0.20503422617912292,
+        0.20503422617912292,
+        0.20503422617912292,
+        1.0
+      ],
+      "metallic": 0.6218181848526001,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_22": {
+      "rgba": [
+        0.09146268665790558,
+        0.09146268665790558,
+        0.09146268665790558,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 1.0,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_23": {
+      "rgba": [
+        0.3675818145275116,
+        0.3896986246109009,
+        0.42931658029556274,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.46909087896347046,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_24": {
+      "rgba": [
+        0.17619502544403076,
+        0.17619502544403076,
+        0.17619502544403076,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5509091019630432,
+      "emission": 0.0,
+      "texture": null
+    },
+    "Material_25": {
+      "rgba": [
+        0.8000156879425049,
+        0.698328971862793,
+        0.5210058093070984,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.2927272915840149,
+      "emission": 0.0,
       "texture": null
     },
     "PROMISE_black_anodized": {
@@ -2287,51 +2748,8 @@
       ],
       "metallic": 0.699999988079071,
       "roughness": 0.3499999940395355,
+      "emission": 0.0,
       "texture": null
-    },
-    "PROMISE_illuminator": {
-      "rgba": [
-        0.699999988079071,
-        0.9100000262260437,
-        1.0,
-        1.0
-      ],
-      "metallic": 0.10000000149011612,
-      "roughness": 0.20000000298023224,
-      "texture": null
-    },
-    "aluminum": {
-      "rgba": [
-        0.9646862149238586,
-        0.964686393737793,
-        0.9646864533424377,
-        1.0
-      ],
-      "metallic": 1.0,
-      "roughness": 0.27727270126342773,
-      "texture": null
-    },
-    "aluminum_black": {
-      "rgba": [
-        0.07773852348327637,
-        0.07383769750595093,
-        0.07383769750595093,
-        1.0
-      ],
-      "metallic": 0.6000000238418579,
-      "roughness": 0.47999998927116394,
-      "texture": null
-    },
-    "hub": {
-      "rgba": [
-        0.5225215554237366,
-        0.5225215554237366,
-        0.5225215554237366,
-        1.0
-      ],
-      "metallic": 1.0,
-      "roughness": 0.4000000059604645,
-      "texture": "mars_2020_hub_jpg.png"
     },
     "PROMISE_silver": {
       "rgba": [
@@ -2342,6 +2760,7 @@
       ],
       "metallic": 0.800000011920929,
       "roughness": 0.30000001192092896,
+      "emission": 0.0,
       "texture": null
     },
     "OS1_optical_window": {
@@ -2353,6 +2772,7 @@
       ],
       "metallic": 0.15000000596046448,
       "roughness": 0.18000000715255737,
+      "emission": 0.0,
       "texture": null
     }
   },
@@ -2416,70 +2836,37 @@
   ],
   "provenance": [
     {
-      "source": "NASA Curiosity Rover (MSL) (Clean), July 7 2026 listing",
-      "objects": [
-        "body",
-        "Chassis",
-        "radiators",
-        "RTG",
-        "antenna_LG",
-        "suspension_axel_L",
-        "suspension_axel_L2",
-        "suspension_axel_R",
-        "suspension_axel_R2",
-        "suspension_xmember",
-        "suspension_rod_L",
-        "suspension_rod_R",
-        "suspension_arm_F_L",
-        "suspension_arm_B_L",
-        "suspension_arm_B2_L",
-        "suspension_arm_F_R",
-        "suspension_arm_B_R",
-        "suspension_arm_B2_R",
-        "suspension_steer_F_L",
-        "suspension_steer_B_L",
-        "suspension_steer_F_R",
-        "suspension_steer_B_R"
-      ],
-      "operation": "Remove arm, original mast, science instruments; preserve body and rocker-bogie geometry; rotate FLU and raise 22.7 mm for larger wheels."
-    },
-    {
-      "source": "NASA Mars 2020 Perseverance Rover.blend, October 16 2026 listing",
-      "objects": [
-        "Wheels_objs"
-      ],
-      "operation": "Split all six wheels; normalize tread radius to 0.2625 m; remount on Curiosity suspension; preserve NASA treads, spokes and hub materials."
-    },
-    {
       "source": "NASA PROMISE interactive GLB, November 7 2026 release",
       "objects": [
         "Mesh_0",
         "Mesh_1",
-        "Mesh_2",
-        "Mesh_3",
+        "Mesh_10",
+        "Mesh_11",
+        "Mesh_12",
+        "Mesh_13",
+        "Mesh_14",
+        "Mesh_15",
+        "Mesh_16",
         "Mesh_17",
         "Mesh_18",
         "Mesh_19",
+        "Mesh_2",
         "Mesh_20",
         "Mesh_21",
         "Mesh_22",
         "Mesh_23",
         "Mesh_24",
+        "Mesh_24.001",
         "Mesh_25",
-        "Mesh_24.001"
+        "Mesh_3",
+        "Mesh_4",
+        "Mesh_5",
+        "Mesh_6",
+        "Mesh_7",
+        "Mesh_8",
+        "Mesh_9"
       ],
-      "operation": "Use current head, stowed TRIDENT and payload accessory meshes; manually split mast/head and create yaw/pitch joints. Exclude its chassis, wheels and suspension, which come from the requested donor models."
-    },
-    {
-      "source": "Manually authored approximation against NASA PROMISE render",
-      "objects": [
-        "arm deletion cover",
-        "NSS enclosure",
-        "HPSC / GPU exterior",
-        "UHF pedestal",
-        "illuminator arrays"
-      ],
-      "operation": "Create simplified attachment geometry; placements are illustrative, not flight CAD."
+      "operation": "All visible geometry, at full resolution. Rotate to ROS FLU and keep NASA materials and corner normals. Split the one-piece rocker-bogie meshes into body, rocker and bogie parts and the mast at z=1.875 m into yaw and pitch parts. Joint axes fitted to NASA hub bearing rings; wheels turned 0.5-0.7 degrees so their axles match the +Y spin joints."
     },
     {
       "source": "Ouster OS1 Rev8 XX STEP, 2026-04-30",
@@ -2491,7 +2878,7 @@
   ],
   "notes": [
     "Masses, inertias, joint limits, actuator gains, friction and optical calibration are estimates, not NASA flight parameters.",
-    "Latest public PROMISE visualization used for mast/payload geometry. TRIDENT is fixed in its stowed driving pose.",
+    "All visible rover geometry is NASA's public PROMISE visualization. TRIDENT is fixed in its stowed driving pose.",
     "Rocker differential uses q_left + q_right = 0.",
     "Tread geometry is visual; wheel contact is a smooth cylinder. No deformable regolith model.",
     "OS1 Rev8 is a user-requested turret sensor substitution, not a NASA flight hardware claim."
@@ -2535,7 +2922,7 @@
       "outer_bounds_m": [
         [
           0.6066039800643921,
-          -0.413682758808136,
+          -0.4136827886104584,
           1.928886890411377
         ],
         [
@@ -2554,11 +2941,11 @@
     },
     "installation": "Recessed inside white mast head, behind a front aperture. Enclosure blocks most side/rear directions; do not interpret the native 360-degree scan grid as unobstructed coverage.",
     "head_visible_mask_encoding": "zlib+packbits-little-base64",
-    "head_visible_mask_b64": "eNrt28FthDAQBVCzRCKHSFYqIJ3QSjrBHaQlS2nEJfjoA8IRJpccVh4kf40c/hSwb8Us5u/Y5Py3FgOtlGs1QP0qny2SD3V/0b382AYI+DzieNeDP+F834NvVW8/+jPOjz34i+7ye3t/xfkbfUHh/L0LHxeAMn3NAOboqwZA34cPC2CBvmoAjPRVA2CirxoAN/qqAXTvxEcFwExfMwA6+qoB1NNXDaCBvmoAjfRVA6i+/y3RA84foqT5EXX/rZIlcDIR9Pzzs2z/O6DypxX8BQJOv81DsAbaF4Os6g/APnT9yfxr39Gnr3T6gz79qj/Qp6/oG/r06d/Wv/v6d/f8wf8fR72q+efs6a29/HHBd4AJ2KfML7PXAJjAnlM1r+eXaxqU/eoAtMxeA2ACm4qflP3qEYD1d1LbvLbS013kR5gvO3yRUL5gC/bsUnt/F/pD6RLAX4xoC9Si/NWI3z9DxLDymZItqNIlhD+KTmCt49Gl5jHMlc5KTiC9H1cJ4c+yE0Dj8S0R/ip9/2sHxEBfdhZF9ZVB/oVqHsAC/SvVPIDFvvzmASzRv1LNA9izJ88Puviogg==",
+    "head_visible_mask_b64": "eNrt20FuwyAUBFAcS/Wu9Ab0Jj5aORq7XIMjsPTCgiZk1UXlieTRL+n8dZQnxWAGPmntZ62OWls7qonqH/LNM/l87K+2Pz/3AQB8m3l8HMFfeH4awfem009+4PllBH+1ff3+e/+L5+/ygeL5dQifF4CafMsAFuWbBsA0hk8LYFm+aQAs8k0D4CbfNADu8k0DaB3EZwXAJt8yAEb5pgE0yTcNoFm+aQAt8pG6sgIo6Due7ysy+HeaP23I4lNIzz8HZApOLpPmf/LAEngL3+mNlH8W91HNwv+tLsAWjHz/4XAOhguTj9lo7YEzwGLsz1w/Wu090D2I/Nf2j17ATr58+fLlyzfwJ/nyDfPXLN90/7O8tp+w/ff7+fLnMz7hFCBjZ9APmXACVzzkdznR/AL52c7v51+ZcAq2dX/7634/f8yEU8i9+8dXEKz9iepXzCfE0OqR5e+xABaGHxzUgl76KCX4q4NasL6PkvNjWJ9ZQP8j9FFC8O/fCbTA1v7Z02NQ7N+J/f8ucnyP3QCa76OE4QfsBoZ3jBiW7q92rANeSX6b0QtYhDYM3PyXT7kCUMbyTw9gm/xn6vQA9lvw+wZEQZDh",
     "head_visibility": {
       "total_rays": 131072,
-      "head_clear_rays": 38314,
-      "head_blocked_rays": 92758,
+      "head_clear_rays": 38171,
+      "head_blocked_rays": 92901,
       "forward_center_all_128_channels_clear": true,
       "rear_center_all_channels_blocked": true,
       "fully_clear_horizontal_sector_deg": [
@@ -2568,6 +2955,5 @@
       "native_vertical_fov_deg": 44,
       "scope": "Only geometry rigidly attached to head_pitch_link; excludes OS1 case. Other rover/environment occlusion is dynamic."
     }
-  },
-  "revision": "0.3.0"
+  }
 }

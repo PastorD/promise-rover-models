@@ -3,6 +3,7 @@
 Separate Gazebo camera sensors otherwise publish a monocular projection matrix.
 """
 import json,pathlib,rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import CameraInfo,Image
@@ -21,10 +22,13 @@ class StereoInfo(Node):
         c=self.cal[name];m=CameraInfo();m.header=image.header;m.header.frame_id=name+'_optical_frame'
         m.width=c['image_width'];m.height=c['image_height'];m.distortion_model=c['distortion_model']
         m.k=[float(x) for x in c['camera_matrix']['data']];m.d=[float(x) for x in c['distortion_coefficients']['data']];m.r=[float(x) for x in c['rectification_matrix']['data']];m.p=[float(x) for x in c['projection_matrix']['data']]
-        self.pubs[name].publish(m)
+        if rclpy.ok():self.pubs[name].publish(m) # an image can arrive after Ctrl-C
 
 def main():
     rclpy.init();n=StereoInfo()
     try:rclpy.spin(n)
-    finally:n.destroy_node();rclpy.shutdown()
+    except (KeyboardInterrupt,ExternalShutdownException):pass
+    except Exception:
+        if rclpy.ok():raise # otherwise Ctrl-C raced spin(); exit cleanly
+    finally:n.destroy_node();rclpy.try_shutdown()
 if __name__=='__main__':main()

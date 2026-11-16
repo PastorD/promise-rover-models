@@ -27,7 +27,10 @@ xacro.substitution_args._eval_find=lambda package:str(P) if package=='promise_de
 expanded=xacro.process_file(str(P/'urdf/promise.gazebo.urdf.xacro')).toxml();eroot=E.fromstring(expanded)
 assert len(eroot.findall('.//sensor'))==5
 assert len(eroot.findall('ros2_control/joint'))==16
-report['gazebo_ros2']={'status':'STRUCTURAL_PASS_RUNTIME_NOT_RUN','xacro_expansion':'PASS','camera_sensors':4,'lidar_sensors':1,'ros2_control_joints':16,'runtime_reason':'Gazebo / ROS 2 are not installed in the build environment.'}
+report['gazebo_ros2']={'status':'STRUCTURAL_PASS_RUNTIME_NOT_RUN','xacro_expansion':'PASS','camera_sensors':4,'lidar_sensors':1,'ros2_control_joints':16,'runtime_reason':'Run scripts/gazebo_runtime_test.sh in a ROS 2 Jazzy / Gazebo Harmonic environment.'}
+# Keep a recorded Gazebo runtime result; this script cannot run Gazebo itself.
+previous=json.loads((ROOT/'validation.json').read_text()).get('gazebo_ros2',{}) if (ROOT/'validation.json').is_file() else {}
+if previous.get('status')=='PASS' and 'runtime' in previous:report['gazebo_ros2']=previous
 
 m=mujoco.MjModel.from_xml_path(str(ROOT/'mujoco/promise.xml'))
 assert mujoco.__version__.startswith('4.0');assert m.nu==12 and m.nv==22

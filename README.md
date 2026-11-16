@@ -2,27 +2,27 @@
 
 Built against NASA's **November 7, 2026 PROMISE announcement** and the public PROMISE visualization available on November 8, 2026. This is an articulated reconstruction for simulation and visualization, **not NASA flight CAD or a validated dynamics model**.
 
-The body and rocker-bogie geometry come from NASA's Curiosity model. All six wheel meshes come from NASA's Perseverance model. The original Curiosity arm, large head and mast, and Mars-specific instrument objects were removed. The current PROMISE compact mast/head, stowed drill and payload details were manually integrated from NASA's newly released PROMISE visualization. Additional enclosures, arm deletion cover and illuminator arrays were modeled against the release rendering.
+All visible rover geometry is NASA's public PROMISE model (`promise-rover-draco-x2.glb` from the [interactive viewer](https://www.nasa.gov/moonbase/promise-model/)), at full resolution with NASA's materials and shading normals. It was split into rigid parts and given joints: NASA models each side's rocker-bogie as one mesh, so it is divided into rocker and bogie, and the mast into yaw and pitch parts. Joint axes are fitted to the bearing rings in NASA's geometry. The only additions are the recessed Ouster OS1 lidar, its open-front head enclosure and internal cradle.
 
 ![PROMISE reconstruction](previews/promise_rover.png)
 
-**Sensor update (revision 0.3):** Four turret cameras and a CAD-derived Ouster OS1 Rev 8 lidar are included in every format. The OS1 is recessed inside the white mast enclosure, tilted down 22.5°, with a 150 × 92 mm front opening and an internal cradle. See [SENSORS.md](SENSORS.md) for the VisionSIM workflow, lidar activation, calibration assumptions and validation.
+**Revision 0.4:** rebuilt from NASA's public PROMISE model; previous revisions used Curiosity's body and suspension with Perseverance wheels. Four turret cameras and a CAD-derived Ouster OS1 Rev 8 lidar are included in every format. The OS1 is recessed inside the white mast enclosure, tilted down 22.5°, with a 150 × 92 mm front opening and an internal cradle. See [SENSORS.md](SENSORS.md) for the VisionSIM workflow, lidar activation, calibration assumptions and validation.
 
 ## Files
 
-Keep the folder structure intact: URDF, MJCF and USD use accompanying mesh or texture files.
+Keep the folder structure intact: URDF, MJCF and USD use the accompanying mesh files.
 
 | Requested format | Entry point | What is included |
 |---|---|---|
-| ROS 2 / Gazebo URDF | `ros2/promise_description/urdf/promise.urdf` | 29 links including sensor frames; 16 movable joints; inertials and simplified collisions |
+| ROS 2 / Gazebo URDF | `ros2/promise_description/urdf/promise.urdf` | 29 links including sensor frames; 16 movable joints; inertials and simplified collisions; Collada meshes |
 | Gazebo configuration | `ros2/promise_description/urdf/promise.gazebo.urdf.xacro` | ROS 2 control, four cameras, OS1 GPU lidar, camera calibration, controller launch and a lunar-gravity world |
 | MuJoCo 4.0 MJCF | `mujoco/promise.xml` | Native MJCF, floating base, 12 actuators, passive suspension, rocker differential, four cameras, IMU, OS1 user sensor/runner and ground |
-| General GLB | `glb/promise.glb` | glTF 2.0, embedded textures, named link hierarchy and one six-wheel animation |
-| Animated Blender | `blender/promise_wheel_animation.blend` | Editable meshes, named link pivots, packed textures, studio lights and an eight-second wheel loop |
+| General GLB | `glb/promise.glb` | glTF 2.0, NASA PBR materials, named link hierarchy and one six-wheel animation |
+| Animated Blender | `blender/promise_wheel_animation.blend` | Editable meshes, named link pivots, studio lights and an eight-second wheel loop |
 | Isaac Sim USD | `usd/promise.usdc` | Rigid bodies, articulation, joints, collision shapes, drives, camera prims, an RTX lidar profile and PhysX rocker mimic metadata |
 | Isaac Sim scene | `usd/promise_scene.usda` | References the rover; adds a ground plane, lighting and lunar gravity |
 
-`data/robot_spec.json` records link frames, masses, inertias, materials, collisions, camera estimates and donor provenance. `validation.json` records the checks actually run.
+`data/robot_spec.json` records link frames, masses, inertias, materials, collisions, camera estimates and source provenance. `validation.json` records the checks actually run.
 
 ## Geometry and assumptions
 
@@ -30,22 +30,22 @@ Keep the folder structure intact: URDF, MJCF and USD use accompanying mesh or te
 |---|---|
 | Coordinates | Meters, radians, ROS FLU: +X forward, +Y left, +Z up |
 | Base | `base_link` at nominal body height 0.90 m; `base_footprint` is a fixed frame 0.90 m below it |
-| Wheels | Six NASA Perseverance wheel meshes, normalized to a 0.525 m tread diameter; independent +Y spin axes |
+| Wheels | NASA's six PROMISE wheels, 0.527 m grouser-tip diameter, 0.34 m wide; independent +Y spin axes. NASA's axles lean 0.5–0.7°; each wheel is turned that much so it spins true on its joint |
 | Steering | Front and rear wheels steer; middle wheels stay aligned with their bogie |
-| Suspension | One rocker and one bogie on each side; the front/aft rocker tubes are one rigid body |
+| Suspension | One rocker and one bogie on each side, split from NASA's one-piece rocker-bogie meshes. Pivots at x 0.214 m / z 0.894 m (rocker) and x −0.540 m / z 0.664 m (bogie), fitted to NASA's hub rings |
 | Rocker differential | `q_left + q_right = 0`; implemented as URDF mimic, MJCF equality, and USD PhysX mimic |
 | Head | Compact NASA PROMISE head; manually assigned yaw and pitch joints |
 | Stereo interpretation | Two forward stereo pairs: `stereo_left/right` and `dashcam_left/right`; four virtual cameras |
 | Camera estimates | 1280 × 720, 10 Hz, 70° horizontal FOV; estimated baselines 0.40 m and 0.31 m |
-| Arm | Removed; no Curiosity arm links or arm control chain |
+| Arm | None; NASA's PROMISE model has no robotic arm |
 | Drill | TRIDENT is fixed in the stowed driving pose; deployment and drilling are not simulated |
 | Estimated mass | 900.55 kg total; editable, not an asserted PROMISE flight mass |
 | Dynamics | Estimated inertias, limits, damping, gains and friction; smooth-cylinder wheel contact |
 | Terrain | Rigid flat ground; no granular regolith, sinkage, soil shear or tread-resolved contact |
 
-The published picture in the supplied Google link shows the drill deployed. The delivered driving configuration follows the stowed drill in NASA's interactive model. The body, wheels and compact head remain the same design. Small exterior boxes and lights are approximations; no unprovided engineering dimensions are represented as measured flight values.
+The published picture in the supplied Google link shows the drill deployed. The delivered driving configuration follows the stowed drill in NASA's interactive model. NASA's model is a visualization: its geometry is used as published, and no unprovided engineering dimensions are represented as measured flight values.
 
-Some Curiosity visual detail is lower resolution than the new PROMISE visualization because the requested Curiosity donor body was retained. Material colors on the mobility tubes were changed to match the dark finish in the PROMISE release.
+The visual meshes total about 950,000 triangles. Simulators use simple collision shapes; the visual meshes are never contact hulls.
 
 ## Run in MuJoCo 4.0
 
@@ -84,6 +84,10 @@ source install/setup.bash
 ros2 launch promise_description gazebo.launch.py
 ```
 
+`scripts/gazebo_runtime_test.sh <workspace> <out_dir>` runs the same launch headless, drives the rover, and checks the controllers, lidar cloud and cameras.
+
+The world uses Gazebo's Bullet Featherstone physics engine: the default DART engine ignores URDF mimic joints, which leaves the rocker differential unconstrained. The launch file adds the package's install folder to `GZ_SIM_RESOURCE_PATH` so Gazebo can find the meshes.
+
 In another sourced terminal:
 
 ```bash
@@ -112,11 +116,11 @@ The bare `promise.urdf` is useful for RViz, URDF importers or other simulators. 
 
 Open `blender/promise_wheel_animation.blend` in **Blender 4.5 or newer** and press Space. Frames 1–240 are an eight-second loop at 30 fps. Each wheel turns about its own axle; the rover stays in place for this animation demonstration. The key at frame 241 closes one full revolution. The wheel animation is not a simulated vehicle trajectory.
 
-The GLB contains the same wheel animation as a single clip, with all textures embedded. Its glTF coordinates follow the standard +Y-up convention; the exporter converts the common Z-up model. Blender, ROS, MJCF and USD remain Z-up.
+The GLB contains the same wheel animation as a single clip. Its glTF coordinates follow the standard +Y-up convention; the exporter converts the common Z-up model. Blender, ROS, MJCF and USD remain Z-up.
 
 ## Isaac Sim
 
-Open `usd/promise_scene.usda` in Isaac Sim. Keep `promise.usdc` and the `textures` directory beside it. Press Play to settle the floating rover under lunar gravity. The articulation root API is on `/World/PROMISE/base_link`.
+Open `usd/promise_scene.usda` in Isaac Sim. Keep `promise.usdc` and `os1_rev8_lidar.usda` beside it. Press Play to settle the floating rover under lunar gravity. The articulation root API is on `/World/PROMISE/base_link`.
 
 Joint prims are under `/World/PROMISE/Joints`. Six wheel angular drives are velocity drives; corner steering and mast drives are position drives. **USD drive angles and target velocities use degrees and degrees/second**, unlike ROS and MJCF. The helper converts them:
 
@@ -131,20 +135,22 @@ PhysX's documented mimic equation is `q_target + gearing*q_reference + offset = 
 
 ## What was verified
 
-The generated files were verified with Blender 4.5.3, MuJoCo **4.0.0**, yourdfpy, xacro and OpenUSD 26.11. See `validation.json`, `references/sensor_validation.json` and `references/blender_validation.json` for the recorded results.
+The generated files were verified with Blender 4.5.3, MuJoCo **4.0.0**, yourdfpy, xacro, OpenUSD 26.11 and Gazebo Harmonic 8.15 with ROS 2 Jazzy. See `validation.json`, `references/sensor_validation.json` and `references/blender_validation.json` for the recorded results.
 
 | Check | Result |
 |---|---|
 | URDF and all referenced Collada meshes | Parsed successfully; 29 links, 16 movable joints; nominal transforms match the common specification |
 | Gazebo xacro | Expanded; four camera sensors, one GPU lidar and 16 ros2_control joint declarations |
+| Gazebo / ROS 2 runtime | Headless launch: all 176 visual meshes load; four controllers active; 0.10 m/s `cmd_vel` for 15 s drives 1.50 m straight with all wheels turning; rocker differential held at 0.0 rad; mast reaches commanded yaw/pitch; filtered OS1 cloud and camera images published; no errors in the launch log |
 | MuJoCo stationary / forward / turning tests | Passed, finite state, zero numerical warnings, all six wheels touching ground at each test end |
 | MuJoCo forward run | 12 s simulated; approximately 0.862 m traveled after settling / acceleration |
-| Rocker differential | Maximum residual below 0.0006 rad in these flat-ground tests |
-| MuJoCo rendering | Textured model rendered successfully with EGL |
-| GLB | Valid binary container, embedded images, one animation driving all six wheels |
+| Rocker differential | Maximum residual 0.00059 rad in these flat-ground tests |
+| MuJoCo rendering | Model rendered successfully with EGL |
+| GLB | Valid binary container, one animation driving all six wheels |
 | Blender | Reopened; six wheel actions checked at half cycle |
 | USD | Composed successfully, 18 rigid bodies, 16 revolute joints, one fixed joint, no unresolved references |
-| Gazebo and Isaac Sim runtime | **Not run**: these applications were unavailable in the build environment |
+| NASA model match | Every point of NASA's model surface is within 5 mm of this model's surface except the 0.6% of the mast head cut away for the lidar opening; see `references/nasa_comparison.png` |
+| Isaac Sim runtime | **Not run**: Isaac Sim was unavailable in the build environment |
 
 These checks establish file integrity and basic flat-ground behavior, not mission performance, terrain fidelity or flight qualification.
 
@@ -169,7 +175,7 @@ uv pip install --python .build-sim/bin/python mujoco==4.0.0 usd-core==26.11 cadq
 
 The source archives are included in the complete package. `fetch_sources.py` verifies their pinned hashes and extracts them; it downloads missing files from NASA and Ouster. It stops if a publisher has replaced an asset with different bytes, so a changed source must be reviewed deliberately.
 
-Source geometry is transformed, segmented and assigned joint pivots explicitly; this is not a renamed static rover mesh. Visual LOD reduction is rejected if it displaces vertices beyond the source bounds. Simulation contacts use independent simple shapes.
+Source geometry is transformed, segmented and assigned joint pivots explicitly; this is not a renamed static rover mesh. NASA's meshes are used at full resolution; only the OS1 CAD is reduced for simulation. Simulation contacts use independent simple shapes. `build_geometry.py` reads only the PROMISE GLB and the Ouster CAD; `fetch_sources.py` still downloads the Curiosity and Perseverance files that earlier revisions used, so their pinned hashes stay checkable.
 
 ## NASA references and provenance
 
@@ -177,9 +183,9 @@ The dates below are the download/listing dates shown by NASA, not proof that eve
 
 1. [NASA announcement, November 7, 2026](https://www.nasa.gov/news-release/nasa-awards-moon-base-transportation-technology-science-projects/) — mission update, nuclear power and science payloads.
 2. [NASA PROMISE mission](https://www.nasa.gov/mission/promise/) — Curiosity testbed body/mobility heritage, instrument descriptions and Lunar Dashcam.
-3. [NASA PROMISE interactive model](https://www.nasa.gov/moonbase/promise-model/) — current compact mast and stowed-payload geometry. The downloaded GLB is `source_assets/promise_nasa.glb`.
-4. [NASA Curiosity Rover (MSL)](https://science.nasa.gov/3d-resources/curiosity-rover-msl/) — Clean Blender ZIP, listing dated July 7, 2026; source for body, MMRTG/radiators and suspension.
-5. [NASA Mars 2020 Perseverance Rover](https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/) — Blender ZIP listed October 16, 2026; GLB listed April 10, 2025. The Blender wheel geometry was used.
+3. [NASA PROMISE interactive model](https://www.nasa.gov/moonbase/promise-model/) — **the source of all rover geometry since revision 0.4.** The downloaded GLB is `source_assets/promise_nasa.glb`; it was unchanged when re-downloaded on November 16, 2026.
+4. [NASA Curiosity Rover (MSL)](https://science.nasa.gov/3d-resources/curiosity-rover-msl/) — Clean Blender ZIP, listing dated July 7, 2026; body, MMRTG/radiators and suspension source for revisions up to 0.3.
+5. [NASA Mars 2020 Perseverance Rover](https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/) — Blender ZIP listed October 16, 2026; GLB listed April 10, 2025. Wheel source for revisions up to 0.3.
 6. [NASA Perseverance wheel description](https://www.nasa.gov/solar-system/nasas-perseverance-mars-rover-gets-its-wheels-and-air-brakes/) — approximately 52.5/52.6 cm diameter, 48 curved grousers.
 7. [Supplied image, resolved to NASA's PROMISE rendering](https://www.nasa.gov/wp-content/uploads/2026/11/promise-7.jpg) — visual comparison, deployed drill pose.
 8. [Existing Space ROS Curiosity URDF/xacro](https://github.com/space-ros/simulation/tree/main/models/curiosity_path/urdf) — inspected as a kinematic reference, including `curiosity_mars_rover_properties.xacro` and `left_wheel_group.xacro`. Its old ROS transmission/plugin configuration was not copied into this package.

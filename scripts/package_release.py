@@ -26,7 +26,6 @@ def files_in(directory):
 ros = files_in("ros2")
 usd = files_in("usd")
 mesh_prefix = ROOT / "ros2/promise_description/meshes"
-texture_files = files_in("ros2/promise_description/textures")
 
 def archive(name, files):
     path = OUT / name
@@ -42,7 +41,7 @@ def archive(name, files):
     return path
 
 archive("promise_ros2_gazebo.zip", [p for p in ros if p.suffix not in {".obj", ".npz"}])
-archive("promise_mujoco_4.zip", files_in("mujoco") + texture_files
+archive("promise_mujoco_4.zip", files_in("mujoco")
         + list(mesh_prefix.glob("*.obj"))
         + [ROOT / ("scripts/"+n) for n in ["mujoco_demo.py", "kinematics.py", "mujoco_sensors.py", "sensor_rays.py"]])
 archive("promise_isaac_usd.zip", usd
@@ -52,7 +51,7 @@ archive("promise_blender_sensors.zip", files_in("blender")
 
 archive("promise_sensor_update_source.zip", files_in("scripts") + files_in("data")
         + files_in("references")
-        + [p for p in ros if "meshes" not in p.parts and "textures" not in p.parts]
+        + [p for p in ros if "meshes" not in p.parts]
         + [ROOT / "source_assets/os1_rev8_cad.zip", ROOT / "source_assets/os1_rev8_datasheet.pdf"])
 
 source_files = [ROOT / "source_assets" / name for name in

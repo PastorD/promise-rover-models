@@ -4,17 +4,59 @@
     "links": 29,
     "movable_joints": 16,
     "wheel_joints": 6,
-    "mesh_parts": 144,
+    "mesh_parts": 176,
     "nominal_link_transform_check": "PASS",
     "mass_kg_estimated": 900.55
   },
   "gazebo_ros2": {
-    "status": "STRUCTURAL_PASS_RUNTIME_NOT_RUN",
+    "status": "PASS",
+    "runtime": "Gazebo Harmonic 8.15 (Bullet Featherstone physics), ROS 2 Jazzy, headless server with EGL rendering, Ubuntu 24.04",
     "xacro_expansion": "PASS",
     "camera_sensors": 4,
     "lidar_sensors": 1,
     "ros2_control_joints": 16,
-    "runtime_reason": "Gazebo / ROS 2 are not installed in the build environment."
+    "visual_meshes_failed_to_load": 0,
+    "controllers_active": [
+      "joint_state_broadcaster",
+      "wheel_controller",
+      "steering_controller",
+      "mast_controller"
+    ],
+    "cmd_vel_0.10_m_s_for_15_s": {
+      "wheel_rotation_rad": {
+        "front_left_wheel_joint": 5.695,
+        "front_right_wheel_joint": 5.69,
+        "middle_left_wheel_joint": 5.69,
+        "middle_right_wheel_joint": 5.689,
+        "rear_left_wheel_joint": 5.675,
+        "rear_right_wheel_joint": 5.675
+      },
+      "final_base_position_m": [
+        1.50027,
+        -0.000813,
+        0.898778
+      ],
+      "final_base_rpy_rad": [
+        4.7e-05,
+        0.00036,
+        -0.000499
+      ]
+    },
+    "rocker_differential_sum_rad": 0.0,
+    "mast_command_[0.4,-0.2]_reached_rad": [
+      0.4,
+      -0.2
+    ],
+    "os1_filtered_cloud": {
+      "frame": "os1_lidar_frame",
+      "height": 128,
+      "width": 1024,
+      "finite_points": 22981,
+      "min_range": 3.641338348388672,
+      "median_range": 6.34769868850708
+    },
+    "stereo_left_image_encoding": "rgb8",
+    "launch_log_errors": 0
   },
   "mujoco": {
     "version": "4.0.0",
@@ -26,16 +68,16 @@
         "name": "stationary",
         "simulated_seconds": 6,
         "final_position_m": [
-          1.8783120387968667e-06,
-          -1.1252250753253393e-07,
-          0.8998791735602125
+          -0.0002217564611326608,
+          -3.2620729751352055e-05,
+          0.8986533719275737
         ],
         "displacement_after_settle_m": [
-          -2.772484614720955e-09,
-          5.56014845686952e-12,
-          -3.8191672047105385e-14
+          -1.1924674739828209e-06,
+          -2.1026154772606974e-07,
+          -1.0196177235854975e-11
         ],
-        "max_rocker_constraint_error_rad": 0.0005932889978648023,
+        "max_rocker_constraint_error_rad": 0.0005881060541784132,
         "wheels_touching_ground_at_end": 6,
         "warnings": [
           0,
@@ -52,16 +94,16 @@
         "name": "forward",
         "simulated_seconds": 12,
         "final_position_m": [
-          0.8618044890117297,
-          -4.733427055983174e-07,
-          0.899879173401136
+          0.8614857374652345,
+          -2.855107395462941e-05,
+          0.8986533728064665
         ],
         "displacement_after_settle_m": [
-          0.8618026079272063,
-          -3.6081463791732657e-07,
-          -1.5911472139862326e-10
+          0.8617063014588932,
+          3.859394248996576e-06,
+          8.686966701532128e-10
         ],
-        "max_rocker_constraint_error_rad": 0.0005932889978648023,
+        "max_rocker_constraint_error_rad": 0.0005881060541784132,
         "wheels_touching_ground_at_end": 6,
         "warnings": [
           0,
@@ -78,16 +120,16 @@
         "name": "turn",
         "simulated_seconds": 10,
         "final_position_m": [
-          0.5600086442202561,
-          0.032162625764132015,
-          0.8999418605976921
+          0.5526660965706113,
+          0.033188772146860605,
+          0.898687145133877
         ],
         "displacement_after_settle_m": [
-          0.5600067631357327,
-          0.0321627382921997,
-          6.268703744138904e-05
+          0.5528866605642699,
+          0.03322118261506423,
+          3.3773196107200754e-05
         ],
-        "max_rocker_constraint_error_rad": 0.0005932889978648023,
+        "max_rocker_constraint_error_rad": 0.0005881060541784132,
         "wheels_touching_ground_at_end": 6,
         "warnings": [
           0,
@@ -105,10 +147,10 @@
   },
   "glb": {
     "status": "PASS",
-    "bytes": 15361884,
+    "bytes": 54139640,
     "animations": 1,
     "animated_wheels": 6,
-    "embedded_images": 7
+    "embedded_images": 0
   },
   "usd": {
     "status": "STRUCTURAL_PASS_ISAAC_RUNTIME_NOT_RUN",

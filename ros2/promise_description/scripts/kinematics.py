@@ -3,9 +3,10 @@ import math
 
 WHEEL_ORDER=['front_left','middle_left','rear_left','front_right','middle_right','rear_right']
 STEER_ORDER=['front_left','rear_left','front_right','rear_right']
-CENTERS={name:(x,y) for side,sign in [('left',1),('right',-1)] for name,x,y in [(f'front_{side}',1.094,sign*1.061),(f'middle_{side}',-.089,sign*1.192),(f'rear_{side}',-1.164,sign*1.061)]}
+# Steering axes and middle-wheel centres (m, base_link), from data/robot_spec.json.
+CENTERS={'front_left':(1.097,1.065),'middle_left':(-.090,1.185),'rear_left':(-1.165,1.063),'front_right':(1.095,-1.062),'middle_right':(-.090,-1.202),'rear_right':(-1.167,-1.062)}
 
-def wheel_commands(v,w,radius=.2625):
+def wheel_commands(v,w,radius=.2634):
     """Return wheel rad/s and corner radians in the declared orders.
 
     Rear wheels counter-steer. Middle wheels are fixed and use the longitudinal

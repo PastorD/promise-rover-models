@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64MultiArray
@@ -23,5 +24,8 @@ class Drive(Node):
 def main():
     rclpy.init();n=Drive()
     try:rclpy.spin(n)
-    finally:n.destroy_node();rclpy.shutdown()
+    except (KeyboardInterrupt,ExternalShutdownException):pass
+    except Exception:
+        if rclpy.ok():raise # otherwise Ctrl-C raced spin(); exit cleanly
+    finally:n.destroy_node();rclpy.try_shutdown()
 if __name__=='__main__':main()

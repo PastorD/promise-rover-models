@@ -40,8 +40,12 @@ def main():
             if message.header.frame_id.lstrip('/')!=self.profile['frame']:
                 self.get_logger().error('OS1 aperture filter requires XYZ in '+self.profile['frame']);return
             self.publisher.publish(filter_cloud(message,self.profile))
+    from rclpy.executors import ExternalShutdownException
     rclpy.init();node=Filter()
     try:rclpy.spin(node)
-    finally:node.destroy_node();rclpy.shutdown()
+    except (KeyboardInterrupt,ExternalShutdownException):pass
+    except Exception:
+        if rclpy.ok():raise # otherwise Ctrl-C raced spin(); exit cleanly
+    finally:node.destroy_node();rclpy.try_shutdown()
 
 if __name__=='__main__':main()

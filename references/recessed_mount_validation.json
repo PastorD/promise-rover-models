@@ -1,7 +1,7 @@
 {
   "total_rays": 131072,
-  "head_clear_rays": 38314,
-  "head_blocked_rays": 92758,
+  "head_clear_rays": 38171,
+  "head_blocked_rays": 92901,
   "forward_center_all_128_channels_clear": true,
   "rear_center_all_channels_blocked": true,
   "fully_clear_horizontal_sector_deg": [

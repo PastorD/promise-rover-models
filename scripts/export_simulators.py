@@ -7,7 +7,7 @@ from pxr import Usd, UsdGeom, UsdPhysics, UsdShade, UsdLux, Sdf, Gf, Vt
 ROOT=pathlib.Path(__file__).resolve().parents[1];P=ROOT/'ros2/promise_description'
 spec=json.loads((ROOT/'data/robot_spec.json').read_text());L=spec['links'];MAT=spec['materials']
 lidar=spec['lidar']
-for d in [P/'urdf',P/'config',P/'launch',P/'worlds',ROOT/'mujoco',ROOT/'usd',ROOT/'usd/textures']:d.mkdir(parents=True,exist_ok=True)
+for d in [P/'urdf',P/'config',P/'launch',P/'worlds',ROOT/'mujoco',ROOT/'usd']:d.mkdir(parents=True,exist_ok=True)
 def f(v):return ' '.join(f'{float(x):.9g}' for x in v)
 def sub(p,tag,**kw):return E.SubElement(p,tag,{k:str(v) for k,v in kw.items()})
 def write(e,path):E.indent(e);E.ElementTree(e).write(path,encoding='utf-8',xml_declaration=True)
@@ -17,29 +17,33 @@ def quat(rpy):
 
 # Collada has broad support in RViz and Gazebo. Keep textures relative to meshes.
 def collada(ident,material):
-    a=np.load(P/'meshes'/f'{ident}.npz');verts=a['vertices'];norms=a['normals'];uv=a['uv'];n=len(verts)
+    a=np.load(P/'meshes'/f'{ident}.npz');m=MAT[material];texture=m.get('texture') if 'uv' in a else None
     ns='http://www.collada.org/2005/11/COLLADASchema';root=E.Element('COLLADA',xmlns=ns,version='1.4.1')
     asset=sub(root,'asset');sub(asset,'unit',name='meter',meter='1');sub(asset,'up_axis').text='Z_UP'
-    m=MAT[material];texture=m.get('texture')
     if texture:
         imgs=sub(root,'library_images');im=sub(imgs,'image',id='texture');sub(im,'init_from').text='../textures/'+texture
     fx=sub(sub(root,'library_effects'),'effect',id='effect');prof=sub(fx,'profile_COMMON')
     if texture:
         par=sub(prof,'newparam',sid='surface');surface=sub(par,'surface',type='2D');sub(surface,'init_from').text='texture'
         sampler=sub(sub(prof,'newparam',sid='sampler'),'sampler2D');sub(sampler,'source').text='surface'
-    tech=sub(prof,'technique',sid='common');phong=sub(tech,'phong');diff=sub(phong,'diffuse')
+    tech=sub(prof,'technique',sid='common');phong=sub(tech,'phong')
+    if m.get('emission'):sub(sub(phong,'emission'),'color').text=f(m['rgba'])
+    diff=sub(phong,'diffuse')
     if texture:sub(diff,'texture',texture='sampler',texcoord='UVMap')
     else:sub(diff,'color').text=f(m['rgba'])
     sub(sub(phong,'specular'),'color').text='0.2 0.2 0.2 1';sub(sub(phong,'shininess'),'float').text='32'
     mat=sub(sub(root,'library_materials'),'material',id='material',name=material);sub(mat,'instance_effect',url='#effect')
     geo=sub(sub(root,'library_geometries'),'geometry',id='geometry');mesh=sub(geo,'mesh')
-    for key,data,components in [('positions',verts,['X','Y','Z']),('normals',norms,['X','Y','Z']),('uv',uv,['S','T'])]:
+    streams=[('positions',a['positions'],['X','Y','Z'],a['position_index']),('normals',a['normals'],['X','Y','Z'],a['normal_index'])]
+    if texture:streams.append(('uv',a['uv'],['S','T'],a['uv_index']))
+    for key,data,components,_ in streams:
         src=sub(mesh,'source',id=key);arr=sub(src,'float_array',id=key+'-array',count=data.size);arr.text=f(data.ravel())
-        acc=sub(sub(src,'technique_common'),'accessor',source='#'+key+'-array',count=n,stride=len(components))
+        acc=sub(sub(src,'technique_common'),'accessor',source='#'+key+'-array',count=len(data),stride=len(components))
         for x in components:sub(acc,'param',name=x,type='float')
     v=sub(mesh,'vertices',id='vertices');sub(v,'input',semantic='POSITION',source='#positions')
-    tri=sub(mesh,'triangles',count=n//3,material='material');sub(tri,'input',semantic='VERTEX',source='#vertices',offset=0);sub(tri,'input',semantic='NORMAL',source='#normals',offset=1);sub(tri,'input',semantic='TEXCOORD',source='#uv',offset=2,set=0)
-    sub(tri,'p').text=' '.join(f'{i} {i} {i}' for i in range(n))
+    tri=sub(mesh,'triangles',count=len(a['position_index']),material='material');sub(tri,'input',semantic='VERTEX',source='#vertices',offset=0);sub(tri,'input',semantic='NORMAL',source='#normals',offset=1)
+    if texture:sub(tri,'input',semantic='TEXCOORD',source='#uv',offset=2,set=0)
+    sub(tri,'p').text=' '.join(map(str,np.stack([s[3] for s in streams],-1).ravel().tolist()))
     scene=sub(sub(root,'library_visual_scenes'),'visual_scene',id='Scene');node=sub(scene,'node',id='node');inst=sub(node,'instance_geometry',url='#geometry');binding=sub(sub(sub(inst,'bind_material'),'technique_common'),'instance_material',symbol='material',target='#material');sub(binding,'bind_vertex_input',semantic='UVMap',input_semantic='TEXCOORD',input_set=0)
     sub(sub(root,'scene'),'instance_visual_scene',url='#Scene');write(root,P/'meshes'/f'{ident}.dae')
 for l in L.values():
@@ -119,6 +123,7 @@ d=sub(m,'default');sub(d,'joint',damping='.1',armature='.03');sub(d,'geom',frict
 a=sub(m,'asset');sub(a,'texture',name='ground_tex',type='2d',builtin='checker',rgb1='.22 .24 .27',rgb2='.30 .32 .35',width=512,height=512);sub(a,'material',name='ground_mat',texture='ground_tex',texrepeat='10 10',reflectance='.1')
 for key,ma in MAT.items():
     at=dict(name=key,rgba=f(np.clip(ma['rgba'],0,1)),specular=.3,shininess=max(.01,1-ma['roughness']))
+    if ma.get('emission'):at['emission']=1
     if ma['texture']:
         sub(a,'texture',name=key+'_tex',type='2d',file='../ros2/promise_description/textures/'+ma['texture']);at['texture']=key+'_tex'
     sub(a,'material',**at)
@@ -157,13 +162,15 @@ custom=sub(m,'custom');sub(custom,'text',name='os1_driver',data='scripts/mujoco_
 write(m,ROOT/'mujoco/promise.xml')
 
 # USD uses the same exact vertex buffers and PBR base textures as the simulators.
-for file in (P/'textures').glob('*.png'):shutil.copy2(file,ROOT/'usd/textures'/file.name)
+for file in (P/'textures').glob('*.png') if (P/'textures').is_dir() else []:shutil.copy2(file,ROOT/'usd/textures'/file.name)
 stage=Usd.Stage.CreateNew(str(ROOT/'usd/promise.usdc'));UsdGeom.SetStageUpAxis(stage,UsdGeom.Tokens.z);UsdGeom.SetStageMetersPerUnit(stage,1)
-root=UsdGeom.Xform.Define(stage,'/PROMISE');stage.SetDefaultPrim(root.GetPrim());root.GetPrim().SetCustomData({'description':'NASA-derived PROMISE, manually articulated, estimated dynamics','sourceDate':'2026-11-08'})
+root=UsdGeom.Xform.Define(stage,'/PROMISE');stage.SetDefaultPrim(root.GetPrim());root.GetPrim().SetCustomData({'description':'NASA PROMISE public model, manually articulated, estimated dynamics','sourceDate':'2026-11-07'})
 usd_mats={}
 for key,ma in MAT.items():
     material=UsdShade.Material.Define(stage,'/PROMISE/Looks/'+key);shader=UsdShade.Shader.Define(stage,material.GetPath().AppendChild('PreviewSurface'));shader.CreateIdAttr('UsdPreviewSurface')
-    shader.CreateInput('diffuseColor',Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(*ma['rgba'][:3]));shader.CreateInput('metallic',Sdf.ValueTypeNames.Float).Set(ma['metallic']);shader.CreateInput('roughness',Sdf.ValueTypeNames.Float).Set(ma['roughness']);material.CreateSurfaceOutput().ConnectToSource(shader.ConnectableAPI(),'surface')
+    shader.CreateInput('diffuseColor',Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(*ma['rgba'][:3]))
+    if ma.get('emission'):shader.CreateInput('emissiveColor',Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(*ma['rgba'][:3]))
+    shader.CreateInput('metallic',Sdf.ValueTypeNames.Float).Set(ma['metallic']);shader.CreateInput('roughness',Sdf.ValueTypeNames.Float).Set(ma['roughness']);material.CreateSurfaceOutput().ConnectToSource(shader.ConnectableAPI(),'surface')
     if ma['texture']:
         uv=UsdShade.Shader.Define(stage,material.GetPath().AppendChild('stReader'));uv.CreateIdAttr('UsdPrimvarReader_float2');uv.CreateInput('varname',Sdf.ValueTypeNames.Token).Set('st')
         tex=UsdShade.Shader.Define(stage,material.GetPath().AppendChild('baseColor'));tex.CreateIdAttr('UsdUVTexture');tex.CreateInput('file',Sdf.ValueTypeNames.Asset).Set('./textures/'+ma['texture']);tex.CreateInput('sourceColorSpace',Sdf.ValueTypeNames.Token).Set('sRGB');tex.CreateInput('st',Sdf.ValueTypeNames.Float2).ConnectToSource(uv.ConnectableAPI(),'result');shader.GetInput('diffuseColor').ConnectToSource(tex.ConnectableAPI(),'rgb')
@@ -174,7 +181,11 @@ for name,l in L.items():
     mass=UsdPhysics.MassAPI.Apply(prim);mass.CreateMassAttr(l['mass']);mass.CreateCenterOfMassAttr(Gf.Vec3f(*l['com']));mass.CreateDiagonalInertiaAttr(Gf.Vec3f(*l['inertia']));mass.CreatePrincipalAxesAttr(Gf.Quatf(1))
     if name=='base_link':UsdPhysics.ArticulationRootAPI.Apply(prim)
     for v in l['visuals']:
-        a=np.load(P/'meshes'/f"{v['mesh']}.npz");verts=a['vertices'];mesh=UsdGeom.Mesh.Define(stage,path+'/visuals/'+v['mesh']);mesh.CreatePointsAttr(Vt.Vec3fArray.FromNumpy(verts));mesh.CreateFaceVertexCountsAttr([3]*(len(verts)//3));mesh.CreateFaceVertexIndicesAttr(list(range(len(verts))));mesh.CreateSubdivisionSchemeAttr('none');mesh.CreateNormalsAttr(Vt.Vec3fArray.FromNumpy(a['normals']));mesh.SetNormalsInterpolation('vertex');mesh.CreateExtentAttr(UsdGeom.PointBased.ComputeExtent(Vt.Vec3fArray.FromNumpy(verts)));st=UsdGeom.PrimvarsAPI(mesh).CreatePrimvar('st',Sdf.ValueTypeNames.TexCoord2fArray,UsdGeom.Tokens.vertex);st.Set(Vt.Vec2fArray.FromNumpy(a['uv']));UsdShade.MaterialBindingAPI.Apply(mesh.GetPrim()).Bind(usd_mats[v['material']])
+        a=np.load(P/'meshes'/f"{v['mesh']}.npz");verts=a['positions'];mesh=UsdGeom.Mesh.Define(stage,path+'/visuals/'+v['mesh'])
+        mesh.CreatePointsAttr(Vt.Vec3fArray.FromNumpy(verts));mesh.CreateFaceVertexCountsAttr([3]*len(a['position_index']));mesh.CreateFaceVertexIndicesAttr(Vt.IntArray.FromNumpy(a['position_index'].ravel()));mesh.CreateSubdivisionSchemeAttr('none')
+        mesh.CreateNormalsAttr(Vt.Vec3fArray.FromNumpy(a['normals'][a['normal_index'].ravel()].astype(np.float32)));mesh.SetNormalsInterpolation('faceVarying');mesh.CreateExtentAttr(UsdGeom.PointBased.ComputeExtent(Vt.Vec3fArray.FromNumpy(verts)))
+        if 'uv' in a:st=UsdGeom.PrimvarsAPI(mesh).CreateIndexedPrimvar('st',Sdf.ValueTypeNames.TexCoord2fArray,Vt.Vec2fArray.FromNumpy(a['uv']),Vt.IntArray.FromNumpy(a['uv_index'].ravel()),UsdGeom.Tokens.faceVarying)
+        UsdShade.MaterialBindingAPI.Apply(mesh.GetPrim()).Bind(usd_mats[v['material']])
     for i,c in enumerate(l['collisions']):
         cp=path+'/collisions/c'+str(i)
         if c['type']=='box':

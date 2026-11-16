@@ -51,5 +51,5 @@ for endian in ['<','>']:
     for row in range(h):assert result.data[row*row_step+w*point_step:(row+1)*row_step]==b'\xee'*8
 bridge=json.loads((P/'config/bridge.yaml').read_text())
 assert any(b['ros_topic_name']=='/promise/os1/points_raw' for b in bridge)
-report={'status':'PASS','revision':spec['revision'],'urdf_mount_pitch_down_deg':float(pitch),'glb_max_transform_error':glb_error,'usd_max_transform_error':usd_error,'usd_fixed_joint_orientation':'PASS','mask_rays':int(visible.size),'mask_clear_rays':int(visible.sum()),'ros_pointcloud_filter':'PASS; organized clouds, both byte orders, padded rows, auxiliary fields preserved','gazebo_runtime':'NOT RUN','isaac_runtime':'NOT RUN; raw RTX output needs documented post-filter'}
+report={'status':'PASS','revision':spec['revision'],'urdf_mount_pitch_down_deg':float(pitch),'glb_max_transform_error':glb_error,'usd_max_transform_error':usd_error,'usd_fixed_joint_orientation':'PASS','mask_rays':int(visible.size),'mask_clear_rays':int(visible.sum()),'ros_pointcloud_filter':'PASS; organized clouds, both byte orders, padded rows, auxiliary fields preserved','gazebo_runtime':'see validation.json gazebo_ros2','isaac_runtime':'NOT RUN; raw RTX output needs documented post-filter'}
 (ROOT/'references/recessed_exports_validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

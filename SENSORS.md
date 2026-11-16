@@ -1,8 +1,8 @@
-# PROMISE turret sensors — revision 0.3
+# PROMISE turret sensors — revision 0.4
 
 All five formats now include **four turret cameras (two stereo pairs)** and a physically modeled **Ouster OS1 Rev 8 lidar**. The OS1 is now fully recessed inside the white mast-head box, near its front face, with a fixed **22.5° downward pitch** relative to the head. A real **150 × 92 mm front opening** exposes the optical window. The camera frames and lidar rotate with both mast yaw and head pitch. The OS1 is the user-requested substitution; its inclusion is not a claim that NASA selected this sensor for flight.
 
-The Curiosity body and suspension, six Perseverance wheels, compact PROMISE head and removed arm are retained. The stowed TRIDENT drill is unchanged. NASA's November 7, 2026 release and public PROMISE model are the design references; see README.md for donor provenance.
+Since revision 0.4 all rover geometry comes from NASA's public PROMISE model; the lidar mount, cameras and scan configuration are unchanged from revision 0.3. The stowed TRIDENT drill is unchanged. NASA's November 7, 2026 release and public PROMISE model are the design references; see README.md for donor provenance.
 
 ## What each format provides
 
@@ -39,7 +39,7 @@ The lidar housing is tessellated from Ouster's Rev 8 **OS1 XX** STEP model (with
 | Optical center | 40.2 mm along lidar-local +Z from its mounting origin; estimated |
 | Sampling | Instantaneous full scan, one geometric return per ray |
 
-The native 360° ray grid is retained, but the enclosing box blocks most side and rear directions. Mesh ray tests found 38,314 directions clear of the rigid head and 92,758 blocked. The complete 44° vertical fan is clear for sensor-local azimuths approximately −44.65° to +44.65°. At azimuth zero, the nominal head-level fan spans **44.5° down to 0.5° down**. Additional obstruction by terrain or other rover components is evaluated at runtime.
+The native 360° ray grid is retained, but the enclosing box blocks most side and rear directions. Mesh ray tests found 38,171 directions clear of the rigid head and 92,901 blocked. The complete 44° vertical fan is clear for sensor-local azimuths approximately −44.65° to +44.65°. At azimuth zero, the nominal head-level fan spans **44.5° down to 0.5° down**. Additional obstruction by terrain or other rover components is evaluated at runtime.
 
 A compressed visibility mask, derived from the actual head mesh and including the four camera housings, is embedded in the profile. It excludes the OS1 case itself. Blender and MuJoCo apply it in addition to geometric ray casting. The ROS launch applies it to the raw Gazebo point cloud because a renderer's near clipping can otherwise hide the close enclosure. GLB and USD carry the same mask as metadata. The Isaac sample saves raw GenericModelOutput and the profile: after decoding to Cartesian SENSOR-frame XYZ, use `sensor_rays.valid_sensor_points(profile, xyz)` to enforce the mask. The raw RTX buffer is not post-filtered automatically.
 
@@ -76,7 +76,7 @@ scanner.update(data)  # runs at 10 Hz simulation time, holds the last scan betwe
 
 ## Blender with VisionSIM
 
-The `.blend` includes packed textures, the four sensor cameras, lidar frame and embedded profile, plus the original six-wheel animation. Use the **Blender sensor ZIP** or complete ZIP for the companion scripts. VisionSIM is an external dependency, not bundled into the `.blend`.
+The `.blend` includes the four sensor cameras, lidar frame and embedded profile, plus the original six-wheel animation. Use the **Blender sensor ZIP** or complete ZIP for the companion scripts. VisionSIM is an external dependency, not bundled into the `.blend`.
 
 The tested integration runs `visionsim.simulate.blender.BlenderService` inside a local `bpy` Python interpreter. It reuses the model's camera positions and intrinsics. It does not start an RPC server. VisionSIM generates RGB, depth EXR and metadata; the OS1 geometric scanner is a separate component because this VisionSIM workflow does not implement spinning-lidar emulation.
 
@@ -116,13 +116,13 @@ Run the included launcher in the Isaac Sim Python environment with an RTX-capabl
   --headless --seconds 2 --capture /absolute/path/captures/isaac
 ```
 
-It targets the Isaac Sim 6.x `isaacsim.sensors.experimental.rtx` API family. The lidar prim is `/World/PROMISE/os1_link/os1_lidar_frame/sensor`. Keep `os1_rev8_lidar.usda`, `promise.usdc` and textures alongside the scene. The helper renders frames even in headless mode, which the sensors require. It saves camera RGB/range NPZs, the raw lidar GenericModelOutput buffer and the OS1 profile. Native RTX near-field self-occlusion remains unverified; apply the included profile mask to decoded sensor-frame points as described above. This is a snapshot example, not a lossless stream recorder or ROS bridge.
+It targets the Isaac Sim 6.x `isaacsim.sensors.experimental.rtx` API family. The lidar prim is `/World/PROMISE/os1_link/os1_lidar_frame/sensor`. Keep `os1_rev8_lidar.usda` and `promise.usdc` alongside the scene. The helper renders frames even in headless mode, which the sensors require. It saves camera RGB/range NPZs, the raw lidar GenericModelOutput buffer and the OS1 profile. Native RTX near-field self-occlusion remains unverified; apply the included profile mask to decoded sensor-frame points as described above. This is a snapshot example, not a lossless stream recorder or ROS bridge.
 
 ## Verification and limits
 
 `validation.json`, `references/sensor_validation.json` and `references/blender_validation.json` and `references/recessed_mount_validation.json` record the actual checks. The recessed-mount check also verifies physical fit, downward pitch, all 128 forward-center rays and rear-wall blockage. The sensor checks render all four MuJoCo and VisionSIM cameras, ray-cast a target with a known position, compare URDF/MuJoCo sensor transforms at three turret poses, check Blender turret parenting and six-wheel animation, inspect GLB camera/profile metadata and compose USD references.
 
-Blender 4.5.3, VisionSIM 0.2.0 and MuJoCo 4.0.0 were exercised. ROS/Gazebo and Isaac Sim were **not runtime-tested** in this environment; their exports received structural checks. Mounting, calibration, mass distribution and contact dynamics remain engineering estimates. These are simulation assets, not flight-qualified hardware models.
+Blender 4.5.3, VisionSIM 0.2.0, MuJoCo 4.0.0 and Gazebo Harmonic 8.15 with ROS 2 Jazzy were exercised. In Gazebo the filtered `/promise/os1/points` cloud and all four camera topics were received; see `validation.json`. Isaac Sim was **not runtime-tested** in this environment; its export received structural checks. Mounting, calibration, mass distribution and contact dynamics remain engineering estimates. These are simulation assets, not flight-qualified hardware models.
 
 ## Sources
 

@@ -6,7 +6,7 @@
   "mujoco": "4.0.0",
   "lidar": {
     "rays": 131072,
-    "scan_wall_seconds": 0.6028545250001116,
+    "scan_wall_seconds": 0.6001620260012714,
     "target_expected_m": 3.849410113643874,
     "target_measured_m": 3.849410113643874,
     "rate_hold_test": "PASS"
@@ -17,28 +17,28 @@
         320,
         180
       ],
-      "target_depth_m": 3.6650002002716064
+      "target_depth_m": 3.6649999618530273
     },
     "stereo_right": {
       "resolution": [
         320,
         180
       ],
-      "target_depth_m": 3.6650002002716064
+      "target_depth_m": 3.6649999618530273
     },
     "dashcam_left": {
       "resolution": [
         320,
         180
       ],
-      "target_depth_m": 3.6650002002716064
+      "target_depth_m": 3.6649999618530273
     },
     "dashcam_right": {
       "resolution": [
         320,
         180
       ],
-      "target_depth_m": 3.6650002002716064
+      "target_depth_m": 3.6649999618530273
     }
   },
   "glb_cameras": 4,

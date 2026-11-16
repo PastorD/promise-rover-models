@@ -9,3 +9,7 @@ blender/.*.blend.*
 
 # NASA donor downloads; re-fetch and verify with scripts/fetch_sources.py
 source_assets/
+
+# Local build environments from the README rebuild steps
+.build-*/
+.vision/
